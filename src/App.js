@@ -4,30 +4,32 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 function Work() {
-  function Card({ title, description, imgPath }) {
+  function Card({ title, description, imgPath, to }) {
     const [visibility, setVisibility] = useState("hidden");
     return (
-      <div
-        onMouseOver={() => setVisibility("visible")}
-        onMouseLeave={() => setVisibility("hidden")}
-        style={{
-          backgroundImage: `url(${imgPath})`,
-          width: 500,
-          height: 500
-        }}
-      >
+      <Link to={to}>
         <div
+          onMouseOver={() => setVisibility("visible")}
+          onMouseLeave={() => setVisibility("hidden")}
           style={{
-            visibility,
-            backgroundColor: "white",
-            width: 200,
-            height: 100
+            backgroundImage: `url(${imgPath})`,
+            width: 500,
+            height: 500
           }}
         >
-          <h4>{title}</h4>
-          <p>{description}</p>
+          <div
+            style={{
+              visibility,
+              backgroundColor: "white",
+              width: 200,
+              height: 100
+            }}
+          >
+            <h4>{title}</h4>
+            <p>{description}</p>
+          </div>
         </div>
-      </div>
+      </Link>
     );
   }
 
@@ -42,11 +44,13 @@ function Work() {
           title="LETTERING SET"
           description="Custom Lettering"
           imgPath="01_Thumbnail_LetteringSet.jpg"
+          to="/lettering-set"
         />
         <Card
           title="SKETCHBOOK"
           description="Custom Lettering"
           imgPath="02_Thumbnail_Sketchbook.jpg"
+          to="/sketchbook"
         />
       </div>
     </div>
@@ -58,6 +62,12 @@ function About() {
 function Contact() {
   return <div>contact</div>;
 }
+function LetteringSet() {
+  return <div>lettering set</div>;
+}
+function SketchBook() {
+  return <div>sketchbook</div>;
+}
 function App() {
   return (
     <Router>
@@ -68,6 +78,8 @@ function App() {
         <Link to="/contact">CONTACT</Link>
       </header>
       <Route path="/work" component={Work} />
+      <Route path="/lettering-set" component={LetteringSet} />
+      <Route path="/sketchbook" component={SketchBook} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
       <footer>
