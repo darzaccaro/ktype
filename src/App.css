@@ -1,0 +1,40 @@
+body {
+  font-family: "PT Serif", serif;
+  font-size: 20px;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Josefin Sans", sans-serif;
+  letter-spacing: 5px;
+}
+
+a {
+  color: #61512d;
+  text-decoration: none;
+}
+a:hover {
+  color: #b9b9b9;
+}
+
+.nav-link {
+  color: #b9b9b9;
+  text-decoration: none;
+  font-family: "Josefin Sans", sans-serif;
+  margin-left: 150px;
+}
+.nav-link:hover {
+  color: #61512d;
+}
+.nav-active {
+  color: #61512d;
+}
+.nav-active:hover {
+  color: #b9b9b9;
+}
