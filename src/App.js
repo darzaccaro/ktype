@@ -4,9 +4,24 @@ import { Route, Link } from "react-router-dom";
 import "./App.css";
 import theme from "./theme";
 import NavLink from "./components/NavLink";
+import BarLink from "./components/BarLink";
 
 function Work() {
-  function Card({ title, description, imgPath, to }) {
+  const works = [
+    {
+      title: "LETTERING SET",
+      description: "Custom Lettering",
+      imgSrc: "/work/01_Thumbnail_LetteringSet.jpg",
+      to: "/lettering-set"
+    },
+    {
+      title: "SKETCHBOOK",
+      description: "Custom Lettering",
+      imgSrc: "/work/02_Thumbnail_Sketchbook.jpg",
+      to: "/sketchbook"
+    }
+  ];
+  function Card({ title, description, imgSrc, to }) {
     const [visibility, setVisibility] = useState("hidden");
     return (
       <Link to={to}>
@@ -14,7 +29,7 @@ function Work() {
           onMouseOver={() => setVisibility("visible")}
           onMouseLeave={() => setVisibility("hidden")}
           style={{
-            backgroundImage: `url(${imgPath})`,
+            backgroundImage: `url(${imgSrc})`,
             width: theme.sizes.cardWidth,
             height: theme.sizes.cardHeight
           }}
@@ -54,7 +69,6 @@ function Work() {
       </Link>
     );
   }
-
   return (
     <div
       style={{
@@ -77,21 +91,19 @@ function Work() {
           display: "flex",
           justifyContent: "space-between",
           maxWidth: theme.sizes.contentWidth,
-          margin: "0 auto"
+          margin: "0 auto",
+          marginBottom: theme.sizes.spacingV1
         }}
       >
-        <Card
-          title="LETTERING SET"
-          description="Custom Lettering"
-          imgPath="01_Thumbnail_LetteringSet.jpg"
-          to="/lettering-set"
-        />
-        <Card
-          title="SKETCHBOOK"
-          description="Custom Lettering"
-          imgPath="02_Thumbnail_Sketchbook.jpg"
-          to="/sketchbook"
-        />
+        {works.map((w, i) => (
+          <Card
+            key={i}
+            title={w.title}
+            description={w.description}
+            imgSrc={w.imgSrc}
+            to={w.to}
+          />
+        ))}
       </div>
     </div>
   );
@@ -244,7 +256,91 @@ function Contact() {
 }
 
 function LetteringSet() {
-  return <div>lettering set</div>;
+  const images = [
+    {
+      src: "/lettering_set/01_rhythm.jpg",
+      alt: "rhythm"
+    },
+    {
+      src: "/lettering_set/02_correlate.jpg",
+      alt: "correlate"
+    },
+    {
+      src: "/lettering_set/03_sunday.jpg",
+      alt: "sunday"
+    },
+    {
+      src: "/lettering_set/04_thanks.jpg",
+      alt: "thanks"
+    },
+    {
+      src: "/lettering_set/05_balance.jpg",
+      alt: "balance"
+    },
+    {
+      src: "/lettering_set/06_surreal.jpg",
+      alt: "surreal"
+    },
+    {
+      src: "/lettering_set/07_format.jpg",
+      alt: "format"
+    },
+    {
+      src: "/lettering_set/08_jfs.jpg",
+      alt: "jfs"
+    },
+    {
+      src: "/lettering_set/09_faux.jpg",
+      alt: "faux"
+    },
+    {
+      src: "/lettering_set/10_refine.jpg",
+      alt: "refine"
+    }
+  ];
+  return (
+    <div>
+      <div
+        style={{
+          width: theme.sizes.contentWidth,
+          margin: "0 auto",
+          marginBottom: theme.sizes.spacingV1,
+          overflow: "hidden"
+        }}
+      >
+        <h1 style={{ display: "inline-block" }}>Lettering Set</h1>
+        <p
+          style={{
+            display: "inline-block",
+            float: "right",
+            marginTop: 35
+          }}
+        >
+          A collection of custom hand-drawn lettering from over the years
+        </p>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          width: theme.sizes.contentWidth,
+          margin: "0 auto",
+          marginBottom: theme.sizes.spacingV1
+        }}
+      >
+        {images.map((img, i) => (
+          <img
+            key={i}
+            src={img.src}
+            alt={img.alt}
+            width={theme.sizes.contentWidth}
+            style={{ marginBottom: theme.sizes.spacingV2 }}
+          />
+        ))}
+      </div>
+      <BarLink text="VIEW ALL WORK" to="/work" />
+    </div>
+  );
 }
 function SketchBook() {
   return <div>sketchbook</div>;
@@ -261,7 +357,9 @@ function App(props) {
           overflow: "hidden"
         }}
       >
-        <img src="logo.svg" alt="logo" style={{ width: 50, float: "left" }} />
+        <Link to={"/"} style={{ width: 50, float: "left" }}>
+          <img src="/logo.svg" alt="logo" />
+        </Link>
         <nav
           style={{
             paddingTop: 20,
@@ -273,16 +371,18 @@ function App(props) {
           <NavLink text="CONTACT" to="/contact" />
         </nav>
       </header>
+
+      <Route exact path="/" component={Work} />
       <Route path="/work" component={Work} />
       <Route path="/lettering-set" component={LetteringSet} />
       <Route path="/sketchbook" component={SketchBook} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
+
       <footer
         style={{
           backgroundColor: theme.colors.light,
-          textAlign: "center",
-          marginTop: theme.sizes.spacingV1
+          textAlign: "center"
         }}
       >
         <div style={{ padding: 200 }}>
