@@ -8,6 +8,8 @@ import BarLink from "./components/BarLink";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 
+import WorkTemplateA from "./components/WorkTemplateA";
+
 function Work() {
   const works = [
     {
@@ -258,94 +260,92 @@ function Contact() {
 }
 
 function LetteringSet() {
-  const images = [
-    {
-      src: "/lettering_set/01_rhythm.jpg",
-      alt: "rhythm"
-    },
-    {
-      src: "/lettering_set/02_correlate.jpg",
-      alt: "correlate"
-    },
-    {
-      src: "/lettering_set/03_sunday.jpg",
-      alt: "sunday"
-    },
-    {
-      src: "/lettering_set/04_thanks.jpg",
-      alt: "thanks"
-    },
-    {
-      src: "/lettering_set/05_balance.jpg",
-      alt: "balance"
-    },
-    {
-      src: "/lettering_set/06_surreal.jpg",
-      alt: "surreal"
-    },
-    {
-      src: "/lettering_set/07_format.jpg",
-      alt: "format"
-    },
-    {
-      src: "/lettering_set/08_jfs.jpg",
-      alt: "jfs"
-    },
-    {
-      src: "/lettering_set/09_faux.jpg",
-      alt: "faux"
-    },
-    {
-      src: "/lettering_set/10_refine.jpg",
-      alt: "refine"
-    }
-  ];
   return (
-    <div>
-      <div
-        style={{
-          width: theme.sizes.contentWidth,
-          margin: "0 auto",
-          marginBottom: theme.sizes.spacingV1,
-          overflow: "hidden"
-        }}
-      >
-        <h1 style={{ display: "inline-block" }}>Lettering Set</h1>
-        <p
-          style={{
-            display: "inline-block",
-            float: "right",
-            marginTop: 35
-          }}
-        >
-          A collection of custom hand-drawn lettering from over the years
-        </p>
-      </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          width: theme.sizes.contentWidth,
-          margin: "0 auto",
-          marginBottom: theme.sizes.spacingV1
-        }}
-      >
-        {images.map((img, i) => (
-          <img
-            key={i}
-            src={img.src}
-            alt={img.alt}
-            width={theme.sizes.contentWidth}
-            style={{ marginBottom: theme.sizes.spacingV2 }}
-          />
-        ))}
-      </div>
-      <BarLink text="VIEW ALL WORK" to="/work" />
-    </div>
+    <WorkTemplateA
+      title="Lettering Set"
+      description="A collection of custom hand-drawn lettering from over the years"
+      images={[
+        {
+          src: "/lettering_set/01_rhythm.jpg",
+          alt: "rhythm"
+        },
+        {
+          src: "/lettering_set/02_correlate.jpg",
+          alt: "correlate"
+        },
+        {
+          src: "/lettering_set/03_sunday.jpg",
+          alt: "sunday"
+        },
+        {
+          src: "/lettering_set/04_thanks.jpg",
+          alt: "thanks"
+        },
+        {
+          src: "/lettering_set/05_balance.jpg",
+          alt: "balance"
+        },
+        {
+          src: "/lettering_set/06_surreal.jpg",
+          alt: "surreal"
+        },
+        {
+          src: "/lettering_set/07_format.jpg",
+          alt: "format"
+        },
+        {
+          src: "/lettering_set/08_jfs.jpg",
+          alt: "jfs"
+        },
+        {
+          src: "/lettering_set/09_faux.jpg",
+          alt: "faux"
+        },
+        {
+          src: "/lettering_set/10_refine.jpg",
+          alt: "refine"
+        }
+      ]}
+    />
   );
 }
 function SketchBook() {
-  return <div>sketchbook</div>;
+  return (
+    <WorkTemplateA
+      title="Sketchbook"
+      description="Various in-progress lettering sketches, vector processes, and play."
+      images={[
+        {
+          src: "/sketchbook/01_process_wip.jpg",
+          alt: "process (WIP)"
+        },
+        {
+          src: "/sketchbook/02_thanks_progression.gif",
+          alt: "thanks (progression)"
+        },
+        {
+          src: "/sketchbook/03_quiver_sketch.jpg",
+          alt: "quiver (sketch)"
+        },
+        {
+          src: "/sketchbook/04_quiver_sketch2.jpg",
+          alt: "another quiver (sketch)"
+        },
+        {
+          src: "/sketchbook/05_jfs_progression.gif",
+          alt: "jfs (progression)"
+        },
+        {
+          src: "/sketchbook/06_a_sketch_play.gif",
+          alt: "a playful sketch (progression)"
+        },
+        {
+          src: "/sketchbook/07_push_through.jpg",
+          alt: "push through"
+        }
+      ]}
+    />
+  );
 }
 
 function App(props) {
