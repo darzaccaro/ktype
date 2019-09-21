@@ -3,9 +3,10 @@ import React, { useState } from "react";
 import theme from "./theme";
 import { Route, Link } from "react-router-dom";
 import "./App.css";
-import NavLink from "./components/NavLink";
+
 import BarLink from "./components/BarLink";
 import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 function Work() {
   const works = [
@@ -350,36 +351,13 @@ function SketchBook() {
 function App(props) {
   return (
     <div>
-      <header
-        style={{
-          width: theme.sizes.contentWidth,
-          margin: "0 auto",
-          marginBottom: theme.sizes.spacingV1,
-          overflow: "hidden"
-        }}
-      >
-        <Link to={"/"} style={{ width: 50, float: "left" }}>
-          <img src="/logo.svg" alt="logo" />
-        </Link>
-        <nav
-          style={{
-            paddingTop: 20,
-            float: "right"
-          }}
-        >
-          <NavLink text="WORK" to="/work" />
-          <NavLink text="ABOUT" to="/about" />
-          <NavLink text="CONTACT" to="/contact" />
-        </nav>
-      </header>
-
+      <Header />
       <Route exact path="/" component={Work} />
       <Route path="/work" component={Work} />
       <Route path="/lettering-set" component={LetteringSet} />
       <Route path="/sketchbook" component={SketchBook} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
-
       <Footer />
     </div>
   );
