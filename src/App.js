@@ -385,23 +385,20 @@ function App(props) {
           textAlign: "center"
         }}
       >
-        <div style={{ padding: 200 }}>
-          <a
-            href="mailto: hi@ktype.xyz"
-            style={{ fontSize: "3em", fontWeight: "bold" }}
-          >
-            hi@ktype.xyz
-          </a>
-          <p
-            style={{
-              fontFamily: theme.fonts.sans,
-              letterSpacing: theme.sizes.letterSpacingWide,
-              fontWeight: 300
-            }}
-          >
-            LET'S START A PROJECT
-          </p>
-        </div>
+        <a href="mailto: hi@ktype.xyz">
+          <div style={{ padding: 200 }}>
+            <p style={{ fontSize: "3em", fontWeight: "bold" }}>hi@ktype.xyz</p>
+            <p
+              style={{
+                fontFamily: theme.fonts.sans,
+                letterSpacing: theme.sizes.letterSpacingWide,
+                fontWeight: 300
+              }}
+            >
+              LET'S START A PROJECT
+            </p>
+          </div>
+        </a>
         <p
           style={{
             backgroundColor: theme.colors.white,
