@@ -17,6 +17,8 @@ export default {
     letterSpacingWide: 8,
     spacingV1: 100,
     spacingV2: 25,
-    spacingV3: 50
+    spacingV3: 50,
+    indent: 50,
+    triangleHeight: 35
   }
 };

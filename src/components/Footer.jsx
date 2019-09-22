@@ -33,7 +33,7 @@ export default function Footer() {
       >
         All visual material &copy; Kade Tyler{" "}
         <span>
-          <Link to="/credits">| Site Credit</Link>
+          <a href="https://www.linkedin.com/in/darzaccaro/">| Site Credit</a>
         </span>
       </p>
     </footer>

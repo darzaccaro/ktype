@@ -1,18 +1,42 @@
 body {
   font-family: "PT Serif", serif;
-  font-size: 20px;
+  font-size: 24px;
   margin: 0px;
   padding: 0px;
+  line-height: 2em;
 }
 
-h1,
-h2,
-h3,
-h4,
+h1 {
+  font-family: "PT Serif", serif;
+  letter-spacing: 5px;
+}
+h2 {
+  font-family: "Josefin Sans", sans-serif;
+  letter-spacing: 10px;
+  font-size: 1rem;
+}
+
+h3 {
+  font-family: "PT Serif", serif;
+  letter-spacing: 5px;
+  font-size: 1.25em;
+}
+h4 {
+  font-family: "Josefin Sans", sans-serif;
+  letter-spacing: 12px;
+}
 h5,
 h6 {
   font-family: "Josefin Sans", sans-serif;
   letter-spacing: 5px;
+}
+
+li {
+  list-style: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 a {
