@@ -48,7 +48,7 @@ function Work() {
               padding: 15
             }}
           >
-            <h4
+            <h6
               style={{
                 color: theme.colors.black,
                 textAlign: "center",
@@ -56,11 +56,11 @@ function Work() {
               }}
             >
               {title}
-            </h4>
+            </h6>
             <p
               style={{
                 textAlign: "center",
-                marginTop: 5,
+                marginTop: 0,
                 fontStyle: "italic"
               }}
             >
@@ -184,7 +184,7 @@ function About() {
           marginTop: theme.sizes.spacingV1
         }}
       >
-        <h4
+        <h2
           style={{
             color: theme.colors.white,
             textAlign: "center",
@@ -194,7 +194,7 @@ function About() {
           }}
         >
           MY APPROACH &amp; CORE VALUES
-        </h4>
+        </h2>
       </div>
       <div
         style={{
@@ -219,16 +219,17 @@ function About() {
             overflow: "hidden",
             width: theme.sizes.contentWidth,
             margin: "0 auto",
-            marginTop: theme.sizes.spacingV1 - theme.sizes.triangleHeight
+            marginTop: theme.sizes.spacingV1 - theme.sizes.triangleHeight,
+            marginBottom: theme.sizes.spacingV1
           }}
         >
           <img
             style={{ float: "right" }}
             src="/about/03_approach.jpg"
             alt="approach"
-            width={theme.sizes.contentWidth / 3}
+            width={500}
           ></img>
-          <h4 style={{ color: theme.colors.brown }}>Approach</h4>
+          <h3 style={{ color: theme.colors.brown }}>Approach</h3>
           {[
             {
               title: "PHASE 1: DISCOVERY",
@@ -253,7 +254,14 @@ function About() {
           ].map((e, i) => (
             <div key={i} style={{ marginLeft: theme.sizes.indent, width: 400 }}>
               <h5 style={{ color: theme.colors.white }}>{e.title}</h5>
-              <p style={{ color: theme.colors.grey }}>{e.description}</p>
+              <p
+                style={{
+                  color: theme.colors.grey,
+                  marginBottom: theme.sizes.spacingV3
+                }}
+              >
+                {e.description}
+              </p>
             </div>
           ))}
         </div>
@@ -261,16 +269,17 @@ function About() {
           style={{
             overflow: "hidden",
             width: theme.sizes.contentWidth,
-            margin: "0 auto"
+            margin: "0 auto",
+            marginBottom: theme.sizes.spacingV1
           }}
         >
           <img
             style={{ float: "right" }}
             src="/about/04_approach2.jpg"
             alt="another approach"
-            width={theme.sizes.contentWidth / 3}
+            width={500}
           ></img>
-          <h4 style={{ color: theme.colors.brown }}>Core Values</h4>
+          <h3 style={{ color: theme.colors.brown }}>Core Values</h3>
           {[
             {
               title: "DEFINE FRAMEWORK.",
@@ -290,7 +299,14 @@ function About() {
           ].map((e, i) => (
             <div key={i} style={{ marginLeft: theme.sizes.indent, width: 400 }}>
               <h5 style={{ color: theme.colors.white }}>{e.title}</h5>
-              <p style={{ color: theme.colors.grey }}>{e.description}</p>
+              <p
+                style={{
+                  color: theme.colors.grey,
+                  marginBottom: theme.sizes.spacingV3
+                }}
+              >
+                {e.description}
+              </p>
             </div>
           ))}
         </div>
@@ -298,24 +314,37 @@ function About() {
           style={{
             overflow: "hidden",
             width: theme.sizes.contentWidth,
-            margin: "0 auto"
+            margin: "0 auto",
+            paddingBottom: theme.sizes.spacingV1
           }}
         >
           <img
             style={{ float: "right" }}
             src="/about/06_studiobooks.jpg"
             alt="books"
-            width={theme.sizes.contentWidth / 3}
+            width={500}
           ></img>
-          <div style={{ width: 400 + theme.sizes.indent }}>
-            <p style={{ color: theme.colors.white }}>
+          <div style={{ width: 465 + theme.sizes.indent }}>
+            <p
+              style={{
+                color: theme.colors.white,
+                marginTop: 0,
+                marginBottom: theme.sizes.spacingV3
+              }}
+            >
               <em>
                 &ldquo;Design is not a thing you do. It is a way of life.&rdquo;
               </em>
               <br></br>
               &mdash;Alan Fletcher, circa 1956
             </p>
-            <p style={{ color: theme.colors.white }}>
+            <p
+              style={{
+                color: theme.colors.white,
+                marginTop: 0,
+                marginBottom: theme.sizes.spacingV3
+              }}
+            >
               Thank you for reading a bit about my process.<br></br> If you’re
               interested in what I do, <Link to="/contact">come say hi.</Link>
             </p>
