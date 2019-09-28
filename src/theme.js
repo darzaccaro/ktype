@@ -19,6 +19,7 @@ export default {
     spacingV2: 25,
     spacingV3: 50,
     indent: 50,
-    triangleHeight: 35
+    triangleHeight: 35,
+    mobileWidth: 800
   }
 };
