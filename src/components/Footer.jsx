@@ -10,8 +10,8 @@ export default function Footer() {
       }}
     >
       <a href="mailto: hi@ktype.xyz">
-        <div style={{ padding: 200 }}>
-          <p style={{ fontSize: "3em", fontWeight: "bold" }}>hi@ktype.xyz</p>
+        <div style={{ paddingTop: 200, paddingBottom: 200 }}>
+          <p style={{ fontSize: "2.8em", fontWeight: "bold" }}>hi@ktype.xyz</p>
           <p
             style={{
               fontFamily: theme.fonts.sans,
@@ -27,12 +27,19 @@ export default function Footer() {
         style={{
           backgroundColor: theme.colors.white,
           padding: 25,
-          marginBottom: 0
+          marginBottom: 0,
+          fontSize: "0.8em"
         }}
       >
         All visual material &copy; Kade Tyler{" "}
         <span>
-          <a href="https://www.linkedin.com/in/darzaccaro/">| Site Credit</a>
+          <p style={{ marginLeft: 10, display: "inline" }}>|</p>
+          <a
+            href="https://www.linkedin.com/in/darzaccaro/"
+            style={{ marginLeft: 15 }}
+          >
+            Site Credit
+          </a>
         </span>
       </p>
     </footer>
