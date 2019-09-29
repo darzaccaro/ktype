@@ -56,6 +56,20 @@ a:hover {
   color: #b9b9b9;
 }
 
+.mobile-menu-button {
+  color: #b9b9b9;
+  text-decoration: none;
+  font-family: "Josefin Sans", sans-serif;
+  border: none;
+  background-color: white;
+  padding: 20px;
+  font-size: 1.75rem;
+}
+.mobile-menu-button:hover {
+  color: #61512d;
+  cursor: pointer;
+}
+
 .nav-link {
   color: #b9b9b9;
   text-decoration: none;
