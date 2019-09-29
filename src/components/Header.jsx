@@ -34,18 +34,26 @@ export default function Header() {
     );
   }
 
-  if (width < theme.sizes.mobileWidth) {
+  if (width < theme.breakpoints.mobile) {
     return (
       <header
         style={{
           width: "100%",
-          paddingBottom: theme.sizes.spacingV1,
-          marginTop: 15,
-          overflow: "hidden"
+          paddingTop: 15,
+          overflow: "hidden",
+          backgroundColor: theme.colors.white
         }}
       >
         <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <Link to={"/"} style={{ width: 50, float: "left", paddingLeft: 20 }}>
+          <Link
+            to={"/"}
+            onClick={() => toggleMenu(false)}
+            style={{
+              width: 50,
+              float: "left",
+              paddingLeft: theme.sizes.spacingV2
+            }}
+          >
             <img src="/logo.svg" alt="logo" />
           </Link>
           <MobileMenuButton />
@@ -58,7 +66,7 @@ export default function Header() {
             width: "100%",
             height: "100%",
             backgroundColor: theme.colors.white,
-            marginTop: 75
+            paddingTop: 75
           }}
         >
           <nav style={{ width: "100%" }}>

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import theme from "../theme";
 import { Link } from "react-router-dom";
+import useWindowDimensions from "../hooks/useWindowDimensions";
 
 export default function Work() {
+  const { width } = useWindowDimensions();
   const works = [
     {
       title: "LETTERING SET",
@@ -17,10 +19,52 @@ export default function Work() {
       to: "/sketchbook"
     }
   ];
+
+  function CardTag({ title, description, alignLeft, visibility }) {
+    return (
+      <div
+        style={{
+          visibility,
+          backgroundColor: "white",
+          maxWidth: theme.sizes.cardWidth - 85,
+          maxHeight: theme.sizes.cardHeight / 4,
+          position: "relative",
+          top: alignLeft ? 0 : 25,
+          margin: "0 auto",
+          padding: 15,
+          paddingLeft: alignLeft ? 50 : 15
+        }}
+      >
+        <h6
+          style={{
+            color: theme.colors.black,
+            textAlign: alignLeft ? "left" : "center",
+            marginBottom: 0
+          }}
+        >
+          {title}
+        </h6>
+        <p
+          style={{
+            textAlign: alignLeft ? "left" : "center",
+            marginTop: 0,
+            fontStyle: "italic"
+          }}
+        >
+          {description}
+        </p>
+      </div>
+    );
+  }
+
   function Card({ title, description, imgSrc, to }) {
     const [visibility, setVisibility] = useState("hidden");
     return (
-      <Link to={to}>
+      <Link
+        to={to}
+        onClick={() => window.scrollTo(0, 0)}
+        style={{ marginBottom: theme.sizes.spacingV3 }}
+      >
         <div
           onMouseOver={() => setVisibility("visible")}
           onMouseLeave={() => setVisibility("hidden")}
@@ -30,38 +74,22 @@ export default function Work() {
             height: theme.sizes.cardHeight
           }}
         >
-          <div
-            style={{
-              visibility,
-              backgroundColor: "white",
-              width: theme.sizes.cardWidth - 85,
-              height: theme.sizes.cardHeight / 4,
-              position: "relative",
-              top: 25,
-              margin: "0 auto",
-              padding: 15
-            }}
-          >
-            <h6
-              style={{
-                color: theme.colors.black,
-                textAlign: "center",
-                marginBottom: 0
-              }}
-            >
-              {title}
-            </h6>
-            <p
-              style={{
-                textAlign: "center",
-                marginTop: 0,
-                fontStyle: "italic"
-              }}
-            >
-              {description}
-            </p>
-          </div>
+          {width >= theme.breakpoints.work && (
+            <CardTag
+              title={title}
+              description={description}
+              visibility={visibility}
+            />
+          )}
         </div>
+        {width < theme.breakpoints.work && (
+          <CardTag
+            title={title}
+            description={description}
+            visibility={"visible"}
+            alignLeft
+          />
+        )}
       </Link>
     );
   }
@@ -75,7 +103,8 @@ export default function Work() {
         style={{
           fontSize: "1.5em",
           textAlign: "center",
-          marginBottom: theme.sizes.spacingV1
+          marginBottom: theme.sizes.spacingV1,
+          padding: 20
         }}
       >
         The strategic visual design studio of Kade Tyler&mdash;specializing in
@@ -85,10 +114,12 @@ export default function Work() {
       <div
         style={{
           display: "flex",
-          justifyContent: "space-between",
+          justifyContent:
+            width < theme.breakpoints.work ? "center" : "space-between",
           maxWidth: theme.sizes.contentWidth,
           margin: "0 auto",
-          marginBottom: theme.sizes.spacingV1
+          marginBottom: theme.sizes.spacingV1,
+          flexWrap: "wrap"
         }}
       >
         {works.map((w, i) => (

@@ -1,23 +1,28 @@
 import React from "react";
 import theme from "../theme";
 import BarLink from "./BarLink";
+import useWindowDimensions from "../hooks/useWindowDimensions";
 
 export default function WorkTemplateA({ title, description, images }) {
+  const { width } = useWindowDimensions();
   return (
     <div>
       <div
         style={{
-          width: theme.sizes.contentWidth,
+          maxWidth: theme.sizes.contentWidth,
           margin: "0 auto",
           marginBottom: theme.sizes.spacingV1,
-          overflow: "hidden"
+          display: "flex",
+          justifyContent: "space-between",
+          flexWrap: "wrap",
+          paddingLeft:
+            width < theme.breakpoints.mobile ? theme.sizes.spacingV2 : 0
         }}
       >
         <h1 style={{ display: "inline-block" }}>{title}</h1>
         <p
           style={{
             display: "inline-block",
-            float: "right",
             marginTop: 35
           }}
         >
@@ -28,7 +33,7 @@ export default function WorkTemplateA({ title, description, images }) {
         style={{
           display: "flex",
           flexDirection: "column",
-          width: theme.sizes.contentWidth,
+          maxWidth: theme.sizes.contentWidth,
           margin: "0 auto",
           marginBottom: theme.sizes.spacingV1
         }}
@@ -38,8 +43,7 @@ export default function WorkTemplateA({ title, description, images }) {
             key={i}
             src={img.src}
             alt={img.alt}
-            width={theme.sizes.contentWidth}
-            style={{ marginBottom: theme.sizes.spacingV2 }}
+            style={{ marginBottom: theme.sizes.spacingV2, width: "100%" }}
           />
         ))}
       </div>

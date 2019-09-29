@@ -19,7 +19,10 @@ export default {
     spacingV2: 25,
     spacingV3: 50,
     indent: 50,
-    triangleHeight: 35,
-    mobileWidth: 800
+    triangleHeight: 35
+  },
+  breakpoints: {
+    work: 1140,
+    mobile: 800
   }
 };
