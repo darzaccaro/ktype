@@ -64,6 +64,7 @@ a:hover {
   background-color: white;
   padding: 20px;
   font-size: 1.75rem;
+  letter-spacing: 5px;
 }
 .mobile-menu-button:hover {
   color: #61512d;
@@ -74,7 +75,8 @@ a:hover {
   color: #b9b9b9;
   text-decoration: none;
   font-family: "Josefin Sans", sans-serif;
-  margin-left: 150px;
+  margin-left: 125px;
+  letter-spacing: 5px;
 }
 .nav-link:hover {
   color: #61512d;

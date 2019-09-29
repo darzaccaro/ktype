@@ -88,10 +88,10 @@ export default function Header() {
     return (
       <header
         style={{
-          width: theme.sizes.contentWidth,
+          maxWidth: theme.sizes.contentWidth,
           margin: "0 auto",
           marginBottom: theme.sizes.spacingV1,
-          marginTop: 15,
+          paddingTop: 15,
           overflow: "hidden"
         }}
       >
