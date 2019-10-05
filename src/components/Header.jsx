@@ -17,7 +17,6 @@ function Header({ location }) {
     }
     setIsMenuOpen(isOpen);
   }
-  console.log(location.pathname);
   function MobileMenuButton() {
     return (
       <div>
@@ -42,7 +41,8 @@ function Header({ location }) {
           width: "100%",
           paddingTop: 15,
           overflow: "hidden",
-          backgroundColor: theme.colors.white
+          backgroundColor: theme.colors.white,
+          marginBottom: theme.sizes.spacingV1
         }}
       >
         <div style={{ display: "flex", justifyContent: "space-between" }}>
@@ -107,9 +107,9 @@ function Header({ location }) {
         style={{
           maxWidth: theme.sizes.contentWidth,
           margin: "0 auto",
-          marginBottom: theme.sizes.spacingV1,
           paddingTop: 25,
-          overflow: "hidden"
+          overflow: "hidden",
+          marginBottom: theme.sizes.spacingV1
         }}
       >
         <Link

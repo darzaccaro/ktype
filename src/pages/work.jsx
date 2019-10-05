@@ -30,9 +30,9 @@ export default function Work() {
           maxHeight: theme.sizes.cardHeight / 4,
           position: "relative",
           top: alignLeft ? 0 : 25,
-          margin: "0 auto",
+          margin: alignLeft ? 0 : "0 auto",
           padding: 15,
-          paddingLeft: alignLeft ? 50 : 15
+          paddingLeft: alignLeft ? theme.sizes.spacingV2 : 15
         }}
       >
         <h6
@@ -57,42 +57,55 @@ export default function Work() {
     );
   }
 
-  function Card({ title, description, imgSrc, to }) {
+  function Card({ title, description, imgSrc, to, isMobile }) {
     const [visibility, setVisibility] = useState("hidden");
-    return (
-      <Link
-        to={to}
-        onClick={() => window.scrollTo(0, 0)}
-        style={{ marginBottom: theme.sizes.spacingV3 }}
-      >
-        <div
-          onMouseOver={() => setVisibility("visible")}
-          onMouseLeave={() => setVisibility("hidden")}
-          style={{
-            backgroundImage: `url(${imgSrc})`,
-            backgroundSize: `${theme.sizes.cardWidth}px ${theme.sizes.cardHeight}px`,
-            width: theme.sizes.cardWidth,
-            height: theme.sizes.cardHeight
-          }}
+    if (isMobile) {
+      return (
+        <Link
+          to={to}
+          onClick={() => window.scrollTo(0, 0)}
+          style={{ marginBottom: theme.sizes.spacingV3 }}
         >
-          {width >= theme.breakpoints.work && (
-            <CardTag
-              title={title}
-              description={description}
-              visibility={visibility}
-            />
-          )}
-        </div>
-        {width < theme.breakpoints.work && (
+          <div
+            onMouseOver={() => setVisibility("visible")}
+            onMouseLeave={() => setVisibility("hidden")}
+          >
+            <img src={imgSrc} width={"100%"} alt={title}></img>
+          </div>
           <CardTag
             title={title}
             description={description}
             visibility={"visible"}
             alignLeft
           />
-        )}
-      </Link>
-    );
+        </Link>
+      );
+    } else {
+      return (
+        <Link
+          to={to}
+          onClick={() => window.scrollTo(0, 0)}
+          style={{ marginBottom: theme.sizes.spacingV3 }}
+        >
+          <div
+            onMouseOver={() => setVisibility("visible")}
+            onMouseLeave={() => setVisibility("hidden")}
+            style={{
+              backgroundImage: `url(${imgSrc})`,
+              backgroundSize: `${theme.sizes.cardWidth}px ${theme.sizes.cardHeight}px`,
+              width: theme.sizes.cardWidth,
+              height: theme.sizes.cardHeight
+            }}
+          >
+            <CardTag
+              title={title}
+              description={description}
+              visibility={visibility}
+            />
+          </div>
+        </Link>
+      );
+    }
   }
   return (
     <div
@@ -117,15 +130,19 @@ export default function Work() {
         style={{
           display: "flex",
           justifyContent:
-            width < theme.breakpoints.work ? "center" : "space-between",
-          maxWidth: theme.sizes.contentWidth,
+            width < theme.breakpoints.mobile ? "center" : "space-between",
+          maxWidth:
+            width < theme.breakpoints.mobile
+              ? "100%"
+              : theme.sizes.contentWidth,
           margin: "0 auto",
           marginBottom: theme.sizes.spacingV1,
-          flexWrap: "wrap"
+          flexWrap: width < theme.breakpoints.mobile ? "wrap" : "nowrap"
         }}
       >
         {works.map((w, i) => (
           <Card
+            isMobile={width < theme.breakpoints.mobile}
             key={i}
             title={w.title}
             description={w.description}
