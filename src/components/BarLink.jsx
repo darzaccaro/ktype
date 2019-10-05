@@ -16,17 +16,18 @@ const BarLink = ({ text, to }) => {
           backgroundColor: isHover ? theme.colors.brown : theme.colors.white
         }}
       >
-        <h4
+        <h2
           style={{
             color: isHover ? theme.colors.white : theme.colors.brown,
             textAlign: "center",
             padding: 50,
+            paddingTop: 55,
             marginBottom: 0,
-            marginTop: 0
+            fontSize: 21
           }}
         >
           {text}
-        </h4>
+        </h2>
       </div>
     </Link>
   );

@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import theme from "../theme";
 
 export default function Footer() {
+  const [siteLinkColor, setSiteLinkColor] = useState(theme.colors.grey);
   return (
     <footer
       style={{
@@ -11,12 +12,22 @@ export default function Footer() {
     >
       <a href="mailto: hi@ktype.xyz">
         <div style={{ paddingTop: 200, paddingBottom: 200 }}>
-          <p style={{ fontSize: "2.8em", fontWeight: "bold" }}>hi@ktype.xyz</p>
+          <p
+            style={{
+              fontSize: "2.8em",
+              fontWeight: "bold",
+              marginBottom: 16
+            }}
+          >
+            hi@ktype.xyz
+          </p>
           <p
             style={{
               fontFamily: theme.fonts.sans,
-              letterSpacing: theme.sizes.letterSpacingWide,
-              fontWeight: 300
+              letterSpacing: 6,
+              fontWeight: 300,
+              color: theme.colors.black,
+              fontSize: 18
             }}
           >
             LET'S START A PROJECT
@@ -33,10 +44,20 @@ export default function Footer() {
       >
         All visual material &copy; Kade Tyler{" "}
         <span>
-          <p style={{ marginLeft: 10, display: "inline" }}>|</p>
+          <span
+            style={{
+              marginLeft: 10,
+              display: "inline",
+              color: theme.colors.grey
+            }}
+          >
+            |
+          </span>
           <a
+            onMouseEnter={() => setSiteLinkColor(theme.colors.brown)}
+            onMouseLeave={() => setSiteLinkColor(theme.colors.grey)}
             href="https://www.linkedin.com/in/darzaccaro/"
-            style={{ marginLeft: 15 }}
+            style={{ marginLeft: 12, color: siteLinkColor }}
           >
             Site Credit
           </a>

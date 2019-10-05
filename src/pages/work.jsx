@@ -70,6 +70,7 @@ export default function Work() {
           onMouseLeave={() => setVisibility("hidden")}
           style={{
             backgroundImage: `url(${imgSrc})`,
+            backgroundSize: `${theme.sizes.cardWidth}px ${theme.sizes.cardHeight}px`,
             width: theme.sizes.cardWidth,
             height: theme.sizes.cardHeight
           }}
@@ -96,7 +97,8 @@ export default function Work() {
   return (
     <div
       style={{
-        marginTop: theme.sizes.spacingV1
+        marginTop: theme.sizes.spacingV1 - 65,
+        width: "100%"
       }}
     >
       <p

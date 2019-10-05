@@ -11,15 +11,14 @@ export default {
     sans: "'Josefin Sans', sans-serif"
   },
   sizes: {
-    contentWidth: 1200,
-    cardHeight: 320,
-    cardWidth: 560,
-    letterSpacingWide: 8,
-    spacingV1: 100,
+    contentWidth: 960,
+    cardHeight: 256,
+    cardWidth: 448,
+    spacingV1: 45,
     spacingV2: 25,
-    spacingV3: 50,
-    indent: 50,
-    triangleHeight: 35
+    spacingV3: 20,
+    indent: 20,
+    triangleHeight: 23
   },
   breakpoints: {
     work: 1140,

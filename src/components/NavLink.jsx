@@ -3,7 +3,8 @@ import { withRouter, Link } from "react-router-dom";
 
 const NavLink = ({ text, to, location, isMobile, onClick }) => {
   let path = location.pathname;
-  if (path === "/") path = "/work";
+  //TODO: THIS DOESN'T WORK UNLESS YOU CLICK THE LINK
+  if (path === "/") path = "/work/";
   return (
     <Link
       className={`nav-link ${to === path && "nav-active"} ${isMobile &&

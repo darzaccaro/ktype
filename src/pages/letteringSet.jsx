@@ -5,7 +5,7 @@ export default function LetteringSet() {
   return (
     <WorkTemplateA
       title="Lettering Set"
-      description="A collection of custom hand-drawn lettering from over the years"
+      description="A collection of custom hand-drawn lettering from over the years."
       images={[
         {
           src: "/lettering_set/01_rhythm.jpg",

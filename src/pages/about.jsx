@@ -41,7 +41,7 @@ export default function About() {
         </div>
         <div style={{ overflow: "hidden", marginTop: theme.sizes.spacingV3 }}>
           <img
-            style={{ float: "right" }}
+            style={{ float: "right", marginTop: 8 }}
             src="/about/02_profile.jpg"
             alt="profile"
             width="800px"
@@ -105,8 +105,9 @@ export default function About() {
             color: theme.colors.white,
             textAlign: "center",
             padding: 50,
+            paddingTop: 55,
             marginBottom: 0,
-            marginTop: 0
+            fontSize: 21
           }}
         >
           MY APPROACH &amp; CORE VALUES
@@ -120,7 +121,9 @@ export default function About() {
         <div
           style={{
             margin: "0 auto",
-            width: 73,
+            width: 53,
+            position: "relative",
+            bottom: 2,
             height: theme.sizes.triangleHeight
           }}
         >
@@ -140,7 +143,7 @@ export default function About() {
           }}
         >
           <img
-            style={{ float: "right" }}
+            style={{ float: "right", marginTop: 8 }}
             src="/about/03_approach.jpg"
             alt="approach"
             width={500}
@@ -200,7 +203,7 @@ export default function About() {
           }}
         >
           <img
-            style={{ float: "right" }}
+            style={{ float: "right", marginTop: 8 }}
             src="/about/04_approach2.jpg"
             alt="another approach"
             width={500}
@@ -255,7 +258,7 @@ export default function About() {
           }}
         >
           <img
-            style={{ float: "right" }}
+            style={{ float: "right", marginTop: 8 }}
             src="/about/06_studiobooks.jpg"
             alt="books"
             width={500}

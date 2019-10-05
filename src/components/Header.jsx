@@ -49,8 +49,10 @@ export default function Header() {
             to={"/"}
             onClick={() => toggleMenu(false)}
             style={{
-              width: 50,
+              width: 35,
               float: "left",
+              position: "relative",
+              top: 10,
               paddingLeft: theme.sizes.spacingV2
             }}
           >
@@ -99,16 +101,20 @@ export default function Header() {
           maxWidth: theme.sizes.contentWidth,
           margin: "0 auto",
           marginBottom: theme.sizes.spacingV1,
-          paddingTop: 15,
+          paddingTop: 25,
           overflow: "hidden"
         }}
       >
-        <Link to={"/"} style={{ width: 50, float: "left" }}>
+        <Link
+          to={"/"}
+          style={{ width: 35, float: "left", position: "relative", top: 10 }}
+        >
           <img src="/logo.svg" alt="logo" />
         </Link>
         <nav
           style={{
-            paddingTop: 20,
+            paddingTop: 15,
+            paddingBottom: 10,
             float: "right"
           }}
         >
