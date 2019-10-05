@@ -1,13 +1,11 @@
 import React from "react";
-import { withRouter, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const NavLink = ({ text, to, location, isMobile, onClick }) => {
-  let path = location.pathname;
-  //TODO: THIS DOESN'T WORK UNLESS YOU CLICK THE LINK
-  if (path === "/") path = "/work/";
+const NavLink = ({ text, to, isMobile, isActive, onClick }) => {
+  console.log(text, isActive);
   return (
     <Link
-      className={`nav-link ${to === path && "nav-active"} ${isMobile &&
+      className={`nav-link ${isActive && "nav-active"} ${isMobile &&
         "nav-link-mobile"}`}
       to={to}
       onClick={onClick}
@@ -17,4 +15,4 @@ const NavLink = ({ text, to, location, isMobile, onClick }) => {
   );
 };
 
-export default withRouter(NavLink);
+export default NavLink;

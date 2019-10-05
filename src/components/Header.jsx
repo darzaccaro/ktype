@@ -1,10 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 import theme from "../theme";
 import NavLink from "./NavLink";
 import useWindowDimensions from "../hooks/useWindowDimensions";
 import { useState } from "react";
-export default function Header() {
+
+function Header({ location }) {
   const { width } = useWindowDimensions();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -16,7 +17,7 @@ export default function Header() {
     }
     setIsMenuOpen(isOpen);
   }
-
+  console.log(location.pathname);
   function MobileMenuButton() {
     return (
       <div>
@@ -76,18 +77,24 @@ export default function Header() {
               isMobile
               text="WORK"
               to="/work"
+              isActive={
+                location.pathname.split("/")[1] === "work" ||
+                location.pathname === "/"
+              }
               onClick={() => toggleMenu(false)}
             />
             <NavLink
               isMobile
               text="ABOUT"
               to="/about"
+              isActive={location.pathname.split("/")[1] === "about"}
               onClick={() => toggleMenu(false)}
             />
             <NavLink
               isMobile
               text="CONTACT"
               to="/contact"
+              isActive={location.pathname.split("/")[1] === "contact"}
               onClick={() => toggleMenu(false)}
             />
           </nav>
@@ -118,11 +125,28 @@ export default function Header() {
             float: "right"
           }}
         >
-          <NavLink text="WORK" to="/work" />
-          <NavLink text="ABOUT" to="/about" />
-          <NavLink text="CONTACT" to="/contact" />
+          <NavLink
+            text="WORK"
+            to="/work"
+            isActive={
+              location.pathname.split("/")[1] === "work" ||
+              location.pathname === "/"
+            }
+          />
+          <NavLink
+            text="ABOUT"
+            to="/about"
+            isActive={location.pathname.split("/")[1] === "about"}
+          />
+          <NavLink
+            text="CONTACT"
+            to="/contact"
+            isActive={location.pathname.split("/")[1] === "contact"}
+          />
         </nav>
       </header>
     );
   }
 }
+
+export default withRouter(Header);
