@@ -9,11 +9,15 @@ import LetteringSet from "./pages/letteringSet";
 import SketchBook from "./pages/sketchBook";
 import Contact from "./pages/contact";
 import Work from "./pages/work";
+import theme from "./theme";
 
 function App(props) {
   return (
     <div>
       <Header />
+      {/* This is a hack to maintain consistent spacing when resizing. */}
+      <div style={{ marginBottom: theme.sizes.spacingV1 }} />
+
       <Route exact path="/" component={Work} />
       <Route path="/work" component={Work} />
       <Route path="/lettering-set" component={LetteringSet} />

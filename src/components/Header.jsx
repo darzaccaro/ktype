@@ -41,8 +41,7 @@ function Header({ location }) {
           width: "100%",
           paddingTop: 15,
           overflow: "hidden",
-          backgroundColor: theme.colors.white,
-          marginBottom: theme.sizes.spacingV1
+          backgroundColor: theme.colors.white
         }}
       >
         <div style={{ display: "flex", justifyContent: "space-between" }}>
@@ -108,8 +107,7 @@ function Header({ location }) {
           maxWidth: theme.sizes.contentWidth,
           margin: "0 auto",
           paddingTop: 25,
-          overflow: "hidden",
-          marginBottom: theme.sizes.spacingV1
+          overflow: "hidden"
         }}
       >
         <Link
