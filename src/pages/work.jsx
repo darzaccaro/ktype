@@ -70,7 +70,7 @@ export default function Work() {
             onMouseOver={() => setVisibility("visible")}
             onMouseLeave={() => setVisibility("hidden")}
           >
-            <img src={imgSrc} width={"100%"} alt={title}></img>
+            <img src={imgSrc} width={"100%"} maxWidth="400px" alt={title}></img>
           </div>
           <CardTag
             title={title}
@@ -116,13 +116,14 @@ export default function Work() {
     >
       <p
         style={{
-          fontSize: "1.5em",
+          fontSize: "27px",
           textAlign: "center",
           marginBottom: theme.sizes.spacingV1,
-          padding: 20
+          padding: 20,
+          lineHeight: "40px"
         }}
       >
-        The strategic visual design studio of Kade Tyler&mdash;specializing in
+        The strategic design studio of Kade Tyler&mdash;specializing in
         <br />
         thoughtful visual identities &amp; custom lettering.
       </p>

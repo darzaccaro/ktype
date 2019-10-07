@@ -14,11 +14,11 @@ export default {
     contentWidth: 960,
     cardHeight: 256,
     cardWidth: 448,
-    spacingV1: 45,
+    spacingV1: 60,
     spacingV2: 25,
-    spacingV3: 20,
+    spacingV3: 40,
     indent: 20,
-    triangleHeight: 23
+    triangleHeight: 20
   },
   breakpoints: {
     work: 1140,

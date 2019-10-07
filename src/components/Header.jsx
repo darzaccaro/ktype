@@ -25,7 +25,12 @@ function Header({ location }) {
           onClick={() => toggleMenu(!isMenuOpen)}
         >
           {isMenuOpen ? (
-            <img src="/icons/x.svg" alt="x" width="25px"></img>
+            <img
+              src="/icons/x.svg"
+              alt="x"
+              width="25px"
+              style={{ position: "relative", bottom: 10 }}
+            ></img>
           ) : (
             "MENU"
           )}
@@ -66,7 +71,7 @@ function Header({ location }) {
             position: "absolute",
             display: isMenuOpen ? "inherit" : "none",
             width: "100%",
-            height: "100%",
+            height: "calc(100vh - 79px)",
             backgroundColor: theme.colors.white,
             paddingTop: 75
           }}

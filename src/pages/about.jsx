@@ -9,11 +9,18 @@ export default function About() {
   return (
     <div>
       <div style={{ maxWidth: theme.sizes.contentWidth, margin: "0 auto" }}>
-        <h1
-          style={{ textAlign: "center", marginBottom: theme.sizes.spacingV1 }}
+        <p
+          style={{
+            textAlign: "center",
+            marginBottom: theme.sizes.spacingV1,
+            fontWeight: "normal",
+            fontSize: "27px",
+            lineHeight: "40px"
+          }}
         >
-          Hi, I'm Kade<br></br>...
-        </h1>
+          Hi, I'm Kade<br></br>
+          <strong style={{ letterSpacing: 8 }}>...</strong>
+        </p>
         <img
           src="/about/01_sketching.jpg"
           alt="sketching"
@@ -25,7 +32,10 @@ export default function About() {
       <div
         style={{
           backgroundColor: theme.colors.brown,
-          marginTop: theme.sizes.spacingV1
+          marginTop:
+            width < theme.breakpoints.mobile
+              ? theme.sizes.spacingV1
+              : theme.sizes.spacingV1 + 55 - 12
         }}
       >
         <h2
@@ -35,7 +45,8 @@ export default function About() {
             padding: 50,
             paddingTop: 55,
             marginBottom: 0,
-            fontSize: 21
+            fontSize: 21,
+            letterSpacing: 10
           }}
         >
           MY APPROACH{width > theme.breakpoints.mobile && " & CORE VALUES"}
@@ -49,9 +60,9 @@ export default function About() {
         <div
           style={{
             margin: "0 auto",
-            width: 53,
+            width: 43,
             position: "relative",
-            bottom: 2,
+            bottom: 6,
             height: theme.sizes.triangleHeight
           }}
         >
@@ -132,7 +143,9 @@ function LinkSection({ isMobile, title, src, data }) {
             <h2
               style={{
                 color: theme.colors.grey,
-                marginTop: theme.sizes.spacingV3
+                marginTop: theme.sizes.spacingV3,
+                fontWeight: "normal",
+                fontSize: 15
               }}
             >
               DESIGN &amp; LETTERING
@@ -144,8 +157,8 @@ function LinkSection({ isMobile, title, src, data }) {
             </p>
           </div>
           <div>
-            <h3 style={{ marginTop: 0 }}>Services</h3>
-            <ul>
+            <h3 style={{ marginTop: theme.sizes.spacingV3 }}>Services</h3>
+            <ul style={{ marginBottom: theme.sizes.spacingV3 }}>
               <li>Branding & Strategy</li>
               <li>Visual Identity</li>
               <li>Design Systems</li>
@@ -154,7 +167,7 @@ function LinkSection({ isMobile, title, src, data }) {
               <li>Web Design</li>
             </ul>
             <h3 style={{ marginTop: theme.sizes.spacingV3 }}>Elsewhere</h3>
-            <ul>
+            <ul style={{ marginBottom: theme.sizes.spacingV3 }}>
               <li>
                 <a
                   href="https://instagram.com/ktype.xyz"
@@ -186,7 +199,7 @@ function LinkSection({ isMobile, title, src, data }) {
           </div>
         </div>
         <img
-          style={{ marginTop: 8 }}
+          style={{ marginTop: theme.sizes.spacingV3 - 16 }}
           src="/about/02_profile.jpg"
           alt="profile"
           width="100%"
@@ -195,16 +208,14 @@ function LinkSection({ isMobile, title, src, data }) {
     );
   } else {
     return (
-      <div style={{ overflow: "hidden", marginTop: theme.sizes.spacingV3 }}>
-        <div
-          style={{
-            paddingLeft: theme.sizes.spacingV3
-          }}
-        >
+      <div style={{ overflow: "hidden" }}>
+        <div>
           <h2
             style={{
               color: theme.colors.grey,
-              marginTop: theme.sizes.spacingV3
+              marginTop: theme.sizes.spacingV3,
+              fontWeight: "normal",
+              fontSize: 15
             }}
           >
             DESIGN &amp; LETTERING
@@ -216,17 +227,13 @@ function LinkSection({ isMobile, title, src, data }) {
           </p>
         </div>
         <img
-          style={{ float: "right", marginTop: 8 }}
+          style={{ float: "right", marginTop: theme.sizes.spacingV3 - 16 }}
           src="/about/02_profile.jpg"
           alt="profile"
           width="600px"
         ></img>
-        <div
-          style={{
-            paddingLeft: theme.sizes.spacingV3
-          }}
-        >
-          <h3 style={{ marginTop: 0 }}>Services</h3>
+        <div>
+          <h3 style={{ marginTop: theme.sizes.spacingV3 }}>Services</h3>
           <ul>
             <li>Branding & Strategy</li>
             <li>Visual Identity</li>
@@ -286,7 +293,7 @@ function Section({ isMobile, title, src, data }) {
           }}
         >
           <div>
-            <h3 style={{ color: theme.colors.brown }}>Approach</h3>
+            <h3 style={{ color: theme.colors.brown }}>{title}</h3>
             {data.map((e, i) => (
               <div
                 key={i}
@@ -334,16 +341,15 @@ function Section({ isMobile, title, src, data }) {
           src={src}
           alt={title}
         ></img>
-        <div
-          style={{
-            paddingLeft: theme.sizes.spacingV3
-          }}
-        >
-          <h3 style={{ color: theme.colors.brown }}>Approach</h3>
+        <div>
+          <h3 style={{ color: theme.colors.brown }}>{title}</h3>
           {data.map((e, i) => (
             <div
               key={i}
-              style={{ marginLeft: theme.sizes.indent, maxWidth: 400 }}
+              style={{
+                marginLeft: theme.sizes.indent + theme.sizes.spacingV3,
+                maxWidth: 400
+              }}
             >
               <h5 style={{ color: theme.colors.white }}>{e.title}</h5>
               <p

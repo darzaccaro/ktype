@@ -23,7 +23,8 @@ const BarLink = ({ text, to }) => {
             padding: 50,
             paddingTop: 55,
             marginBottom: 0,
-            fontSize: 21
+            fontSize: 21,
+            letterSpacing: 10
           }}
         >
           {text}
