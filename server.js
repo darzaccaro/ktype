@@ -1,15 +1,14 @@
 require("dotenv").config();
 const express = require("express");
-const next = require("next");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const dev = process.env.NODE_ENV !== "production";
-const app = next({ dev });
-const handle = app.getRequestHandler();
+const app = express();
+console.log(process.env.EMAIL_PASSWORD);
 
 // TODO: store password in .env, get email off contact form
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  service: "Gmail",
   auth: {
     user: "darbot9000@gmail.com",
     pass: process.env.EMAIL_PASSWORD
@@ -20,40 +19,37 @@ const transporter = nodemailer.createTransport({
 function generateContactEmail({
   name,
   email,
-  subject,
+  company,
+  url,
   details,
   deadline,
   priceRange
 }) {
   return {
-    from: email,
-    to: "darzaccaro@gmail.com", //TODO: change to "hi@ktype.xyz",
-    subject: subject,
-    text: `Hi Kade,\n${name} is interested in working with you on a project involving "${details}" that should be completed by ${deadline} for ${priceRange}.\nGLHF!\n--darbot9000`
+    from: "darbot9000@gmail.com",
+    to: dev ? "darzaccaro@gmail.com" : "hi@ktype.xyz",
+    subject: `${name} is attempting to make contact`,
+    text:
+      `Hi Kade,\n\n${name} (${email}) from ${company} (${url}) is interested in working with you on a project involving "${details}" that should be completed by ${deadline} for ${priceRange}.\n\nGLHF!\n` +
+      String.raw(`TODO: put some ascii art here`)
   };
 }
 
-app.prepare().then(() => {
-  const server = express();
-
-  server.use(bodyParser.json());
-  server.use(bodyParser.urlencoded({ extended: true }));
-  server.get("*", (req, res) => {
-    return handle(req, res);
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.get("/mail", (req, res) => {
+  console.log("TESTMAIL");
+  console.log(req.body);
+  transporter.sendMail(generateContactEmail(req.body), function(error, info) {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log("Email sent: " + info.response);
+    }
   });
-  server.post("/testmail", (req, res) => {
-    console.log(req.body);
-    transporter.sendMail(generateContactEmail(req.body), function(error, info) {
-      if (error) {
-        console.log(error);
-      } else {
-        console.log("Email sent: " + info.response);
-      }
-    });
-    res.send("success");
-  });
-  server.listen(3000, err => {
-    if (err) throw err;
-    console.log("> Read on http://localhost:3000");
-  });
+  res.send("success");
+});
+app.listen(4000, err => {
+  if (err) throw err;
+  console.log("> Read on http://localhost:4000");
 });
