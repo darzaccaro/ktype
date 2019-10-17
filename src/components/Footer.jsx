@@ -6,12 +6,19 @@ export default function Footer() {
   return (
     <footer
       style={{
-        backgroundColor: theme.colors.light,
-        textAlign: "center"
+        backgroundColor: theme.colors.white,
+        textAlign: "center",
+        width: "100%"
       }}
     >
       <a href="mailto: hi@ktype.xyz">
-        <div style={{ paddingTop: 200, paddingBottom: 200 }}>
+        <div
+          style={{
+            margin: "0 auto",
+            backgroundColor: theme.colors.light
+          }}
+          className="trans-shrink"
+        >
           <p
             style={{
               fontSize: "2.8em",
@@ -54,9 +61,15 @@ export default function Footer() {
             |
           </span>
           <a
-            onMouseEnter={() => setSiteLinkColor(theme.colors.brown)}
-            onMouseLeave={() => setSiteLinkColor(theme.colors.grey)}
+            onMouseEnter={() => {
+              setSiteLinkColor(theme.colors.brown);
+            }}
+            onMouseLeave={() => {
+              setSiteLinkColor(theme.colors.grey);
+            }}
             href="https://www.linkedin.com/in/darzaccaro/"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{ marginLeft: 12, color: siteLinkColor }}
           >
             Site Credit

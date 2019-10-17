@@ -109,7 +109,11 @@ a:hover {
   background-color: #61512d;
   border: none;
 }
-
+.k-button:disabled,
+.k-button:disabled:hover {
+  background-color: #f3f3f3;
+  color: #b9b9b9;
+}
 .k-button:hover {
   background-color: white;
   color: #61512d;
@@ -150,4 +154,34 @@ textarea {
 
 .k-mbv1 {
   margin-bottom: 60px;
+}
+
+.trans-shrink {
+  width: 100%;
+  padding: 200px 0px 200px 0px;
+  transition: width 1s;
+  transition-timing-function: ease-in-out;
+}
+.trans-shrink:hover {
+  width: 85%;
+}
+
+.trans-fade {
+  transition: opacity 0.2s;
+  opacity: 0;
+  transition-timing-function: ease-in-out;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.anim-fade-in {
+  animation-name: fadein;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 }

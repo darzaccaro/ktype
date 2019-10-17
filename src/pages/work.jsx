@@ -20,11 +20,10 @@ export default function Work() {
     }
   ];
 
-  function CardTag({ title, description, alignLeft, visibility }) {
+  function CardTag({ title, description, alignLeft, style }) {
     return (
       <div
         style={{
-          visibility,
           backgroundColor: "white",
           maxWidth: theme.sizes.cardWidth - 85,
           maxHeight: theme.sizes.cardHeight / 4,
@@ -32,8 +31,10 @@ export default function Work() {
           top: alignLeft ? 0 : 25,
           margin: alignLeft ? 0 : "0 auto",
           padding: 15,
-          paddingLeft: alignLeft ? theme.sizes.spacingV2 : 15
+          paddingLeft: alignLeft ? theme.sizes.spacingV2 : 15,
+          ...style
         }}
+        className={"trans-fade"}
       >
         <h6
           style={{
@@ -75,8 +76,8 @@ export default function Work() {
           <CardTag
             title={title}
             description={description}
-            visibility={"visible"}
             alignLeft
+            style={{ opacity: 1 }}
           />
         </Link>
       );
@@ -100,7 +101,7 @@ export default function Work() {
             <CardTag
               title={title}
               description={description}
-              visibility={visibility}
+              style={visibility === "visible" ? { opacity: 1 } : { opacity: 0 }}
             />
           </div>
         </Link>
@@ -113,6 +114,7 @@ export default function Work() {
         marginTop: theme.sizes.spacingV1 - 65,
         width: "100%"
       }}
+      className="anim-fade-in"
     >
       <p
         style={{

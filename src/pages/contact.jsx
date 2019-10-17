@@ -17,8 +17,14 @@ export default function Contact() {
   ];
 
   async function handleSubmit(event) {
-    console.log(
-      "Submitting from client",
+    const serverUrl = "http://localhost:4000/mail";
+    const query = `?name=${name}&email=${email}&company=${company}&url=${url ||
+      "no website provided"}&details=${details}&deadline=${deadline ||
+      "idk, because they didn't provide a deadline"}&priceRange=${
+      priceRanges[priceRange]
+    }`;
+    //TODO: replace with proper server address
+    const payload = {
       name,
       email,
       company,
@@ -26,48 +32,36 @@ export default function Contact() {
       details,
       deadline,
       priceRange
-    );
-    //TODO: replace with proper server address
+    };
+    let data = new FormData();
+    data.append("json", JSON.stringify(payload));
+    console.log("Submitting from client", JSON.stringify(data));
     event.preventDefault();
     try {
-      const response = await fetch("http://localhost:4000/mail");
-      // , {
-      //   method: "POST",
-      //   // mode: "cors",
-      //   // cache: "no-cache",
-      //   // credentials: "same-origin",
-      //   //headers: { "Content-Type": "application/json" },
-      //   // redirect: "follow",
-      //   // referrer: "no-referrer",
-      //   body: JSON.stringify({
-      //     name,
-      //     email,
-      //     company,
-      //     url,
-      //     details,
-      //     deadline,
-      //     priceRange
-      //   })
-      // });
+      const response = await fetch(serverUrl + query, {
+        method: "POST",
+        mode: "no-cors",
+        credentials: "same-origin", // TODO: change credentials on prod?
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        },
+        body: data
+      });
       const json = await response.json();
-      alert("got back ", JSON.stringify(json));
+      alert("success: ", JSON.stringify(json));
     } catch (err) {
       console.log("error: ", err);
     }
   }
   return (
-    <div className="contact-container">
+    <div className="contact-container anim-fade-in">
       <p>
         If you have a question, inquiry, or just want to say hi, you can write
         me at <br></br>
         <a href="mailto:hi@ktype.xyz">hi@ktype.xyz</a> or use the form below.
       </p>
-      <form
-        // action="http://localhost:3000/testmail"
-        // method="post"
-        // encType="text/plain"
-        onSubmit={handleSubmit}
-      >
+      <form onSubmit={handleSubmit}>
         <div className="contact-dual-input-container">
           <div>
             Full Name: *
@@ -85,7 +79,6 @@ export default function Contact() {
             Email Address: *
             <br />
             <input
-              // TODO: validate e-mail
               value={email}
               onChange={e => setEmail(e.target.value)}
               type="text"
@@ -165,9 +158,21 @@ export default function Contact() {
         </div>
         <br />
         <div className="k-mbv1">
-          <button className="k-button" onClick={e => handleSubmit(e)}>
+          <button
+            className="k-button"
+            onClick={e => handleSubmit(e)}
+            disabled={!(name && email && company && details && priceRange)}
+          >
             Submit
           </button>
+          {(name || email || company || details) &&
+            !(name && email && company && details) && (
+              <p
+                style={{ fontSize: "0.9em", display: "inline", marginLeft: 25 }}
+              >
+                Please enter all required fields.
+              </p>
+            )}
         </div>
       </form>
     </div>

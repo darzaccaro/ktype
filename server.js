@@ -1,12 +1,10 @@
 require("dotenv").config();
-const express = require("express");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const dev = process.env.NODE_ENV !== "production";
+const express = require("express");
 const app = express();
-console.log(process.env.EMAIL_PASSWORD);
 
-// TODO: store password in .env, get email off contact form
 const transporter = nodemailer.createTransport({
   service: "Gmail",
   auth: {
@@ -29,27 +27,29 @@ function generateContactEmail({
     from: "darbot9000@gmail.com",
     to: dev ? "darzaccaro@gmail.com" : "hi@ktype.xyz",
     subject: `${name} is attempting to make contact`,
-    text:
-      `Hi Kade,\n\n${name} (${email}) from ${company} (${url}) is interested in working with you on a project involving "${details}" that should be completed by ${deadline} for ${priceRange}.\n\nGLHF!\n` +
-      String.raw(`TODO: put some ascii art here`)
+    text: `Hi Kade,\n\n${name} (${email}) from ${company} (${url}) is interested in working with you on a project involving "${details}" that should be completed by ${deadline} for ${priceRange}.\n\nGLHF!\n—darbot9000`
   };
 }
 
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.get("/mail", (req, res) => {
+
+app.post("/mail", (req, res) => {
   console.log("TESTMAIL");
   console.log(req.body);
-  transporter.sendMail(generateContactEmail(req.body), function(error, info) {
+  console.log(req.query);
+  transporter.sendMail(generateContactEmail(req.query), function(error, info) {
     if (error) {
       console.log(error);
+      res.status(500).send("Something broke!");
     } else {
       console.log("Email sent: " + info.response);
+      res.status(200).send("Email sent!");
     }
   });
-  res.send("success");
 });
+
 app.listen(4000, err => {
   if (err) throw err;
-  console.log("> Read on http://localhost:4000");
+  console.log("> Listening on http://localhost:4000");
 });

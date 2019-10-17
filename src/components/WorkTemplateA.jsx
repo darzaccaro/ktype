@@ -6,7 +6,7 @@ import useWindowDimensions from "../hooks/useWindowDimensions";
 export default function WorkTemplateA({ title, description, images }) {
   const { width } = useWindowDimensions();
   return (
-    <div>
+    <div className="anim-fade-in">
       <div
         style={{
           maxWidth: theme.sizes.contentWidth,
