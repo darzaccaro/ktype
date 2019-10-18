@@ -1,11 +1,11 @@
 import React from "react";
 import theme from "../theme";
 import { Link } from "react-router-dom";
-import useWindowDimensions from "../hooks/useWindowDimensions";
+import useWindowWidth from "../hooks/useWindowWidth";
 
 //TODO (cleanup): pass all data in once to two seperate full templates (one mobile, and one desktop)
 export default function About() {
-  const { width } = useWindowDimensions();
+  const width = useWindowWidth();
   return (
     <div className="anim-fade-in">
       <div style={{ maxWidth: theme.sizes.contentWidth, margin: "0 auto" }}>

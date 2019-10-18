@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import theme from "../theme";
 import { Link } from "react-router-dom";
-import useWindowDimensions from "../hooks/useWindowDimensions";
+import useWindowWidth from "../hooks/useWindowWidth";
 
 export default function Work() {
-  const { width } = useWindowDimensions();
+  const width = useWindowWidth();
+  //const width = 400;
   const works = [
     {
       title: "LETTERING SET",
@@ -59,7 +60,7 @@ export default function Work() {
   }
 
   function Card({ title, description, imgSrc, to, isMobile }) {
-    const [visibility, setVisibility] = useState("hidden");
+    const [tagOpacity, setTagOpacity] = useState(0);
     if (isMobile) {
       return (
         <Link
@@ -67,10 +68,7 @@ export default function Work() {
           onClick={() => window.scrollTo(0, 0)}
           style={{ marginBottom: theme.sizes.spacingV3 }}
         >
-          <div
-            onMouseOver={() => setVisibility("visible")}
-            onMouseLeave={() => setVisibility("hidden")}
-          >
+          <div>
             <img src={imgSrc} width={"100%"} maxWidth="400px" alt={title}></img>
           </div>
           <CardTag
@@ -89,8 +87,8 @@ export default function Work() {
           style={{ marginBottom: theme.sizes.spacingV3 }}
         >
           <div
-            onMouseOver={() => setVisibility("visible")}
-            onMouseLeave={() => setVisibility("hidden")}
+            onMouseOver={() => setTagOpacity(1)}
+            onMouseLeave={() => setTagOpacity(0)}
             style={{
               backgroundImage: `url(${imgSrc})`,
               backgroundSize: `${theme.sizes.cardWidth}px ${theme.sizes.cardHeight}px`,
@@ -101,7 +99,7 @@ export default function Work() {
             <CardTag
               title={title}
               description={description}
-              style={visibility === "visible" ? { opacity: 1 } : { opacity: 0 }}
+              style={{ opacity: tagOpacity }}
             />
           </div>
         </Link>

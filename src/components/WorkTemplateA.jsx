@@ -1,10 +1,10 @@
 import React from "react";
 import theme from "../theme";
 import BarLink from "./BarLink";
-import useWindowDimensions from "../hooks/useWindowDimensions";
+import useWindowWidth from "../hooks/useWindowWidth";
 
 export default function WorkTemplateA({ title, description, images }) {
-  const { width } = useWindowDimensions();
+  const width = useWindowWidth();
   return (
     <div className="anim-fade-in">
       <div

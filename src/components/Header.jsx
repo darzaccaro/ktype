@@ -2,11 +2,11 @@ import React from "react";
 import { withRouter, Link } from "react-router-dom";
 import theme from "../theme";
 import NavLink from "./NavLink";
-import useWindowDimensions from "../hooks/useWindowDimensions";
+import useWindowWidth from "../hooks/useWindowWidth";
 import { useState } from "react";
 
 function Header({ location }) {
-  const { width } = useWindowDimensions();
+  const width = useWindowWidth();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function toggleMenu(isOpen) {
