@@ -71,7 +71,7 @@ export default function Contact() {
               onChange={e => setName(e.target.value)}
               type="text"
               name="name"
-              size="48"
+              size="43"
               autoComplete="off"
             />
           </div>
@@ -83,7 +83,7 @@ export default function Contact() {
               onChange={e => setEmail(e.target.value)}
               type="text"
               name="email"
-              size="48"
+              size="43"
               autoComplete="off"
             />
           </div>
@@ -97,7 +97,7 @@ export default function Contact() {
               onChange={e => setCompany(e.target.value)}
               type="text"
               name="company"
-              size="48"
+              size="43"
               autoComplete="off"
             />
             <br />
@@ -110,7 +110,7 @@ export default function Contact() {
               onChange={e => setUrl(e.target.value)}
               type="url"
               name="company"
-              size="48"
+              size="43"
               autoComplete="off"
             />
             <br />
@@ -124,7 +124,7 @@ export default function Contact() {
               value={details}
               onChange={e => setDetails(e.target.value)}
               name="details"
-              cols={47}
+              cols={43}
               rows={7}
             />
           </div>
@@ -136,7 +136,7 @@ export default function Contact() {
               onChange={e => setDeadline(e.target.value)}
               type="text"
               name="deadline"
-              size="48"
+              size="43"
               autoComplete="off"
             />
             <br />

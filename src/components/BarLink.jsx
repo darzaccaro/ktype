@@ -13,6 +13,7 @@ const BarLink = ({ text, to }) => {
     >
       <div
         style={{
+          transition: "background-color 0.4s, color 0.2s",
           backgroundColor: isHover ? theme.colors.brown : theme.colors.white
         }}
       >

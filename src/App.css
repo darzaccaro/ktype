@@ -129,7 +129,7 @@ input {
 select {
   border: 2px solid black;
   height: 41px;
-  width: 453px;
+  min-width: 399px;
   font-family: "PT Serif", serif;
   font-size: 17px;
 }
@@ -139,13 +139,21 @@ textarea {
   height: 107px;
   font-family: "PT Serif", serif;
   font-size: 17px;
-  min-width: 445px;
+  min-width: 399px;
 }
 
 .contact-container {
   max-width: 960px;
   margin: 0 auto;
 }
+
+@media (max-width: 925px) {
+  .contact-container {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
 .contact-dual-input-container {
   display: flex;
   justify-content: space-between;
