@@ -147,13 +147,6 @@ textarea {
   margin: 0 auto;
 }
 
-@media (max-width: 925px) {
-  .contact-container {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-}
-
 .contact-dual-input-container {
   display: flex;
   justify-content: space-between;
@@ -192,4 +185,19 @@ textarea {
   animation-name: fadein;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
+}
+
+@media (max-width: 925px) {
+  .contact-container {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .trans-shrink {
+    padding: 200px 5px 200px 5px;
+    width: calc(100% - 10px);
+  }
+
+  .trans-shrink:hover {
+    width: calc(100% - 10px);
+  }
 }

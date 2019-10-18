@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import theme from "../theme";
+import useWindowWidth from "../hooks/useWindowWidth";
 
 export default function Footer() {
   const [siteLinkColor, setSiteLinkColor] = useState(theme.colors.grey);
+  const width = useWindowWidth();
   return (
     <footer
       style={{
@@ -17,11 +19,11 @@ export default function Footer() {
             margin: "0 auto",
             backgroundColor: theme.colors.light
           }}
-          className="trans-shrink"
+          className={"trans-shrink"}
         >
           <p
             style={{
-              fontSize: "2.8em",
+              fontSize: width > theme.breakpoints.mobile ? "2.8em" : "2.4em",
               fontWeight: "bold",
               marginBottom: 16
             }}
@@ -34,7 +36,7 @@ export default function Footer() {
               letterSpacing: 6,
               fontWeight: 300,
               color: theme.colors.black,
-              fontSize: 18
+              fontSize: width > theme.breakpoints.mobile ? 18 : 15
             }}
           >
             LET'S START A PROJECT

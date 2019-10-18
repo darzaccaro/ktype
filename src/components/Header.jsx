@@ -9,27 +9,22 @@ function Header({ location }) {
   const width = useWindowWidth();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  function toggleMenu(isOpen) {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "inherit";
-    }
-    setIsMenuOpen(isOpen);
-  }
   function MobileMenuButton() {
     return (
       <div>
         <button
           className="mobile-menu-button"
-          onClick={() => toggleMenu(!isMenuOpen)}
+          onClick={() => {
+            document.body.style.overflow = !isMenuOpen ? "hidden" : "scroll";
+            setIsMenuOpen(!isMenuOpen);
+          }}
         >
           {isMenuOpen ? (
             <img
               src="/icons/x.svg"
               alt="x"
               width="25px"
-              style={{ position: "relative", bottom: 10 }}
+              style={{ position: "relative", bottom: 5, right: 25 }}
             ></img>
           ) : (
             "MENU"
@@ -52,7 +47,7 @@ function Header({ location }) {
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <Link
             to={"/"}
-            onClick={() => toggleMenu(false)}
+            onClick={() => setIsMenuOpen(false)}
             style={{
               width: 35,
               float: "left",
@@ -85,27 +80,28 @@ function Header({ location }) {
                 location.pathname.split("/")[1] === "work" ||
                 location.pathname === "/"
               }
-              onClick={() => toggleMenu(false)}
+              onClick={() => setIsMenuOpen(false)}
             />
             <NavLink
               isMobile
               text="ABOUT"
               to="/about"
               isActive={location.pathname.split("/")[1] === "about"}
-              onClick={() => toggleMenu(false)}
+              onClick={() => setIsMenuOpen(false)}
             />
             <NavLink
               isMobile
               text="CONTACT"
               to="/contact"
               isActive={location.pathname.split("/")[1] === "contact"}
-              onClick={() => toggleMenu(false)}
+              onClick={() => setIsMenuOpen(false)}
             />
           </nav>
         </div>
       </header>
     );
   } else {
+    document.body.style.overflow = "scroll";
     return (
       <header
         style={{

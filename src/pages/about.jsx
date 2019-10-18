@@ -417,13 +417,19 @@ function Signature({ isMobile }) {
             alt="signature"
           ></img>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <img
-              style={{ display: "block", margin: "0 auto", marginTop: 8 }}
-              src="/about/06_studiobooks.jpg"
-              alt="books"
-              width={"100%"}
-              maxWidth="400px"
-            ></img>
+            <div>
+              <img
+                style={{
+                  display: "block",
+                  margin: "0 auto",
+                  marginTop: 8,
+                  maxWidth: 400
+                }}
+                src="/about/06_studiobooks.jpg"
+                alt="books"
+                width={"100%"}
+              ></img>
+            </div>
           </div>
         </div>
       </div>
