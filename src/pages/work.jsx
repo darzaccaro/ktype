@@ -41,7 +41,9 @@ export default function Work() {
           style={{
             color: theme.colors.black,
             textAlign: alignLeft ? "left" : "center",
-            marginBottom: 0
+            marginTop: 13,
+            marginBottom: 0,
+            lineHeight: 1
           }}
         >
           {title}
@@ -50,7 +52,10 @@ export default function Work() {
           style={{
             textAlign: alignLeft ? "left" : "center",
             marginTop: 0,
-            fontStyle: "italic"
+            fontStyle: "italic",
+            fontSize: 16,
+            color: theme.colors.grey,
+            letterSpacing: 1
           }}
         >
           {description}
@@ -137,7 +142,7 @@ export default function Work() {
               ? "100%"
               : theme.sizes.contentWidth,
           margin: "0 auto",
-          marginBottom: theme.sizes.spacingV1,
+          marginBottom: theme.sizes.spacingV1 - 10,
           flexWrap: width < theme.breakpoints.mobile ? "wrap" : "nowrap"
         }}
       >

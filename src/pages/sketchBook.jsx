@@ -20,10 +20,6 @@ export default function SketchBook() {
           alt: "quiver (sketch)"
         },
         {
-          src: "/sketchbook/04_quiver_sketch2.jpg",
-          alt: "another quiver (sketch)"
-        },
-        {
           src: "/sketchbook/05_jfs_progression.gif",
           alt: "jfs (progression)"
         },

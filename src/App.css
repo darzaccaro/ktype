@@ -38,7 +38,8 @@ h5 {
 }
 h6 {
   font-family: "Josefin Sans", sans-serif;
-  letter-spacing: 10px;
+  font-size: 15px;
+  letter-spacing: 5px;
   font-size: 1rem;
   margin: 0px;
 }
@@ -159,7 +160,7 @@ textarea {
 
 .trans-shrink {
   width: 100%;
-  padding: 200px 0px 200px 0px;
+  padding: 185px 0px 165px 0px;
   transition: width 1s;
   transition-timing-function: ease-in-out;
 }
@@ -193,7 +194,7 @@ textarea {
     margin: 0 auto;
   }
   .trans-shrink {
-    padding: 200px 5px 200px 5px;
+    padding: 185px 5px 165px 5px;
     width: calc(100% - 10px);
   }
 

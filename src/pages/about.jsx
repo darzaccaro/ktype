@@ -35,7 +35,7 @@ export default function About() {
           marginTop:
             width < theme.breakpoints.mobile
               ? theme.sizes.spacingV1
-              : theme.sizes.spacingV1 + 55 - 12
+              : theme.sizes.spacingV1 + 30
         }}
       >
         <h2
@@ -45,7 +45,7 @@ export default function About() {
             padding: 50,
             paddingTop: 55,
             marginBottom: 0,
-            fontSize: 21,
+            fontSize: width < theme.breakpoints.mobile ? 18 : 21,
             letterSpacing: 10
           }}
         >
@@ -121,7 +121,9 @@ export default function About() {
             }
           ]}
         />
+        {/* <div style={{ padding: 40 }}></div> */}
         <Signature isMobile={width < theme.breakpoints.mobile} />
+        <div style={{ padding: 14 }}></div>
       </div>
     </div>
   );
@@ -230,10 +232,10 @@ function LinkSection({ isMobile, title, src, data }) {
           style={{ float: "right", marginTop: theme.sizes.spacingV3 - 16 }}
           src="/about/02_profile.jpg"
           alt="profile"
-          width="600px"
+          width="650px"
         ></img>
         <div>
-          <h3 style={{ marginTop: theme.sizes.spacingV3 }}>Services</h3>
+          <h3 style={{ marginTop: theme.sizes.spacingV3 + 7 }}>Services</h3>
           <ul>
             <li>Branding & Strategy</li>
             <li>Visual Identity</li>
@@ -242,7 +244,7 @@ function LinkSection({ isMobile, title, src, data }) {
             <li>Illustration</li>
             <li>Web Design</li>
           </ul>
-          <h3 style={{ marginTop: theme.sizes.spacingV3 }}>Elsewhere</h3>
+          <h3 style={{ marginTop: theme.sizes.spacingV3 + 7 }}>Elsewhere</h3>
           <ul>
             <li>
               <a
@@ -293,7 +295,14 @@ function Section({ isMobile, title, src, data }) {
           }}
         >
           <div>
-            <h3 style={{ color: theme.colors.brown }}>{title}</h3>
+            <h3
+              style={{
+                color: theme.colors.brown,
+                marginBottom: theme.sizes.spacingV3
+              }}
+            >
+              {title}
+            </h3>
             {data.map((e, i) => (
               <div
                 key={i}
@@ -311,6 +320,7 @@ function Section({ isMobile, title, src, data }) {
               </div>
             ))}
           </div>
+          <div style={{ marginBottom: theme.sizes.spacingV1 }}></div>
           <img
             style={{
               display: "block",
@@ -332,36 +342,53 @@ function Section({ isMobile, title, src, data }) {
           overflow: "hidden",
           width: theme.sizes.contentWidth,
           margin: "0 auto",
-          marginTop: theme.sizes.spacingV1 - theme.sizes.triangleHeight,
+          marginTop: theme.sizes.spacingV1,
           marginBottom: theme.sizes.spacingV1
         }}
       >
         <img
-          style={{ float: "right", marginTop: 8, maxWidth: 400 }}
+          style={{
+            float: "right",
+            marginTop: 8,
+            maxWidth: 400
+          }}
           src={src}
           alt={title}
         ></img>
         <div>
-          <h3 style={{ color: theme.colors.brown }}>{title}</h3>
-          {data.map((e, i) => (
-            <div
-              key={i}
-              style={{
-                marginLeft: theme.sizes.indent + theme.sizes.spacingV3,
-                maxWidth: 400
-              }}
-            >
-              <h5 style={{ color: theme.colors.white }}>{e.title}</h5>
-              <p
+          <h3
+            style={{
+              color: theme.colors.brown,
+              marginBottom: theme.sizes.spacingV3 + 10
+            }}
+          >
+            {title}
+          </h3>
+          {data.map((e, i) => {
+            let marginBottom =
+              i !== Object.keys(data).length - 1
+                ? theme.sizes.spacingV3 + 10
+                : 25;
+            return (
+              <div
+                key={i}
                 style={{
-                  color: theme.colors.grey,
-                  marginBottom: theme.sizes.spacingV3
+                  marginLeft: theme.sizes.indent + theme.sizes.spacingV3,
+                  maxWidth: 400
                 }}
               >
-                {e.description}
-              </p>
-            </div>
-          ))}
+                <h5 style={{ color: theme.colors.white }}>{e.title}</h5>
+                <p
+                  style={{
+                    color: theme.colors.grey,
+                    marginBottom
+                  }}
+                >
+                  {e.description}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </div>
     );
@@ -396,7 +423,7 @@ function Signature({ isMobile }) {
               <em>
                 &ldquo;Design is not a thing you do. It is a way of life.&rdquo;
               </em>
-              <br></br>
+              <br />
               &mdash;Alan Fletcher, circa 1956
             </p>
             <p
@@ -406,8 +433,8 @@ function Signature({ isMobile }) {
                 marginBottom: theme.sizes.spacingV3
               }}
             >
-              Thank you for reading a bit about my process.<br></br> If you’re
-              interested in what I do, <Link to="/contact">come say hi.</Link>
+              Thank you for reading a bit about my process. If you’re interested
+              in what I do, <Link to="/contact">come say hi.</Link>
             </p>
           </div>
           <img
@@ -451,11 +478,7 @@ function Signature({ isMobile }) {
           width={400}
         ></img>
         <div style={{ width: 465 + theme.sizes.indent }}>
-          <div
-            style={{
-              paddingLeft: theme.sizes.spacingV3
-            }}
-          >
+          <div>
             <p
               style={{
                 color: theme.colors.white,
@@ -476,16 +499,19 @@ function Signature({ isMobile }) {
                 marginBottom: theme.sizes.spacingV3
               }}
             >
-              Thank you for reading a bit about my process.<br></br> If you’re
-              interested in what I do, <Link to="/contact">come say hi.</Link>
+              Thank you for reading a bit about my process. If you’re interested
+              in what I do, <Link to="/contact">come say hi.</Link>
             </p>
           </div>
-          <img
-            style={{ marginLeft: theme.sizes.indent }}
-            width="140px"
-            src="/about/05_signature.png"
-            alt="signature"
-          ></img>
+          <div
+            style={{ marginLeft: theme.sizes.indent + theme.sizes.spacingV3 }}
+          >
+            <img
+              width="140px"
+              src="/about/05_signature.png"
+              alt="signature"
+            ></img>
+          </div>
         </div>
       </div>
     );

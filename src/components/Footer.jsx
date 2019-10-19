@@ -25,7 +25,7 @@ export default function Footer() {
             style={{
               fontSize: width > theme.breakpoints.mobile ? "2.8em" : "2.4em",
               fontWeight: "bold",
-              marginBottom: 16
+              marginBottom: 20
             }}
           >
             hi@ktype.xyz
@@ -48,7 +48,7 @@ export default function Footer() {
           backgroundColor: theme.colors.white,
           padding: 25,
           marginBottom: 0,
-          fontSize: "0.8em"
+          fontSize: width > theme.breakpoints.mobile ? 15 : 13
         }}
       >
         All visual material &copy; Kade Tyler{" "}

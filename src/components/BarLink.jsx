@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import theme from "../theme";
+import useWindowWidth from "../hooks/useWindowWidth";
 
 const BarLink = ({ text, to }) => {
   const [isHover, setIsHover] = useState(false);
+  const width = useWindowWidth();
   return (
     <Link
       to={to}
@@ -22,9 +24,11 @@ const BarLink = ({ text, to }) => {
             color: isHover ? theme.colors.white : theme.colors.brown,
             textAlign: "center",
             padding: 50,
+            paddingLeft: width > theme.breakpoints.mobile ? 50 : 10,
+            paddingRight: width > theme.breakpoints.mobile ? 50 : 10,
             paddingTop: 55,
             marginBottom: 0,
-            fontSize: 21,
+            fontSize: width > theme.breakpoints.mobile ? 21 : 18,
             letterSpacing: 10
           }}
         >

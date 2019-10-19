@@ -16,7 +16,7 @@ function App(props) {
     <div>
       <Header />
       {/* This is a hack to maintain consistent spacing when resizing. */}
-      <div style={{ marginBottom: theme.sizes.spacingV1 }} />
+      <div style={{ marginBottom: theme.sizes.spacingV1 - 15 }} />
 
       <Route exact path="/" component={Work} />
       <Route path="/work" component={Work} />

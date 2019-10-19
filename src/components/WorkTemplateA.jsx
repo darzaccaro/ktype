@@ -23,7 +23,8 @@ export default function WorkTemplateA({ title, description, images }) {
         <p
           style={{
             display: "inline-block",
-            marginTop: width < theme.breakpoints.mobile ? 0 : 23
+            marginTop: width < theme.breakpoints.mobile ? 0 : 23,
+            paddingRight: 30
           }}
         >
           {description}

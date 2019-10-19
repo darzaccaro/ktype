@@ -24,7 +24,7 @@ function Header({ location }) {
               src="/icons/x.svg"
               alt="x"
               width="25px"
-              style={{ position: "relative", bottom: 5, right: 25 }}
+              style={{ position: "relative", bottom: 5, right: 10 }}
             ></img>
           ) : (
             "MENU"
