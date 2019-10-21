@@ -3,7 +3,8 @@ import { withRouter, Link } from "react-router-dom";
 import theme from "../theme";
 import NavLink from "./NavLink";
 import useWindowWidth from "../hooks/useWindowWidth";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import ScrollLock, { TouchScrollable } from "react-scrolllock";
 
 function Header({ location }) {
   const width = useWindowWidth();
@@ -14,10 +15,7 @@ function Header({ location }) {
       <div>
         <button
           className="mobile-menu-button"
-          onClick={() => {
-            document.body.style.overflow = !isMenuOpen ? "hidden" : "scroll";
-            setIsMenuOpen(!isMenuOpen);
-          }}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? (
             <img
@@ -44,6 +42,7 @@ function Header({ location }) {
           backgroundColor: theme.colors.white
         }}
       >
+        <ScrollLock isActive={isMenuOpen}></ScrollLock>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <Link
             to={"/"}
@@ -101,7 +100,6 @@ function Header({ location }) {
       </header>
     );
   } else {
-    document.body.style.overflow = "scroll";
     return (
       <header
         style={{

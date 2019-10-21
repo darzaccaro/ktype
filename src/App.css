@@ -5,14 +5,22 @@ textarea {
   -webkit-appearance: none;
   appearance: none;
   font-family: inherit;
-  font-size: 100%;
   border: 2px solid black;
-  min-height: 35px;
+  height: 35px;
   font-family: "PT Serif", serif;
   font-size: 17px;
   margin-bottom: 25px;
+  width: 425px;
+  box-sizing: border-box;
+  padding-left: 5px;
 }
-
+textarea {
+  height: 200px;
+}
+label {
+  font-family: "PT Serif", serif;
+  font-size: 17px;
+}
 body {
   font-family: "PT Serif", serif;
   font-size: 19px;
@@ -20,7 +28,13 @@ body {
   padding: 0px;
   line-height: 33px;
 }
-
+.contact-container {
+}
+.contact-subcontainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 p {
   margin-top: 0px;
 }
@@ -116,14 +130,17 @@ a:hover {
 }
 
 .k-button {
-  width: 125px;
-  height: 50px;
+  width: 100%;
+  height: 75px;
   font-family: "Josefin Sans", sans-serif;
-  letter-spacing: 5px;
+  letter-spacing: 10px;
   text-transform: uppercase;
   color: white;
   background-color: #61512d;
   border: none;
+  font-weight: bold;
+  font-size: 21px;
+  transition: background-color 0.4s, color 0.2s;
 }
 .k-button:disabled,
 .k-button:disabled:hover {
@@ -145,6 +162,9 @@ a:hover {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+.contact-input-sub-container {
+  display: inherit;
 }
 
 .k-mbv1 {
@@ -182,10 +202,6 @@ a:hover {
 }
 
 @media (max-width: 925px) {
-  .contact-container {
-    max-width: 400px;
-    margin: 0 auto;
-  }
   .trans-shrink {
     padding: 185px 5px 165px 5px;
     width: calc(100% - 10px);
@@ -193,5 +209,15 @@ a:hover {
 
   .trans-shrink:hover {
     width: calc(100% - 10px);
+  }
+  .contact-container {
+    width: 400px;
+    margin: 0 auto;
+  }
+  button,
+  input,
+  select,
+  textarea {
+    width: 400px;
   }
 }

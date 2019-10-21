@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import theme from "../theme";
 import "./contact.css";
 
 export default function Contact() {
@@ -8,13 +9,8 @@ export default function Contact() {
   const [url, setUrl] = useState("");
   const [details, setDetails] = useState("");
   const [deadline, setDeadline] = useState("");
-  const [priceRange, setPriceRange] = useState(2);
-  const priceRanges = [
-    "< $1,000",
-    "$1,000 - $5,000",
-    "$5,000 - $10,000",
-    "$10,000 +"
-  ];
+  const [priceRange, setPriceRange] = useState(0);
+  const priceRanges = ["Under $5K", "Under $10K", "Under $15K", "$20K+"];
 
   async function handleSubmit(event) {
     const serverUrl = "http://localhost:4000/mail";
@@ -61,112 +57,122 @@ export default function Contact() {
         me at <br></br>
         <a href="mailto:hi@ktype.xyz">hi@ktype.xyz</a> or use the form below.
       </p>
-      <form onSubmit={handleSubmit}>
-        <div className="contact-dual-input-container">
-          <div>
-            Full Name: *
-            <br />
-            <input
-              value={name}
-              onChange={e => setName(e.target.value)}
-              type="text"
-              name="name"
-              size="43"
-              autoComplete="off"
-            />
+      <form
+        onSubmit={handleSubmit}
+        style={{
+          margin: "0 auto",
+          marginTop: theme.sizes.spacingV1,
+          marginBottom: theme.sizes.spacingV2
+        }}
+      >
+        <div className="contact-container">
+          <div className="contact-subcontainer">
+            <div>
+              <label for="name">Full Name: *</label>
+              <br />
+              <input
+                value={name}
+                onChange={e => setName(e.target.value)}
+                type="text"
+                name="name"
+                autoComplete="off"
+              />
+            </div>
+            <div>
+              <label for="email">Email Address: *</label>
+              <br />
+              <input
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+                type="text"
+                name="email"
+                autoComplete="off"
+              />
+            </div>
           </div>
-          <div>
-            Email Address: *
-            <br />
-            <input
-              value={email}
-              onChange={e => setEmail(e.target.value)}
-              type="text"
-              name="email"
-              size="43"
-              autoComplete="off"
-            />
+          <div className="contact-subcontainer">
+            <div>
+              <label for="company"> Name of company/organization: *</label>
+              <br />
+              <input
+                value={company}
+                onChange={e => setCompany(e.target.value)}
+                type="text"
+                name="company"
+                autoComplete="off"
+              />
+              <br />
+            </div>
+            <div>
+              <label for="url">Website URL:</label>
+              <br />
+              <input
+                value={url}
+                onChange={e => setUrl(e.target.value)}
+                type="text"
+                name="url"
+                autoComplete="off"
+              />
+              <br />
+            </div>
+          </div>
+          <div className="contact-subcontainer">
+            <div>
+              <label for="deadline">
+                Are there any deadlines we should be aware of? *
+              </label>
+              <br />
+              <input
+                value={deadline}
+                onChange={e => setDeadline(e.target.value)}
+                type="text"
+                name="deadline"
+                autoComplete="off"
+              />
+            </div>
+            <div>
+              <label for="budget">Do you have a budget range in mind? *</label>
+              <br />
+              <select
+                value={priceRange}
+                onChange={e => setPriceRange(e.target.value)}
+                name="budget"
+              >
+                <option value={0}>{priceRanges[0]}</option>
+                <option value={1}>{priceRanges[1]}</option>
+                <option selected value={2}>
+                  {priceRanges[2]}
+                </option>
+                <option value={3}>{priceRanges[3]}</option>
+              </select>
+            </div>
+            <div>
+              <label for="details">
+                What are your hopes and goals for this project? *
+              </label>
+              <br />
+              <textarea
+                value={details}
+                onChange={e => setDetails(e.target.value)}
+                name="details"
+                cols={43}
+                rows={7}
+              />
+            </div>
           </div>
         </div>
-        <div className="contact-dual-input-container">
-          <div>
-            Name of company/organization: *
-            <br />
-            <input
-              value={company}
-              onChange={e => setCompany(e.target.value)}
-              type="text"
-              name="company"
-              size="43"
-              autoComplete="off"
-            />
-            <br />
-          </div>
-          <div>
-            Website URL:
-            <br />
-            <input
-              value={url}
-              onChange={e => setUrl(e.target.value)}
-              type="url"
-              name="company"
-              size="43"
-              autoComplete="off"
-            />
-            <br />
-          </div>
-        </div>
-        <div className="contact-dual-input-container">
-          <div>
-            What are your hopes and goals for this project? *
-            <br />
-            <textarea
-              value={details}
-              onChange={e => setDetails(e.target.value)}
-              name="details"
-              cols={43}
-              rows={7}
-            />
-          </div>
-          <div>
-            Are there any deadlines we should be aware of?
-            <br />
-            <input
-              value={deadline}
-              onChange={e => setDeadline(e.target.value)}
-              type="text"
-              name="deadline"
-              size="43"
-              autoComplete="off"
-            />
-            <br />
-            Do you have a budget range in mind? *
-            <br />
-            <select
-              value={priceRange}
-              onChange={e => setPriceRange(e.target.value)}
-              width="200px"
-            >
-              <option value={0}>{priceRanges[0]}</option>
-              <option value={1}>{priceRanges[1]}</option>
-              <option selected value={2}>
-                {priceRanges[2]}
-              </option>
-              <option value={3}>{priceRanges[3]}</option>
-            </select>
-          </div>
-        </div>
+
         <br />
         <div className="k-mbv1">
           <button
             className="k-button"
             onClick={e => handleSubmit(e)}
-            disabled={!(name && email && company && details && priceRange)}
+            disabled={!(name && email && company && details && deadline)}
           >
             Submit
           </button>
-          {(name || email || company || details) &&
-            !(name && email && company && details) && (
+          {(name || email || company || details || deadline) &&
+            !(name && email && company && details && deadline) && (
               <p
                 style={{ fontSize: "0.9em", display: "inline", marginLeft: 25 }}
               >
