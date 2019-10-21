@@ -45,9 +45,16 @@ export default function Contact() {
         body: data
       });
       const json = await response.json();
-      alert("success: ", JSON.stringify(json));
+      if (json) {
+        alert("Success! Your message was sent.");
+      } else {
+        throw new Error("No data returned from server!");
+      }
     } catch (err) {
       console.log("error: ", err);
+      alert(
+        "Oops, your message failed to send! Try again, or email hi@ktype.xyz directly."
+      );
     }
   }
   return (

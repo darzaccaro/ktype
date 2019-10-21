@@ -27,8 +27,6 @@ body {
   padding: 0px;
   line-height: 33px;
 }
-.contact-container {
-}
 .contact-subcontainer {
   display: flex;
   justify-content: space-between;
