@@ -44,7 +44,7 @@ export default function Contact() {
       body: JSON.stringify(payload) //data // json.stringify?
     });
     response = await response.json();
-    console.log("res", res);
+    console.log("res", response);
     if (response.status === 200) {
       alert("Success! Your message was sent.");
     } else {
