@@ -2,7 +2,7 @@ require("dotenv").config();
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const path = require("path");
-const dev = process.env.NODE_ENV !== "production";
+const dev = process.env.NODE_ENV === "production"; // TODO: toggle back
 const express = require("express");
 const morgan = require("morgan");
 const app = express();
