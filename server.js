@@ -7,11 +7,23 @@ const express = require("express");
 const morgan = require("morgan");
 const app = express();
 
-const transporter = nodemailer.createTransport({
-  service: "hotmail",
+// const transporter = nodemailer.createTransport({
+//   service: "hotmail",
+//   auth: {
+//     user: "darbot9002@hotmail.com",
+//     pass: process.env.EMAIL_PASSWORD
+//   }
+// });
+let testAccount = await nodemailer.createTestAccount();
+
+// create reusable transporter object using the default SMTP transport
+let transporter = nodemailer.createTransport({
+  host: "smtp.ethereal.email",
+  port: 587,
+  secure: false, // true for 465, false for other ports
   auth: {
-    user: "darbot9002@hotmail.com",
-    pass: process.env.EMAIL_PASSWORD
+    user: testAccount.user, // generated ethereal user
+    pass: testAccount.pass // generated ethereal password
   }
 });
 
