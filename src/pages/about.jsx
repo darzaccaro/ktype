@@ -312,7 +312,8 @@ function Section({ isMobile, title, src, data }) {
                 <p
                   style={{
                     color: theme.colors.grey,
-                    marginBottom: theme.sizes.spacingV3
+                    marginBottom: theme.sizes.spacingV3,
+                    width: "75%"
                   }}
                 >
                   {e.description}
@@ -408,11 +409,7 @@ function Signature({ isMobile }) {
         }}
       >
         <div style={{ maxWidth: 465 + theme.sizes.indent }}>
-          <div
-            style={{
-              paddingLeft: theme.sizes.spacingV3
-            }}
-          >
+          <div>
             <p
               style={{
                 color: theme.colors.white,
@@ -438,7 +435,10 @@ function Signature({ isMobile }) {
             </p>
           </div>
           <img
-            style={{ marginLeft: theme.sizes.indent }}
+            style={{
+              marginLeft: theme.sizes.indent,
+              marginBottom: theme.sizes.spacingV3
+            }}
             width="140px"
             src="/about/05_signature.png"
             alt="signature"
@@ -468,11 +468,12 @@ function Signature({ isMobile }) {
           overflow: "hidden",
           width: theme.sizes.contentWidth,
           margin: "0 auto",
-          paddingBottom: theme.sizes.spacingV1
+          paddingBottom: theme.sizes.spacingV1,
+          paddingTop: theme.sizes.spacingV1 - 35
         }}
       >
         <img
-          style={{ float: "right", marginTop: 8 }}
+          style={{ float: "right" }}
           src="/about/06_studiobooks.jpg"
           alt="books"
           width={400}
