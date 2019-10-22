@@ -12,14 +12,8 @@ export default function Contact() {
   const [priceRange, setPriceRange] = useState(0);
   const priceRanges = ["Under $5K", "Under $10K", "Under $15K", "$20K+"];
 
-  async function handleSubmit(event) {
-    event.preventDefault();
-    const serverUrl = "/api/mail";
-    const query = `?name=${name}&email=${email}&company=${company}&url=${url ||
-      "no website provided"}&details=${details}&deadline=${deadline ||
-      "idk, because they didn't provide a deadline"}&priceRange=${
-      priceRanges[priceRange]
-    }"`;
+  async function handleSubmit(e) {
+    e.preventDefault();
     const payload = {
       name,
       email,
@@ -29,22 +23,13 @@ export default function Contact() {
       deadline,
       priceRange
     };
-    //let data = new FormData();
-    //data.append("json", JSON.stringify(payload));
-    //console.log("sent this data", JSON.stringify(data));
-    //try {
-    let response = await fetch(serverUrl + query, {
+    const response = await fetch("/api/mail", {
       method: "POST",
-      //mode: "no-cors",
-      //credentials: "same-origin", // TODO: change credentials on prod?
       headers: {
-        //Accept: "application/json",
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(payload) //data // json.stringify?
+      body: JSON.stringify(payload)
     });
-    response = await response.json();
-    console.log("res", response);
     if (response.status === 200) {
       alert("Success! Your message was sent.");
     } else {

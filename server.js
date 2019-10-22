@@ -2,7 +2,7 @@ require("dotenv").config();
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const path = require("path");
-const dev = process.env.NODE_ENV === "production"; // todo invert
+const dev = process.env.NODE_ENV !== "production";
 const express = require("express");
 const morgan = require("morgan");
 const app = express();
@@ -40,8 +40,7 @@ app.use(morgan("combined"));
 app.post("/api/mail", (req, res) => {
   console.log("TESTMAIL");
   console.log(req.body);
-  console.log(req.query);
-  transporter.sendMail(generateContactEmail(req.query), function(error, info) {
+  transporter.sendMail(generateContactEmail(req.body), function(error, info) {
     if (error) {
       console.log(error);
       res.status(500).send("Something broke!");
