@@ -21,7 +21,7 @@ export default function Contact() {
       url,
       details,
       deadline,
-      priceRange
+      priceRange: priceRanges[priceRange]
     };
     const response = await fetch("/api/mail", {
       method: "POST",
