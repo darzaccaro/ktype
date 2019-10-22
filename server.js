@@ -7,23 +7,11 @@ const express = require("express");
 const morgan = require("morgan");
 const app = express();
 
-// const transporter = nodemailer.createTransport({
-//   service: "hotmail",
-//   auth: {
-//     user: "darbot9002@hotmail.com",
-//     pass: process.env.EMAIL_PASSWORD
-//   }
-// });
-let testAccount = await nodemailer.createTestAccount();
-
-// create reusable transporter object using the default SMTP transport
-let transporter = nodemailer.createTransport({
-  host: "smtp.ethereal.email",
-  port: 587,
-  secure: false, // true for 465, false for other ports
+const transporter = nodemailer.createTransport({
+  service: "Hotmail",
   auth: {
-    user: testAccount.user, // generated ethereal user
-    pass: testAccount.pass // generated ethereal password
+    user: "darbot9002@hotmail.com",
+    pass: process.env.EMAIL_PASSWORD
   }
 });
 
@@ -38,7 +26,7 @@ function generateContactEmail({
   priceRange
 }) {
   return {
-    from: "darbot9001@hotmail.com",
+    from: "darbot9002@hotmail.com",
     to: dev ? "darzaccaro@gmail.com" : "hi@ktype.xyz",
     subject: `${name} is attempting to make contact`,
     text: `Hi Kade,\n\n${name} (${email}) from ${company} (${url}) is interested in working with you on a project involving "${details}" that should be completed by ${deadline} for ${priceRange}.\n\nGLHF!\n—darbot9000`
