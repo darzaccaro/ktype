@@ -29,11 +29,11 @@ export default function Contact() {
       deadline,
       priceRange
     };
-    let data = new FormData();
-    data.append("json", JSON.stringify(payload));
-    console.log("sent this data", JSON.stringify(data));
+    //let data = new FormData();
+    //data.append("json", JSON.stringify(payload));
+    //console.log("sent this data", JSON.stringify(data));
     //try {
-    const response = await fetch(serverUrl + query, {
+    let response = await fetch(serverUrl + query, {
       method: "POST",
       //mode: "no-cors",
       //credentials: "same-origin", // TODO: change credentials on prod?
@@ -41,9 +41,9 @@ export default function Contact() {
         //Accept: "application/json",
         "Content-Type": "application/json"
       },
-      body: data // json.stringify?
+      body: JSON.stringify(payload) //data // json.stringify?
     });
-    const res = await res.text();
+    response = await response.json();
     console.log("res", res);
     if (response.status === 200) {
       alert("Success! Your message was sent.");
