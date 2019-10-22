@@ -1,8 +1,10 @@
 require("dotenv").config();
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
+const path = require("path");
 const dev = process.env.NODE_ENV !== "production";
 const express = require("express");
+const morgan = require("morgan");
 const app = express();
 
 const transporter = nodemailer.createTransport({
@@ -30,11 +32,12 @@ function generateContactEmail({
     text: `Hi Kade,\n\n${name} (${email}) from ${company} (${url}) is interested in working with you on a project involving "${details}" that should be completed by ${deadline} for ${priceRange}.\n\nGLHF!\n—darbot9000`
   };
 }
-
+app.use(express.static(path.join(__dirname, "build")));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(morgan("combined"));
 
-app.post("/mail", (req, res) => {
+app.post("/api/mail", (req, res) => {
   console.log("TESTMAIL");
   console.log(req.body);
   console.log(req.query);
@@ -49,7 +52,12 @@ app.post("/mail", (req, res) => {
   });
 });
 
-app.listen(4000, err => {
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname + "/build/index.html"));
+});
+
+const port = 5000;
+app.listen(port, err => {
   if (err) throw err;
-  console.log("> Listening on http://localhost:4000");
+  console.log(`> Listening on PORT ${port}`);
 });

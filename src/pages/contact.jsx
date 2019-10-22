@@ -13,13 +13,13 @@ export default function Contact() {
   const priceRanges = ["Under $5K", "Under $10K", "Under $15K", "$20K+"];
 
   async function handleSubmit(event) {
-    const serverUrl = "http://localhost:4000/mail";
-    const query = `?name=${name}&email=${email}&company=${company}&url=${url ||
-      "no website provided"}&details=${details}&deadline=${deadline ||
-      "idk, because they didn't provide a deadline"}&priceRange=${
-      priceRanges[priceRange]
-    }`;
     //TODO: replace with proper server address
+    const serverUrl = "http://localhost:5000/api/mail";
+    const query = `?name="${name}"&email="${email}"&company=${company}&url="${url ||
+      "no website provided"}"&details="${details}"&deadline="${deadline ||
+      "idk, because they didn't provide a deadline"}"&priceRange="${
+      priceRanges[priceRange]
+    }"`;
     const payload = {
       name,
       email,
@@ -33,25 +33,20 @@ export default function Contact() {
     data.append("json", JSON.stringify(payload));
     console.log("Submitting from client", JSON.stringify(data));
     event.preventDefault();
-    try {
-      const response = await fetch(serverUrl + query, {
-        method: "POST",
-        mode: "no-cors",
-        credentials: "same-origin", // TODO: change credentials on prod?
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json"
-        },
-        body: data
-      });
-      const json = await response.json();
-      if (json) {
-        alert("Success! Your message was sent.");
-      } else {
-        throw new Error("No data returned from server!");
-      }
-    } catch (err) {
-      console.log("error: ", err);
+    //try {
+    const response = await fetch(serverUrl + query, {
+      method: "POST",
+      mode: "no-cors",
+      credentials: "same-origin", // TODO: change credentials on prod?
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      body: data
+    });
+    if (response.status === 200) {
+      alert("Success! Your message was sent.");
+    } else {
       alert(
         "Oops, your message failed to send! Try again, or email hi@ktype.xyz directly."
       );

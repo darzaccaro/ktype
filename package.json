@@ -5,6 +5,7 @@
   "dependencies": {
     "dotenv": "^8.1.0",
     "express": "^4.17.1",
+    "morgan": "^1.9.1",
     "nodemailer": "^6.3.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
@@ -14,7 +15,8 @@
     "react-scrolllock": "^4.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server.js",
+    "dev": "react-scripts start",
     "serve": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
