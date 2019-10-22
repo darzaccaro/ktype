@@ -14,7 +14,7 @@ export default function Contact() {
 
   async function handleSubmit(event) {
     //TODO: replace with proper server address
-    const serverUrl = "http://localhost:5000/api/mail";
+    const serverUrl = "/api/mail";
     const query = `?name="${name}"&email="${email}"&company=${company}&url="${url ||
       "no website provided"}"&details="${details}"&deadline="${deadline ||
       "idk, because they didn't provide a deadline"}"&priceRange="${
@@ -36,10 +36,10 @@ export default function Contact() {
     //try {
     const response = await fetch(serverUrl + query, {
       method: "POST",
-      mode: "no-cors",
-      credentials: "same-origin", // TODO: change credentials on prod?
+      //mode: "no-cors",
+      //credentials: "same-origin", // TODO: change credentials on prod?
       headers: {
-        Accept: "application/json",
+        //Accept: "application/json",
         "Content-Type": "application/json"
       },
       body: data
