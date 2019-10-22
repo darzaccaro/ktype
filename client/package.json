@@ -1,5 +1,5 @@
 {
-  "name": "ktype",
+  "name": "ktype_client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
