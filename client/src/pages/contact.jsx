@@ -31,7 +31,7 @@ export default function Contact() {
     };
     let data = new FormData();
     data.append("json", JSON.stringify(payload));
-    console.log("Submitting from client", JSON.stringify(data));
+    console.log("sent this data", data);
     //try {
     const response = await fetch(serverUrl + query, {
       method: "POST",
