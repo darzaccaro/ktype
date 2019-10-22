@@ -8,12 +8,7 @@ const morgan = require("morgan");
 const app = express();
 
 const transporter = nodemailer.createTransport({
-  host: "smtp-mail.outlook.com", // hostname
-  secureConnection: false, // TLS requires secureConnection to be false
-  port: 587, // port for secure SMTP
-  tls: {
-    ciphers: "SSLv3"
-  },
+  service: "hotmail",
   auth: {
     user: "darbot9002@hotmail.com",
     pass: process.env.EMAIL_PASSWORD
