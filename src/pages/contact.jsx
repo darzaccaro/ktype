@@ -72,100 +72,98 @@ export default function Contact() {
           marginBottom: theme.sizes.spacingV2
         }}
       >
-        <div className="contact-container">
-          <div className="contact-subcontainer">
-            <div>
-              <label for="name">Full Name: *</label>
-              <br />
-              <input
-                value={name}
-                onChange={e => setName(e.target.value)}
-                type="text"
-                name="name"
-                autoComplete="off"
-              />
-            </div>
-            <div>
-              <label for="email">Email Address: *</label>
-              <br />
-              <input
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-                type="text"
-                name="email"
-                autoComplete="off"
-              />
-            </div>
+        <div className="contact-subcontainer">
+          <div>
+            <label for="name">Full Name: *</label>
+            <br />
+            <input
+              value={name}
+              onChange={e => setName(e.target.value)}
+              type="text"
+              name="name"
+              autoComplete="off"
+            />
           </div>
-          <div className="contact-subcontainer">
-            <div>
-              <label for="company"> Name of company/organization: *</label>
-              <br />
-              <input
-                value={company}
-                onChange={e => setCompany(e.target.value)}
-                type="text"
-                name="company"
-                autoComplete="off"
-              />
-              <br />
-            </div>
-            <div>
-              <label for="url">Website URL:</label>
-              <br />
-              <input
-                value={url}
-                onChange={e => setUrl(e.target.value)}
-                type="text"
-                name="url"
-                autoComplete="off"
-              />
-              <br />
-            </div>
+          <div>
+            <label for="email">Email Address: *</label>
+            <br />
+            <input
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              type="text"
+              name="email"
+              autoComplete="off"
+            />
           </div>
-          <div className="contact-subcontainer">
-            <div>
-              <label for="deadline">
-                Are there any deadlines we should be aware of? *
-              </label>
-              <br />
-              <input
-                value={deadline}
-                onChange={e => setDeadline(e.target.value)}
-                type="text"
-                name="deadline"
-                autoComplete="off"
-              />
-            </div>
-            <div>
-              <label for="budget">Do you have a budget range in mind? *</label>
-              <br />
-              <select
-                value={priceRange}
-                onChange={e => setPriceRange(e.target.value)}
-                name="budget"
-              >
-                <option value={0}>{priceRanges[0]}</option>
-                <option value={1}>{priceRanges[1]}</option>
-                <option selected value={2}>
-                  {priceRanges[2]}
-                </option>
-                <option value={3}>{priceRanges[3]}</option>
-              </select>
-            </div>
-            <div>
-              <label for="details">
-                What are your hopes and goals for this project? *
-              </label>
-              <br />
-              <textarea
-                value={details}
-                onChange={e => setDetails(e.target.value)}
-                name="details"
-                cols={43}
-                rows={7}
-              />
-            </div>
+        </div>
+        <div className="contact-subcontainer">
+          <div>
+            <label for="company"> Name of company/organization: *</label>
+            <br />
+            <input
+              value={company}
+              onChange={e => setCompany(e.target.value)}
+              type="text"
+              name="company"
+              autoComplete="off"
+            />
+            <br />
+          </div>
+          <div>
+            <label for="url">Website URL:</label>
+            <br />
+            <input
+              value={url}
+              onChange={e => setUrl(e.target.value)}
+              type="text"
+              name="url"
+              autoComplete="off"
+            />
+            <br />
+          </div>
+        </div>
+        <div className="contact-subcontainer">
+          <div>
+            <label for="deadline">
+              Are there any deadlines we should be aware of? *
+            </label>
+            <br />
+            <input
+              value={deadline}
+              onChange={e => setDeadline(e.target.value)}
+              type="text"
+              name="deadline"
+              autoComplete="off"
+            />
+          </div>
+          <div>
+            <label for="budget">Do you have a budget range in mind? *</label>
+            <br />
+            <select
+              value={priceRange}
+              onChange={e => setPriceRange(e.target.value)}
+              name="budget"
+            >
+              <option value={0}>{priceRanges[0]}</option>
+              <option value={1}>{priceRanges[1]}</option>
+              <option selected value={2}>
+                {priceRanges[2]}
+              </option>
+              <option value={3}>{priceRanges[3]}</option>
+            </select>
+          </div>
+          <div>
+            <label for="details">
+              What are your hopes and goals for this project? *
+            </label>
+            <br />
+            <textarea
+              value={details}
+              onChange={e => setDetails(e.target.value)}
+              name="details"
+              cols={43}
+              rows={7}
+            />
           </div>
         </div>
 
