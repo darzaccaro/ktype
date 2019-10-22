@@ -31,18 +31,19 @@ export default function Contact() {
     };
     let data = new FormData();
     data.append("json", JSON.stringify(payload));
-    console.log("sent this data", data);
+    console.log("sent this data", JSON.stringify());
     //try {
     const response = await fetch(serverUrl + query, {
       method: "POST",
-      mode: "no-cors",
-      credentials: "same-origin", // TODO: change credentials on prod?
+      //mode: "no-cors",
+      //credentials: "same-origin", // TODO: change credentials on prod?
       headers: {
-        Accept: "application/json",
+        //Accept: "application/json",
         "Content-Type": "application/json"
       },
-      body: data
+      body: data // json.stringify?
     });
+    console.log("res", response.text());
     if (response.status === 200) {
       alert("Success! Your message was sent.");
     } else {
