@@ -31,7 +31,7 @@ export default function Contact() {
     };
     let data = new FormData();
     data.append("json", JSON.stringify(payload));
-    console.log("sent this data", JSON.stringify());
+    console.log("sent this data", JSON.stringify(data));
     //try {
     const response = await fetch(serverUrl + query, {
       method: "POST",
@@ -43,7 +43,8 @@ export default function Contact() {
       },
       body: data // json.stringify?
     });
-    console.log("res", response.text());
+    const res = await res.text();
+    console.log("res", res);
     if (response.status === 200) {
       alert("Success! Your message was sent.");
     } else {
