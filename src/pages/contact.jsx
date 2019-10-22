@@ -137,7 +137,9 @@ export default function Contact() {
             />
           </div>
           <div>
-            <label for="budget">Do you have a budget range in mind? *</label>
+            <label for="budget">
+              Do you have a budget range in mind?&nbsp;*
+            </label>
             <br />
             <select
               value={priceRange}
@@ -178,10 +180,8 @@ export default function Contact() {
           </button>
           {(name || email || company || details || deadline) &&
             !(name && email && company && details && deadline) && (
-              <p
-                style={{ fontSize: "0.9em", display: "inline", marginLeft: 25 }}
-              >
-                Please enter all required fields.
+              <p style={{ fontSize: "0.9em", display: "inline" }}>
+                * Please enter all required fields.
               </p>
             )}
         </div>
