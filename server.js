@@ -32,7 +32,7 @@ function generateContactEmail({
     text: `Hi Kade,\n\n${name} (${email}) from ${company} (${url}) is interested in working with you on a project involving "${details}" that should be completed by ${deadline} for ${priceRange}.\n\nGLHF!\n—darbot9000`
   };
 }
-app.use(express.static(path.join(__dirname, "build")));
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(morgan("combined"));
@@ -52,9 +52,12 @@ app.post("/api/mail", (req, res) => {
   });
 });
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname + "/build/index.html"));
-});
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "client/build")));
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client/build", "index.html"));
+  });
+}
 
 const port = 5000;
 app.listen(port, err => {
