@@ -13,11 +13,11 @@ export default function Contact() {
   const priceRanges = ["Under $5K", "Under $10K", "Under $15K", "$20K+"];
 
   async function handleSubmit(event) {
-    //TODO: replace with proper server address
+    event.preventDefault();
     const serverUrl = "/api/mail";
-    const query = `?name="${name}"&email="${email}"&company=${company}&url="${url ||
-      "no website provided"}"&details="${details}"&deadline="${deadline ||
-      "idk, because they didn't provide a deadline"}"&priceRange="${
+    const query = `?name=${name}&email=${email}&company=${company}&url=${url ||
+      "no website provided"}&details=${details}&deadline=${deadline ||
+      "idk, because they didn't provide a deadline"}&priceRange=${
       priceRanges[priceRange]
     }"`;
     const payload = {
@@ -32,14 +32,13 @@ export default function Contact() {
     let data = new FormData();
     data.append("json", JSON.stringify(payload));
     console.log("Submitting from client", JSON.stringify(data));
-    event.preventDefault();
     //try {
     const response = await fetch(serverUrl + query, {
       method: "POST",
-      //mode: "no-cors",
-      //credentials: "same-origin", // TODO: change credentials on prod?
+      mode: "no-cors",
+      credentials: "same-origin", // TODO: change credentials on prod?
       headers: {
-        //Accept: "application/json",
+        Accept: "application/json",
         "Content-Type": "application/json"
       },
       body: data
