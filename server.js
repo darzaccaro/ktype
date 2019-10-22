@@ -28,8 +28,16 @@ function generateContactEmail({
   return {
     from: "darbot9002@hotmail.com",
     to: dev ? "darzaccaro@gmail.com" : "hi@ktype.xyz",
-    subject: `${name} is attempting to make contact`,
-    text: `Hi Kade,\n\n${name} (${email}) from ${company} (${url}) is interested in working with you on a project involving "${details}" that should be completed by ${deadline} for ${priceRange}.\n\nGLHF!\n—darbot9000`
+    subject: `New form submission from ${name}`,
+    text: `
+    Name: ${name}\n
+    Email: ${email}\n
+    Company: ${company}\n
+    URL: ${url}\n
+    Details: ${details}\n
+    Deadline: ${deadline}\n
+    PriceRange: ${priceRange}\n
+    \n\nGLHF!\n—darbot9000`
   };
 }
 
