@@ -38,7 +38,7 @@ app.use(bodyParser.json());
 app.use(morgan("combined"));
 
 app.post("/api/mail", (req, res) => {
-  console.log("TESTMAIL");
+  console.log("Sending Mail");
   console.log(req.body);
   transporter.sendMail(generateContactEmail(req.body), function(error, info) {
     if (error) {
