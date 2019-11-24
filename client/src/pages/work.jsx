@@ -5,7 +5,6 @@ import useWindowWidth from "../hooks/useWindowWidth";
 
 export default function Work() {
   const width = useWindowWidth();
-  //const width = 400;
   const works = [
     {
       title: "LETTERING SET",

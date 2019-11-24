@@ -9,6 +9,7 @@ import LetteringSet from "./pages/letteringSet";
 import SketchBook from "./pages/sketchBook";
 import Contact from "./pages/contact";
 import Work from "./pages/work";
+import Success from "./pages/success";
 import theme from "./theme";
 
 function App(props) {
@@ -24,6 +25,7 @@ function App(props) {
       <Route path="/sketchbook" component={SketchBook} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
+      <Route path="/success" component={Success} />
       <Footer />
     </div>
   );

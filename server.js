@@ -15,7 +15,6 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-//TODO: client-side validation
 function generateContactEmail({
   name,
   email,
@@ -48,7 +47,7 @@ app.use(morgan("combined"));
 app.post("/api/mail", (req, res) => {
   console.log("Sending Mail");
   console.log(req.body);
-  transporter.sendMail(generateContactEmail(req.body), function(error, info) {
+  transporter.sendMail(generateContactEmail(req.body), function (error, info) {
     if (error) {
       console.log(error);
       res.status(500).send("Something broke!");

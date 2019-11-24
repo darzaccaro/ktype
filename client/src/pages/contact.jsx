@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import theme from "../theme";
-import "./contact.css";
+import { withRouter } from 'react-router-dom'
 
-export default function Contact() {
+function Contact(props) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [company, setCompany] = useState("");
@@ -10,10 +10,13 @@ export default function Contact() {
   const [details, setDetails] = useState("");
   const [deadline, setDeadline] = useState("");
   const [priceRange, setPriceRange] = useState(0);
+  const [submitted, setSubmitted] = useState(false);
   const priceRanges = ["Under $5K", "Under $10K", "Under $15K", "$20K+"];
 
   async function handleSubmit(e) {
     e.preventDefault();
+    if (submitted) return;
+    setSubmitted(true);
     const payload = {
       name,
       email,
@@ -31,7 +34,7 @@ export default function Contact() {
       body: JSON.stringify(payload)
     });
     if (response.status === 200) {
-      alert("Success! Your message was sent.");
+      props.history.push("/success");
     } else {
       alert(
         "Oops, your message failed to send! Try again, or email hi@ktype.xyz directly."
@@ -155,9 +158,9 @@ export default function Contact() {
           <button
             className="k-button"
             onClick={e => handleSubmit(e)}
-            disabled={!(name && email && company && details && deadline)}
+            disabled={submitted || !(name && email && company && details && deadline)}
           >
-            Submit
+            {submitted ? "Processing" : "Submit"}
           </button>
           {(name || email || company || details || deadline) &&
             !(name && email && company && details && deadline) && (
@@ -170,3 +173,5 @@ export default function Contact() {
     </div>
   );
 }
+
+export default withRouter(Contact);

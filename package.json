@@ -10,7 +10,8 @@
   },
   "scripts": {
     "start": "node server.js",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "client": "cd client && npm run dev"
   },
   "eslintConfig": {
     "extends": "react-app"
