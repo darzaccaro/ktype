@@ -18,7 +18,7 @@ export default function Success() {
                 marginBottom: theme.sizes.spacingV1 - 10,
                 minHeight: 800
             }}>
-                <h1>Thank you for your submission!</h1>
+                <h1>Thank your for your submission!</h1>
                 <p>We'll be in touch as soon as possible. I do my best to respond within 1-2 days.</p>
             </div>
         </div>
