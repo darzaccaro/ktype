@@ -78,22 +78,26 @@ export default function About() {
           src="/about/03_approach.jpg"
           data={[
             {
-              title: "PHASE 1: DISCOVERY",
+              title1: "PHASE 1 — ",
+              title2: "DISCOVERY",
               description:
                 "Understand your goals and what drives you. Establish a personalized project road map."
             },
             {
-              title: "PHASE 2: STRATEGY",
+              title1: "PHASE 2 — ",
+              title2: "STRATEGY",
               description:
-                "Conscientiously analyze your industry landscape. Uncover an opportunistic pathway."
+                "Analyze your industry landscape. Uncover an opportunistic pathway while taking note of avoidances."
             },
             {
-              title: "PHASE 3: DESIGN",
+              title1: "PHASE 3 — ",
+              title2: "DESIGN",
               description:
-                "Explore, trial, and reflect on various solutions. Meticulously refine meaningful ideas into form."
+                "Explore, trial, and reflect on various solutions. Carefully refine and bring meaningful ideas to life."
             },
             {
-              title: "PHASE 4: DEADLINE",
+              title1: "PHASE 4 — ",
+              title2: "DEADLINE",
               description:
                 "Finalize and prepare all project deliverables. Launch forward-looking solutions to the world."
             }
@@ -105,17 +109,17 @@ export default function About() {
           src="/about/04_approach2.jpg"
           data={[
             {
-              title: "DEFINE FRAMEWORK.",
+              title2: "DESIGN WITH PURPOSE.",
               description:
-                "No structure can last without a foundational blueprint. Endlessly reference personal values among the underlying core."
+                "Design needs a clear purpose for existing; therefore, it should always be prompted by a foundational blueprint. Consider the “why?” throughout every project."
             },
             {
-              title: "ALLOW FAILURE.",
+              title2: "FAILURE IS ALLOWED.",
               description:
                 "Visual problems have unlimited solutions. The valid solutions are identified through the result of many failed explorations."
             },
             {
-              title: "CRITICAL EYES.",
+              title2: "CRITICAL EYES.",
               description:
                 "Critically accept and provide mindful feedback. Observe problems objectively with openness and a dynamic perspective."
             }
@@ -153,17 +157,17 @@ function LinkSection({ isMobile, title, src, data }) {
               DESIGN &amp; LETTERING
             </h2>
             <p>
-              I’m a designer focused on expanding meaning into enduring visuals.
-              My passion-driven process generates thoughtful design solutions
-              through the repetition of extensive trials and explorations.
+              I’m a graphic designer focused on mindful typographic arts. My
+              passion-driven process repeats extensive trials and explorations
+              to provide enduring solutions.
             </p>
           </div>
           <div>
             <h3 style={{ marginTop: theme.sizes.spacingV3 }}>Services</h3>
             <ul style={{ marginBottom: theme.sizes.spacingV3 }}>
               <li>Branding & Strategy</li>
-              <li>Visual Identity</li>
-              <li>Design Systems</li>
+              <li>Identity Design</li>
+              <li>Logotype Design</li>
               <li>Custom Lettering</li>
               <li>Illustration</li>
               <li>Web Design</li>
@@ -201,7 +205,7 @@ function LinkSection({ isMobile, title, src, data }) {
           </div>
         </div>
         <img
-          style={{ marginTop: theme.sizes.spacingV3 - 16 }}
+          style={{ marginTop: theme.sizes.spacingV3 - 6 }}
           src="/about/02_profile.jpg"
           alt="profile"
           width="100%"
@@ -223,13 +227,13 @@ function LinkSection({ isMobile, title, src, data }) {
             DESIGN &amp; LETTERING
           </h2>
           <p>
-            I’m a designer focused on expanding meaning into enduring visuals.
-            My passion-driven process generates thoughtful design solutions
-            through the repetition of extensive trials and explorations.
+            I’m a graphic designer focused on mindful typographic arts. My
+            passion-driven process repeats extensive trials and explorations to
+            provide enduring solutions.
           </p>
         </div>
         <img
-          style={{ float: "right", marginTop: theme.sizes.spacingV3 - 16 }}
+          style={{ float: "right", marginTop: theme.sizes.spacingV3 - 6 }}
           src="/about/02_profile.jpg"
           alt="profile"
           width="650px"
@@ -238,8 +242,8 @@ function LinkSection({ isMobile, title, src, data }) {
           <h3 style={{ marginTop: theme.sizes.spacingV3 + 7 }}>Services</h3>
           <ul>
             <li>Branding & Strategy</li>
-            <li>Visual Identity</li>
-            <li>Design Systems</li>
+            <li>Identity Design</li>
+            <li>Logotype Design</li>
             <li>Custom Lettering</li>
             <li>Illustration</li>
             <li>Web Design</li>
@@ -290,8 +294,8 @@ function Section({ isMobile, title, src, data }) {
             margin: "0 auto",
             width: "90%",
             maxWidth: "400px",
-            marginTop: theme.sizes.spacingV1 - theme.sizes.triangleHeight,
-            marginBottom: theme.sizes.spacingV1
+            marginTop: theme.sizes.spacingV1 + 22 - theme.sizes.triangleHeight,
+            marginBottom: theme.sizes.spacingV1 - 20
           }}
         >
           <div>
@@ -308,10 +312,13 @@ function Section({ isMobile, title, src, data }) {
                 key={i}
                 style={{ marginLeft: theme.sizes.indent, width: 400 }}
               >
-                <h5 style={{ color: theme.colors.white }}>{e.title}</h5>
+                <h5 style={{ color: theme.colors.white }}>
+                  {e.title1}
+                  <span style={{ color: theme.colors.brown }}>{e.title2}</span>
+                </h5>
                 <p
                   style={{
-                    color: theme.colors.grey,
+                    color: theme.colors.white,
                     marginBottom: theme.sizes.spacingV3,
                     width: "75%"
                   }}
@@ -326,7 +333,7 @@ function Section({ isMobile, title, src, data }) {
             style={{
               display: "block",
               margin: "0 auto",
-              marginTop: 8
+              marginTop: 5
             }}
             src={src}
             alt={title}
@@ -343,14 +350,14 @@ function Section({ isMobile, title, src, data }) {
           overflow: "hidden",
           width: theme.sizes.contentWidth,
           margin: "0 auto",
-          marginTop: theme.sizes.spacingV1,
-          marginBottom: theme.sizes.spacingV1
+          marginTop: theme.sizes.spacingV1 + 22,
+          marginBottom: theme.sizes.spacingV1 - 20
         }}
       >
         <img
           style={{
             float: "right",
-            marginTop: 8,
+            marginTop: 5,
             maxWidth: 400
           }}
           src={src}
@@ -378,10 +385,13 @@ function Section({ isMobile, title, src, data }) {
                   maxWidth: 400
                 }}
               >
-                <h5 style={{ color: theme.colors.white }}>{e.title}</h5>
+                <h5 style={{ color: theme.colors.white }}>
+                  {e.title1}
+                  <span style={{ color: theme.colors.brown }}>{e.title2}</span>
+                </h5>
                 <p
                   style={{
-                    color: theme.colors.grey,
+                    color: theme.colors.white,
                     marginBottom
                   }}
                 >
@@ -430,8 +440,8 @@ function Signature({ isMobile }) {
                 marginBottom: theme.sizes.spacingV3
               }}
             >
-              Thank you for reading a bit about my process. If you’re interested
-              in what I do, <Link to="/contact">come say hi.</Link>
+              Thank you for reading a bit about my process. I'm always open to
+              discussions on design. <Link to="/contact"> Come say hi!</Link>
             </p>
           </div>
           <img
@@ -449,7 +459,7 @@ function Signature({ isMobile }) {
                 style={{
                   display: "block",
                   margin: "0 auto",
-                  marginTop: 8,
+                  marginTop: 5,
                   maxWidth: 400
                 }}
                 src="/about/06_studiobooks.jpg"
@@ -469,7 +479,7 @@ function Signature({ isMobile }) {
           width: theme.sizes.contentWidth,
           margin: "0 auto",
           paddingBottom: theme.sizes.spacingV1,
-          paddingTop: theme.sizes.spacingV1 - 35
+          paddingTop: theme.sizes.spacingV1 - 44
         }}
       >
         <img
@@ -500,8 +510,8 @@ function Signature({ isMobile }) {
                 marginBottom: theme.sizes.spacingV3
               }}
             >
-              Thank you for reading a bit about my process. If you’re interested
-              in what I do, <Link to="/contact">come say hi.</Link>
+              Thank you for reading a bit about my process. I'm always open to
+              discussions on design. <Link to="/contact"> Come say hi!</Link>
             </p>
           </div>
           <div

@@ -124,7 +124,7 @@ export default function Work() {
           textAlign: "center",
           marginBottom: theme.sizes.spacingV1,
           padding: 20,
-          lineHeight: "40px"
+          lineHeight: "44px"
         }}
       >
         The strategic design studio of Kade Tyler&mdash;specializing in

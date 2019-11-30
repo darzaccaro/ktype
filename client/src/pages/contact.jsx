@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import theme from "../theme";
-import { withRouter } from 'react-router-dom'
+import { withRouter } from "react-router-dom";
 
 function Contact(props) {
   const [name, setName] = useState("");
@@ -58,7 +58,7 @@ function Contact(props) {
       >
         <div className="contact-subcontainer">
           <div>
-            <label for="name">Full Name: *</label>
+            <label for="name">Full name: *</label>
             <br />
             <input
               value={name}
@@ -69,7 +69,7 @@ function Contact(props) {
             />
           </div>
           <div>
-            <label for="email">Email Address: *</label>
+            <label for="email">Email address: *</label>
             <br />
             <input
               value={email}
@@ -140,7 +140,7 @@ function Contact(props) {
           </div>
           <div>
             <label for="details">
-              What are your hopes and goals for this project? *
+              Who are you? What are your hopes and goals for this project? *
             </label>
             <br />
             <textarea
@@ -158,7 +158,9 @@ function Contact(props) {
           <button
             className="k-button"
             onClick={e => handleSubmit(e)}
-            disabled={submitted || !(name && email && company && details && deadline)}
+            disabled={
+              submitted || !(name && email && company && details && deadline)
+            }
           >
             {submitted ? "Processing" : "Submit"}
           </button>
