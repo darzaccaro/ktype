@@ -117,7 +117,7 @@ function Header({ location }) {
         </Link>
         <nav
           style={{
-            paddingTop: 15,
+            paddingTop: 10,
             paddingBottom: 10,
             float: "right"
           }}

@@ -52,13 +52,13 @@ function Contact(props) {
         onSubmit={handleSubmit}
         style={{
           margin: "0 auto",
-          marginTop: theme.sizes.spacingV1,
-          marginBottom: theme.sizes.spacingV2
+          marginTop: theme.sizes.spacingV1 + 13,
+          marginBottom: theme.sizes.spacingV2 + 64
         }}
       >
         <div className="contact-subcontainer">
           <div>
-            <label for="name">Full name: *</label>
+            <label for="name">Full Name: *</label>
             <br />
             <input
               value={name}
@@ -67,9 +67,10 @@ function Contact(props) {
               name="name"
               autoComplete="off"
             />
+            <br />
           </div>
           <div>
-            <label for="email">Email address: *</label>
+            <label for="email">Email Address: *</label>
             <br />
             <input
               value={email}
@@ -82,7 +83,7 @@ function Contact(props) {
         </div>
         <div className="contact-subcontainer">
           <div>
-            <label for="company"> Name of company/organization: *</label>
+            <label for="company">Company Name: *</label>
             <br />
             <input
               value={company}
@@ -166,8 +167,11 @@ function Contact(props) {
           </button>
           {(name || email || company || details || deadline) &&
             !(name && email && company && details && deadline) && (
-              <p style={{ fontSize: "0.9em", display: "inline" }}>
-                * Please enter all required fields.
+              <p style={{ fontSize: "14px", display: "inline" }}>
+                <font color="#b53737">
+                  * Please enter all required fields before submitting this
+                  form.
+                </font>
               </p>
             )}
         </div>
