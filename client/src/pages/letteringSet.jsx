@@ -9,43 +9,43 @@ export default function LetteringSet() {
       images={[
         {
           src: "/lettering_set/01_rhythm.jpg",
-          alt: "rhythm"
+          alt: "Rhythm: brush script lettering"
         },
         {
           src: "/lettering_set/02_correlate.jpg",
-          alt: "correlate"
+          alt: "Correlate: monoline lettering"
         },
         {
           src: "/lettering_set/03_sunday.jpg",
-          alt: "sunday"
+          alt: "Sunday: brush script lettering"
         },
         {
           src: "/lettering_set/04_thanks.jpg",
-          alt: "thanks"
+          alt: "Thanks!: spencerian formal script lettering"
         },
         {
           src: "/lettering_set/05_balance.jpg",
-          alt: "balance"
+          alt: "Balance: script lettering"
         },
         {
           src: "/lettering_set/06_surreal.jpg",
-          alt: "surreal"
+          alt: "Surreal: backslant script lettering"
         },
         {
           src: "/lettering_set/07_format.jpg",
-          alt: "format"
+          alt: "Format: brush script lettering"
         },
         {
           src: "/lettering_set/08_jfs.jpg",
-          alt: "jfs"
+          alt: "Just Fucking Start: spencerian formal script lettering"
         },
         {
           src: "/lettering_set/09_faux.jpg",
-          alt: "faux"
+          alt: "Faux: brush script lettering"
         },
         {
           src: "/lettering_set/10_refine.jpg",
-          alt: "refine"
+          alt: "Refine: bouncy brush script lettering"
         }
       ]}
     />

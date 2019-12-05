@@ -18,6 +18,7 @@ export default function Success() {
               ? "325px"
               : theme.sizes.contentWidth,
           margin: "0 auto",
+          marginTop: 64,
           marginBottom: theme.sizes.spacingV1 - 10,
           minHeight: 800
         }}

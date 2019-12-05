@@ -54,7 +54,7 @@ export default function Work() {
             fontStyle: "italic",
             fontSize: 16,
             color: theme.colors.grey,
-            letterSpacing: 1
+            letterSpacing: 0
           }}
         >
           {description}

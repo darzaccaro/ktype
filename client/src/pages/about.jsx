@@ -12,6 +12,7 @@ export default function About() {
         <p
           style={{
             textAlign: "center",
+            marginTop: 60,
             marginBottom: theme.sizes.spacingV1,
             fontWeight: "normal",
             fontSize: "27px",
@@ -23,7 +24,7 @@ export default function About() {
         </p>
         <img
           src="/about/01_sketching.jpg"
-          alt="sketching"
+          alt="A photo of Kade Tyler making edits to lettering with a pencil"
           maxHeight="400px"
           width="100%"
         />
@@ -127,7 +128,7 @@ export default function About() {
         />
         {/* <div style={{ padding: 40 }}></div> */}
         <Signature isMobile={width < theme.breakpoints.mobile} />
-        <div style={{ padding: 14 }}></div>
+        <div style={{ padding: 16 }}></div>
       </div>
     </div>
   );
@@ -207,7 +208,7 @@ function LinkSection({ isMobile, title, src, data }) {
         <img
           style={{ marginTop: theme.sizes.spacingV3 - 6 }}
           src="/about/02_profile.jpg"
-          alt="profile"
+          alt="A photo of Kade Tyler"
           width="100%"
         ></img>
       </div>
@@ -235,7 +236,7 @@ function LinkSection({ isMobile, title, src, data }) {
         <img
           style={{ float: "right", marginTop: theme.sizes.spacingV3 - 6 }}
           src="/about/02_profile.jpg"
-          alt="profile"
+          alt="A photo of Kade Tyler"
           width="650px"
         ></img>
         <div>
@@ -440,8 +441,9 @@ function Signature({ isMobile }) {
                 marginBottom: theme.sizes.spacingV3
               }}
             >
-              Thank you for reading a bit about my process. I'm always open to
-              discussions on design. <Link to="/contact"> Come say hi!</Link>
+              Thank you for reading a bit about my process. If you have a
+              project consideration or just have a question, I'd be glad to
+              help... <Link to="/contact"> Come say hi!</Link>
             </p>
           </div>
           <img
@@ -451,7 +453,7 @@ function Signature({ isMobile }) {
             }}
             width="140px"
             src="/about/05_signature.png"
-            alt="signature"
+            alt="Artist signature"
           ></img>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <div>
@@ -463,7 +465,7 @@ function Signature({ isMobile }) {
                   maxWidth: 400
                 }}
                 src="/about/06_studiobooks.jpg"
-                alt="books"
+                alt="A collection of Graphic Design books; topics consist of lettering, branding, and typography"
                 width={"100%"}
               ></img>
             </div>
@@ -485,7 +487,7 @@ function Signature({ isMobile }) {
         <img
           style={{ float: "right" }}
           src="/about/06_studiobooks.jpg"
-          alt="books"
+          alt="A collection of Graphic Design books; topics consist of lettering, branding, and typography"
           width={400}
         ></img>
         <div style={{ width: 465 + theme.sizes.indent }}>
@@ -510,8 +512,9 @@ function Signature({ isMobile }) {
                 marginBottom: theme.sizes.spacingV3
               }}
             >
-              Thank you for reading a bit about my process. I'm always open to
-              discussions on design. <Link to="/contact"> Come say hi!</Link>
+              Thank you for reading a bit about my process. If you have a
+              project consideration or just have a question, I'd be glad to
+              help... <Link to="/contact"> Come say hi!</Link>
             </p>
           </div>
           <div
@@ -520,7 +523,7 @@ function Signature({ isMobile }) {
             <img
               width="140px"
               src="/about/05_signature.png"
-              alt="signature"
+              alt="Artist signature"
             ></img>
           </div>
         </div>

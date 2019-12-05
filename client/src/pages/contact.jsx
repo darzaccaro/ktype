@@ -37,7 +37,7 @@ function Contact(props) {
       props.history.push("/success");
     } else {
       alert(
-        "Oops, your message failed to send! Try again, or email hi@ktype.xyz directly."
+        "Oops, your message failed to send! Please try again, or email hi@ktype.xyz directly."
       );
     }
   }
@@ -53,7 +53,7 @@ function Contact(props) {
         style={{
           margin: "0 auto",
           marginTop: theme.sizes.spacingV1 + 13,
-          marginBottom: theme.sizes.spacingV2 + 64
+          marginBottom: theme.sizes.spacingV2 + 66
         }}
       >
         <div className="contact-subcontainer">
