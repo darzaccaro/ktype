@@ -9,14 +9,26 @@ export default function Work() {
     {
       title: "LETTERING SET",
       description: "Custom Lettering",
-      imgSrc: "/work/01_Thumbnail_LetteringSet.jpg",
+      imgSrc: "/work/01_lettering_set.jpg",
       to: "/lettering-set"
     },
     {
-      title: "SKETCHBOOK",
+      title: "HUMILITY",
+      description: "Identity Design",
+      imgSrc: "/work/02_humility.jpg",
+      to: "/humility"
+    },
+    {
+      title: "COMMUNICATE",
       description: "Custom Lettering",
-      imgSrc: "/work/02_Thumbnail_Sketchbook.jpg",
-      to: "/sketchbook"
+      imgSrc: "/work/03_communicate.jpg",
+      to: "/communicate"
+    },
+    {
+      title: "UNDEFINED BY NUMBERS",
+      description: "Custom Lettering",
+      imgSrc: "/work/04_undefined_by_numbers.jpg",
+      to: "/undefined-by-numbers"
     }
   ];
 
@@ -142,7 +154,7 @@ export default function Work() {
               : theme.sizes.contentWidth,
           margin: "0 auto",
           marginBottom: theme.sizes.spacingV1 - 10,
-          flexWrap: width < theme.breakpoints.mobile ? "wrap" : "nowrap"
+          flexWrap: "wrap"
         }}
       >
         {works.map((w, i) => (

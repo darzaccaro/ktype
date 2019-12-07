@@ -1,8 +1,13 @@
 import React from "react";
 import theme from "../theme";
 import useWindowWidth from "../hooks/useWindowWidth";
+import { useEffect } from 'react';
 export default function Success() {
   const width = useWindowWidth();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  })
+
   return (
     <div
       className="anim-fade-in"
