@@ -357,7 +357,7 @@ function Section({ isMobile, title, src, data }) {
           width: theme.sizes.contentWidth,
           margin: "0 auto",
           marginTop: theme.sizes.spacingV1 + 30,
-          marginBottom: theme.sizes.spacingV1 - 28
+          marginBottom: theme.sizes.spacingV1 + 4
         }}
       >
         <img
