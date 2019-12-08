@@ -11,7 +11,7 @@ export default function WorkTemplateA({ title, description, images }) {
         style={{
           maxWidth: theme.sizes.contentWidth,
           margin: "0 auto",
-          marginBottom: theme.sizes.spacingV1,
+          marginBottom: theme.sizes.spacingV1 + 5,
           display: "flex",
           justifyContent: "space-between",
           flexWrap: "wrap",
@@ -24,7 +24,7 @@ export default function WorkTemplateA({ title, description, images }) {
           style={{
             display: "inline-block",
             marginTop: width < theme.breakpoints.mobile ? 0 : 23,
-            paddingRight: 30
+            paddingRight: 0
           }}
         >
           {description}

@@ -13,7 +13,7 @@ export default function About() {
           style={{
             textAlign: "center",
             marginTop: 60,
-            marginBottom: theme.sizes.spacingV1,
+            marginBottom: theme.sizes.spacingV1 + 22,
             fontWeight: "normal",
             fontSize: "27px",
             lineHeight: "40px"
@@ -36,7 +36,7 @@ export default function About() {
           marginTop:
             width < theme.breakpoints.mobile
               ? theme.sizes.spacingV1
-              : theme.sizes.spacingV1 + 30
+              : theme.sizes.spacingV1 + 32
         }}
       >
         <h2
@@ -128,7 +128,12 @@ export default function About() {
         />
         {/* <div style={{ padding: 40 }}></div> */}
         <Signature isMobile={width < theme.breakpoints.mobile} />
-        <div style={{ padding: 16 }}></div>
+        <div
+          style={{
+            padding: 16,
+            marginTop: 0
+          }}
+        ></div>
       </div>
     </div>
   );
@@ -296,7 +301,7 @@ function Section({ isMobile, title, src, data }) {
             width: "90%",
             maxWidth: "400px",
             marginTop: theme.sizes.spacingV1 + 22 - theme.sizes.triangleHeight,
-            marginBottom: theme.sizes.spacingV1 - 20
+            marginBottom: theme.sizes.spacingV1
           }}
         >
           <div>
@@ -351,8 +356,8 @@ function Section({ isMobile, title, src, data }) {
           overflow: "hidden",
           width: theme.sizes.contentWidth,
           margin: "0 auto",
-          marginTop: theme.sizes.spacingV1 + 22,
-          marginBottom: theme.sizes.spacingV1 - 20
+          marginTop: theme.sizes.spacingV1 + 30,
+          marginBottom: theme.sizes.spacingV1 + 4
         }}
       >
         <img
@@ -480,8 +485,8 @@ function Signature({ isMobile }) {
           overflow: "hidden",
           width: theme.sizes.contentWidth,
           margin: "0 auto",
-          paddingBottom: theme.sizes.spacingV1,
-          paddingTop: theme.sizes.spacingV1 - 44
+          paddingBottom: theme.sizes.spacingV1 + 22,
+          paddingTop: theme.sizes.spacingV1 - 30
         }}
       >
         <img
@@ -495,7 +500,7 @@ function Signature({ isMobile }) {
             <p
               style={{
                 color: theme.colors.white,
-                marginTop: 0,
+                marginTop: -5,
                 marginBottom: theme.sizes.spacingV3
               }}
             >
@@ -508,8 +513,8 @@ function Signature({ isMobile }) {
             <p
               style={{
                 color: theme.colors.white,
-                marginTop: 0,
-                marginBottom: theme.sizes.spacingV3
+                marginTop: 48,
+                marginBottom: theme.sizes.spacingV3 + 10
               }}
             >
               Thank you for reading a bit about my process. If you have a
