@@ -153,7 +153,7 @@ export default function Work() {
               ? "100%"
               : theme.sizes.contentWidth,
           margin: "0 auto",
-          marginBottom: theme.sizes.spacingV1 - 10,
+          marginBottom: theme.sizes.spacingV1 - 32,
           flexWrap: "wrap"
         }}
       >

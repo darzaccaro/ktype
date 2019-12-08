@@ -57,14 +57,14 @@ export default function WorkTemplateA({ title, description, data }) {
                     width < theme.breakpoints.mobile
                       ? theme.sizes.spacingV2
                       : 0,
-                  marginBottom: theme.sizes.spacingV3,
-                  width: "90%"
+                  marginBottom: theme.sizes.spacingV3 - 2,
+                  width: "80%"
                 }}
               >
                 <h2
                   style={{
                     color: theme.colors.grey,
-                    marginTop: theme.sizes.spacingV3 - 10,
+                    marginTop: theme.sizes.spacingV3 - 15,
                     fontWeight: "normal",
                     fontSize: 15
                   }}

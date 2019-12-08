@@ -301,7 +301,7 @@ function Section({ isMobile, title, src, data }) {
             width: "90%",
             maxWidth: "400px",
             marginTop: theme.sizes.spacingV1 + 22 - theme.sizes.triangleHeight,
-            marginBottom: theme.sizes.spacingV1 - 20
+            marginBottom: theme.sizes.spacingV1
           }}
         >
           <div>
@@ -363,7 +363,7 @@ function Section({ isMobile, title, src, data }) {
         <img
           style={{
             float: "right",
-            marginTop: 0,
+            marginTop: 5,
             maxWidth: 400
           }}
           src={src}
@@ -485,8 +485,8 @@ function Signature({ isMobile }) {
           overflow: "hidden",
           width: theme.sizes.contentWidth,
           margin: "0 auto",
-          paddingBottom: theme.sizes.spacingV1,
-          paddingTop: theme.sizes.spacingV1 - 35
+          paddingBottom: theme.sizes.spacingV1 + 22,
+          paddingTop: theme.sizes.spacingV1 - 30
         }}
       >
         <img
