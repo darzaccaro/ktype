@@ -46,6 +46,11 @@ export default function LetteringSet() {
         {
           src: "/lettering_set/10_refine.jpg",
           alt: "Refine: bouncy brush script lettering"
+        },
+        {
+          src: "/lettering_set/11_pushthrough_full.jpg",
+          alt:
+            "Push Through: calligraphy using a modified ruling pen for added grunge."
         }
       ]}
     />

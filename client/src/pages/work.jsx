@@ -100,7 +100,7 @@ export default function Work() {
         <Link
           to={to}
           onClick={() => window.scrollTo(0, 0)}
-          style={{ marginBottom: theme.sizes.spacingV3 }}
+          style={{ marginBottom: theme.sizes.spacingV3 + 25 }}
         >
           <div
             onMouseOver={() => setTagOpacity(1)}

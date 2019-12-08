@@ -44,7 +44,7 @@ h1 {
   font-family: "PT Serif", serif;
   font-size: 27px;
   font-weight: 700;
-  line-height: 1.4em;
+  line-height: 33px;
 }
 
 h2 {
@@ -112,7 +112,7 @@ a:hover {
   margin-left: 100px;
   letter-spacing: 2px;
   font-size: 13px;
-  padding: 20px 0px 20px 34px;
+  padding: 20px 0px 20px 33px;
 }
 .nav-link:hover {
   color: #61512d;
@@ -142,6 +142,7 @@ a:hover {
   font-weight: bold;
   font-size: 21px;
   transition: background-color 0.4s, color 0.2s;
+  margin-top: -20px;
 }
 .k-button:disabled,
 .k-button:disabled:hover {
