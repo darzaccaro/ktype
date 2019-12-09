@@ -58,7 +58,7 @@ export default function WorkTemplateA({ title, description, data }) {
                       ? theme.sizes.spacingV2
                       : 0,
                   marginBottom: theme.sizes.spacingV3 - 2,
-                  width: "80%"
+                  width: "85%"
                 }}
               >
                 <h2
