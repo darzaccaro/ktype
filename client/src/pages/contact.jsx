@@ -11,7 +11,13 @@ function Contact(props) {
   const [deadline, setDeadline] = useState("");
   const [priceRange, setPriceRange] = useState(0);
   const [submitted, setSubmitted] = useState(false);
-  const priceRanges = ["Under $5K", "Under $10K", "Under $15K", "$20K+"];
+  const priceRanges = [
+    "Under $1,000",
+    "Under $5,000",
+    "Under $10,000",
+    "$10,000+",
+    "I'm not sure."
+  ];
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -137,6 +143,7 @@ function Contact(props) {
                 {priceRanges[2]}
               </option>
               <option value={3}>{priceRanges[3]}</option>
+              <option value={4}>{priceRanges[4]}</option>
             </select>
           </div>
           <div>
