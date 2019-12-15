@@ -448,7 +448,7 @@ function Signature({ isMobile }) {
             >
               Thank you for reading a bit about my process. If you have a
               project consideration or just have a question, I'd be glad to
-              help... <Link to="/contact"> Come say hi!</Link>
+              help... <Link to="/contact" onClick={() => window.scrollTo(0, 0)}> Come say hi!</Link>
             </p>
           </div>
           <img
@@ -519,7 +519,7 @@ function Signature({ isMobile }) {
             >
               Thank you for reading a bit about my process. If you have a
               project consideration or just have a question, I'd be glad to
-              help... <Link to="/contact"> Come say hi!</Link>
+              help... <Link to="/contact" onClick={() => window.scrollTo(0, 0)}> Come say hi!</Link>
             </p>
           </div>
           <div
