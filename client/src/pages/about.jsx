@@ -8,26 +8,13 @@ export default function About() {
   const width = useWindowWidth();
   return (
     <div className="anim-fade-in">
-      <div style={{ maxWidth: theme.sizes.contentWidth, margin: "0 auto" }}>
-        <p
-          style={{
-            textAlign: "center",
-            marginTop: 60,
-            marginBottom: theme.sizes.spacingV1 + 22,
-            fontWeight: "normal",
-            fontSize: "27px",
-            lineHeight: "40px"
-          }}
-        >
-          Hi, I'm Kade<br></br>
-          <strong style={{ letterSpacing: 8 }}>...</strong>
-        </p>
-        <img
-          src="/about/01_sketching.jpg"
-          alt="A photo of Kade Tyler making edits to lettering with a pencil"
-          maxHeight="400px"
-          width="100%"
-        />
+      <div
+        style={{
+          maxWidth: theme.sizes.contentWidth,
+          margin: "0 auto",
+          overflow: "hidden"
+        }}
+      >
         <LinkSection isMobile={width < theme.breakpoints.mobile} />
       </div>
       <div
@@ -77,6 +64,7 @@ export default function About() {
           isMobile={width < theme.breakpoints.mobile}
           title="Approach"
           src="/about/03_approach.jpg"
+          alt="Vector bezier curves and anchor points"
           data={[
             {
               title1: "PHASE 1 — ",
@@ -108,6 +96,7 @@ export default function About() {
           isMobile={width < theme.breakpoints.mobile}
           title="Core Values"
           src="/about/04_approach2.jpg"
+          alt="Lettering refinement"
           data={[
             {
               title2: "DESIGN WITH PURPOSE.",
@@ -152,6 +141,12 @@ function LinkSection({ isMobile, title, src, data }) {
           }}
         >
           <div>
+            <img
+              style={{ marginTop: theme.sizes.spacingV3 - 6 }}
+              src="/about/kade_portrait.jpg"
+              alt="A photo of Kade Tyler"
+              width="100%"
+            ></img>
             <h2
               style={{
                 color: theme.colors.grey,
@@ -163,11 +158,12 @@ function LinkSection({ isMobile, title, src, data }) {
               DESIGN &amp; LETTERING
             </h2>
             <p>
-              I’m a graphic designer focused on mindful typographic arts. My
-              passion-driven process repeats extensive trials and explorations
-              to provide enduring solutions.
+              My name is Kade Tyler, a designer focused on mindful typographic
+              arts. I enjoy translating meaning into enduring solutions through
+              my passion-driven process.
             </p>
           </div>
+
           <div>
             <h3 style={{ marginTop: theme.sizes.spacingV3 }}>Services</h3>
             <ul style={{ marginBottom: theme.sizes.spacingV3 }}>
@@ -210,41 +206,36 @@ function LinkSection({ isMobile, title, src, data }) {
             </ul>
           </div>
         </div>
-        <img
-          style={{ marginTop: theme.sizes.spacingV3 - 6 }}
-          src="/about/02_profile.jpg"
-          alt="A photo of Kade Tyler"
-          width="100%"
-        ></img>
       </div>
     );
   } else {
     return (
       <div style={{ overflow: "hidden" }}>
         <div>
+          <img
+            style={{ float: "left", paddingTop: "24px" }}
+            src="/about/kade_portrait.jpg"
+            alt="A photo of Kade Tyler"
+            width="450px"
+          ></img>
+        </div>
+
+        <div style={{ paddingLeft: "511px" }}>
           <h2
             style={{
               color: theme.colors.grey,
-              marginTop: theme.sizes.spacingV3,
               fontWeight: "normal",
               fontSize: 15
             }}
           >
             DESIGN &amp; LETTERING
           </h2>
+
           <p>
-            I’m a graphic designer focused on mindful typographic arts. My
-            passion-driven process repeats extensive trials and explorations to
-            provide enduring solutions.
+            My name is Kade Tyler, a designer focused on mindful typographic
+            arts. I enjoy translating meaning into enduring solutions through my
+            passion-driven process.
           </p>
-        </div>
-        <img
-          style={{ float: "right", marginTop: theme.sizes.spacingV3 - 6 }}
-          src="/about/02_profile.jpg"
-          alt="A photo of Kade Tyler"
-          width="650px"
-        ></img>
-        <div>
           <h3 style={{ marginTop: theme.sizes.spacingV3 + 7 }}>Services</h3>
           <ul>
             <li>Branding & Strategy</li>
@@ -448,7 +439,11 @@ function Signature({ isMobile }) {
             >
               Thank you for reading a bit about my process. If you have a
               project consideration or just have a question, I'd be glad to
-              help... <Link to="/contact" onClick={() => window.scrollTo(0, 0)}> Come say hi!</Link>
+              help...{" "}
+              <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
+                {" "}
+                Come say hi.
+              </Link>
             </p>
           </div>
           <img
@@ -495,7 +490,7 @@ function Signature({ isMobile }) {
           alt="A collection of Graphic Design books; topics consist of lettering, branding, and typography"
           width={400}
         ></img>
-        <div style={{ width: 465 + theme.sizes.indent }}>
+        <div style={{ width: 435 + theme.sizes.indent }}>
           <div>
             <p
               style={{
@@ -519,7 +514,11 @@ function Signature({ isMobile }) {
             >
               Thank you for reading a bit about my process. If you have a
               project consideration or just have a question, I'd be glad to
-              help... <Link to="/contact" onClick={() => window.scrollTo(0, 0)}> Come say hi!</Link>
+              help...{" "}
+              <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
+                {" "}
+                Come say hi.
+              </Link>
             </p>
           </div>
           <div
