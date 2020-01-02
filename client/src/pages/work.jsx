@@ -64,7 +64,7 @@ export default function Work() {
             textAlign: alignLeft ? "left" : "center",
             marginTop: 0,
             fontStyle: "italic",
-            fontSize: 16,
+            fontSize: 17,
             color: theme.colors.grey,
             letterSpacing: 0
           }}
@@ -103,6 +103,7 @@ export default function Work() {
           style={{ marginBottom: theme.sizes.spacingV3 + 25 }}
         >
           <div
+            className="thumbnail"
             onMouseOver={() => setTagOpacity(1)}
             onMouseLeave={() => setTagOpacity(0)}
             style={{

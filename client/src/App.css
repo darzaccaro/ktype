@@ -188,7 +188,7 @@ a:hover {
 .trans-shrink {
   width: 100%;
   padding: 185px 0px 165px 0px;
-  transition: width 1s;
+  transition: width 0.4s;
   transition-timing-function: ease-in-out;
 }
 .trans-shrink:hover {
@@ -211,7 +211,7 @@ a:hover {
 }
 .anim-fade-in {
   animation-name: fadein;
-  animation-duration: 0.8s;
+  animation-duration: 0.3s;
   animation-fill-mode: forwards;
 }
 
@@ -243,4 +243,12 @@ a:hover {
 ::-moz-selection {
   background-color: #b9b9b9;
   color: #fff;
+}
+
+.thumbnail {
+  transition: transform 0.2s ease-in-out;
+  box-sizing: border-box;
+}
+.thumbnail:hover {
+  transform: scale(0.95);
 }

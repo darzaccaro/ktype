@@ -55,7 +55,7 @@ function Header({ location }) {
               paddingLeft: theme.sizes.spacingV2
             }}
           >
-            <img src="/logo.svg" alt="logo" />
+            <img className="logo" src="/logo.svg" alt="logo" />
           </Link>
           <MobileMenuButton />
         </div>
@@ -113,7 +113,7 @@ function Header({ location }) {
           to={"/"}
           style={{ width: 35, float: "left", position: "relative", top: 10 }}
         >
-          <img src="/logo.svg" alt="logo" />
+          <img className="logo" src="/logo.svg" alt="logo" />
         </Link>
         <nav
           style={{
