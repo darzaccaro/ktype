@@ -1,5 +1,6 @@
 //@flow
-import React from "react";
+import ReactGA from "react-ga";
+import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/Footer";
@@ -14,6 +15,10 @@ import Contact from "./pages/contact";
 import Work from "./pages/work";
 import Success from "./pages/success";
 import theme from "./theme";
+
+// Google Analytics
+ReactGA.initialize("UA-155272033-1");
+ReactGA.pageview(window.location.pathname);
 
 function App(props) {
   return (
