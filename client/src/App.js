@@ -18,7 +18,12 @@ import theme from "./theme";
 
 // Google Analytics
 ReactGA.initialize("UA-155272033-1");
-ReactGA.pageview(window.location.pathname + window.location.search);
+ReactGA.pageview("/");
+ReactGA.pageview("/lettering-set");
+ReactGA.pageview("/humility");
+ReactGA.pageview("/communicate");
+ReactGA.pageview("/undefined-by-numbers");
+ReactGA.pageview("/contact");
 
 function App(props) {
   return (
