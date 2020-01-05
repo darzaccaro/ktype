@@ -1,5 +1,4 @@
 //@flow
-import ReactGA from "react-ga";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
 import "./App.css";
@@ -15,15 +14,10 @@ import Contact from "./pages/contact";
 import Work from "./pages/work";
 import Success from "./pages/success";
 import theme from "./theme";
-
 // Google Analytics
+import ReactGA from "react-ga";
 ReactGA.initialize("UA-155272033-1");
-ReactGA.pageview("/");
-ReactGA.pageview("/lettering-set");
-ReactGA.pageview("/humility");
-ReactGA.pageview("/communicate");
-ReactGA.pageview("/undefined-by-numbers");
-ReactGA.pageview("/contact");
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 function App(props) {
   return (
