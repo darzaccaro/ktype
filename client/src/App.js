@@ -6,10 +6,11 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import About from "./pages/about";
 import LetteringSet from "./pages/letteringSet";
-import SketchBook from "./pages/sketchBook";
 import Humility from "./pages/humility";
 import Communicate from "./pages/communicate";
 import UBN from "./pages/ubn";
+import DimensionalType from "./pages/dimensionalType";
+import LoosenUp from "./pages/loosenUp";
 import Contact from "./pages/contact";
 import Work from "./pages/work";
 import Success from "./pages/success";
@@ -32,7 +33,8 @@ function App(props) {
       <Route path="/humility" component={Humility} />
       <Route path="/communicate" component={Communicate} />
       <Route path="/undefined-by-numbers" component={UBN} />
-      {/* <Route path="/sketchbook" component={SketchBook} /> */}
+      <Route path="/dimensional-type" component={DimensionalType} />
+      <Route path="/loosen-up" component={LoosenUp} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
       <Route path="/success" component={Success} />

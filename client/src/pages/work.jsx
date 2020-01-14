@@ -7,6 +7,12 @@ export default function Work() {
   const width = useWindowWidth();
   const works = [
     {
+      title: "DIMENSIONAL TYPE",
+      description: "3D Lettering",
+      imgSrc: "/work/dimensionaltype_thumbnail.jpg",
+      to: "/dimensional-type"
+    },
+    {
       title: "LETTERING SET",
       description: "Custom Lettering",
       imgSrc: "/work/01_lettering_set.jpg",
@@ -29,6 +35,12 @@ export default function Work() {
       description: "Custom Lettering",
       imgSrc: "/work/04_undefined_by_numbers.jpg",
       to: "/undefined-by-numbers"
+    },
+    {
+      title: "LOOSEN UP",
+      description: "Custom Lettering",
+      imgSrc: "/work/loosenup_thumbnail.jpg",
+      to: "/loosen-up"
     }
   ];
 

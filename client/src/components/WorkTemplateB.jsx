@@ -4,7 +4,7 @@ import BarLink from "./BarLink";
 import useWindowWidth from "../hooks/useWindowWidth";
 
 export default function WorkTemplateA({ title, description, data }) {
-  const width = useWindowWidth();
+  const windowWidth = useWindowWidth();
   return (
     <div className="anim-fade-in">
       <div
@@ -17,7 +17,7 @@ export default function WorkTemplateA({ title, description, data }) {
           justifyContent: "space-between",
           flexWrap: "wrap",
           paddingLeft:
-            width < theme.breakpoints.mobile ? theme.sizes.spacingV2 : 0
+            windowWidth < theme.breakpoints.mobile ? theme.sizes.spacingV2 : 0
         }}
       >
         <h1 style={{ display: "inline-block" }}>{title}</h1>
@@ -54,11 +54,11 @@ export default function WorkTemplateA({ title, description, data }) {
               <div
                 style={{
                   paddingLeft:
-                    width < theme.breakpoints.mobile
+                    windowWidth < theme.breakpoints.mobile
                       ? theme.sizes.spacingV2
                       : 0,
                   marginBottom: theme.sizes.spacingV3 - 2,
-                  width: "85%"
+                  width: windowWidth < theme.breakpoints.mobile ? "85%" : "65%"
                 }}
               >
                 <h2
