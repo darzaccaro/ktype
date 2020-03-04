@@ -15,7 +15,6 @@ textarea {
   padding-left: 10px;
   background-color: #f3f3f3;
   margin-top: 12px;
-  text-rendering: optimizeLegibility;
 }
 
 textarea {
@@ -25,7 +24,6 @@ textarea {
 label {
   font-family: "PT Serif", serif;
   font-size: 19px;
-  text-rendering: optimizeLegibility;
 }
 body {
   font-family: "PT Serif", serif;
@@ -33,7 +31,6 @@ body {
   margin: 0px;
   padding: 0px;
   line-height: 33px;
-  text-rendering: optimizeLegibility;
 }
 .contact-subcontainer {
   display: flex;
@@ -49,7 +46,6 @@ h1 {
   font-size: 27px;
   font-weight: 700;
   line-height: 33px;
-  text-rendering: optimizeLegibility;
 }
 
 h2 {
@@ -57,7 +53,6 @@ h2 {
   letter-spacing: 5px;
   font-size: 1rem;
   line-height: 46px;
-  text-rendering: optimizeLegibility;
 }
 
 h3 {
@@ -65,14 +60,12 @@ h3 {
   font-size: 27px;
   margin-top: 0px;
   margin-bottom: 24px;
-  text-rendering: optimizeLegibility;
 }
 h4,
 h5 {
   font-family: "Josefin Sans", sans-serif;
   letter-spacing: 5px;
   font-size: 0.95rem;
-  text-rendering: optimizeLegibility;
 }
 h6 {
   font-family: "Josefin Sans", sans-serif;
@@ -80,7 +73,6 @@ h6 {
   letter-spacing: 5px;
   font-size: 1rem;
   margin: 0px;
-  text-rendering: optimizeLegibility;
 }
 
 li {
@@ -108,7 +100,6 @@ a:hover {
   padding: 20px;
   font-size: 1.5rem;
   letter-spacing: 2px;
-  text-rendering: optimizeLegibility;
 }
 .mobile-menu-button:hover {
   color: #61512d;
@@ -123,7 +114,6 @@ a:hover {
   letter-spacing: 2px;
   font-size: 13px;
   padding: 20px 0px 20px 33px;
-  text-rendering: optimizeLegibility;
 }
 .nav-link:hover {
   color: #61512d;
@@ -152,9 +142,8 @@ a:hover {
   border: none;
   font-weight: bold;
   font-size: 21px;
-  transition: background-color 0.4s, color 0.2s;
+  transition: background-color 0.18s, color 0.18s;
   margin-top: -20px;
-  text-rendering: optimizeLegibility;
 }
 .k-button:disabled,
 .k-button:disabled:hover {
@@ -187,7 +176,7 @@ a:hover {
 
 .trans-shrink {
   width: 100%;
-  padding: 185px 0px 165px 0px;
+  padding: 165px 0px 140px 0px;
   transition: width 0.4s;
   transition-timing-function: ease-in-out;
 }
@@ -196,9 +185,18 @@ a:hover {
 }
 
 .trans-fade {
-  transition: opacity 0.2s;
-  opacity: 0;
-  transition-timing-function: ease-in-out;
+  transition: 0.18s ease-in-out;
+}
+
+.thumbnail {
+  transition: 0.18s ease-in-out;
+  box-sizing: border-box;
+  outline: 4px solid white;
+}
+
+.thumbnail:hover {
+  transform: scale(1.06);
+  outline: 4px solid black;
 }
 
 @keyframes fadein {
@@ -211,8 +209,9 @@ a:hover {
 }
 .anim-fade-in {
   animation-name: fadein;
-  animation-duration: 0.3s;
+  animation-duration: 0.5s;
   animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 }
 
 @media (max-width: 925px) {
@@ -243,12 +242,4 @@ a:hover {
 ::-moz-selection {
   background-color: #b9b9b9;
   color: #fff;
-}
-
-.thumbnail {
-  transition: transform 0.2s ease-in-out;
-  box-sizing: border-box;
-}
-.thumbnail:hover {
-  transform: scale(0.95);
 }

@@ -1,5 +1,5 @@
 //@flow
-import React, { useEffect } from "react";
+import React, { useEffect, Component } from "react";
 import { Route } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/Footer";
@@ -9,7 +9,8 @@ import LetteringSet from "./pages/letteringSet";
 import Humility from "./pages/humility";
 import Communicate from "./pages/communicate";
 import UBN from "./pages/ubn";
-import DimensionalType from "./pages/dimensionalType";
+import RibbonNumerals from "./pages/ribbonNumerals";
+import TapeTypography from "./pages/tapeTypography";
 import LoosenUp from "./pages/loosenUp";
 import Contact from "./pages/contact";
 import Work from "./pages/work";
@@ -33,7 +34,8 @@ function App(props) {
       <Route path="/humility" component={Humility} />
       <Route path="/communicate" component={Communicate} />
       <Route path="/undefined-by-numbers" component={UBN} />
-      <Route path="/dimensional-type" component={DimensionalType} />
+      <Route path="/ribbon-numerals" component={RibbonNumerals} />
+      <Route path="/tape-typography" component={TapeTypography} />
       <Route path="/loosen-up" component={LoosenUp} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />

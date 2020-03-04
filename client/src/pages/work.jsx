@@ -7,22 +7,22 @@ export default function Work() {
   const width = useWindowWidth();
   const works = [
     {
-      title: "DIMENSIONAL TYPE",
+      title: "TAPE TYPOGRAPHY",
       description: "3D Lettering",
-      imgSrc: "/work/dimensionaltype_thumbnail.jpg",
-      to: "/dimensional-type"
+      imgSrc: "/work/tape_typography_thumbnail.jpg",
+      to: "/tape-typography"
+    },
+    {
+      title: "RIBBON NUMERALS",
+      description: "3D Lettering",
+      imgSrc: "/work/ribbon_numerals_thumbnail.jpg",
+      to: "/ribbon-numerals"
     },
     {
       title: "LETTERING SET",
       description: "Custom Lettering",
       imgSrc: "/work/01_lettering_set.jpg",
       to: "/lettering-set"
-    },
-    {
-      title: "HUMILITY",
-      description: "Identity Design",
-      imgSrc: "/work/02_humility.jpg",
-      to: "/humility"
     },
     {
       title: "COMMUNICATE",
@@ -41,6 +41,12 @@ export default function Work() {
       description: "Custom Lettering",
       imgSrc: "/work/loosenup_thumbnail.jpg",
       to: "/loosen-up"
+    },
+    {
+      title: "HUMILITY",
+      description: "Identity Design",
+      imgSrc: "/work/02_humility.jpg",
+      to: "/humility"
     }
   ];
 
@@ -49,10 +55,10 @@ export default function Work() {
       <div
         style={{
           backgroundColor: "white",
-          maxWidth: theme.sizes.cardWidth - 85,
+          /* maxWidth: theme.sizes.cardWidth - 85, */
           maxHeight: theme.sizes.cardHeight / 4,
           position: "relative",
-          top: alignLeft ? 0 : 25,
+          /* top: alignLeft ? 0 : 30, */
           margin: alignLeft ? 0 : "0 auto",
           padding: 15,
           paddingLeft: alignLeft ? theme.sizes.spacingV2 : 15,
@@ -113,9 +119,9 @@ export default function Work() {
           to={to}
           onClick={() => window.scrollTo(0, 0)}
           style={{ marginBottom: theme.sizes.spacingV3 + 25 }}
+          className="thumbnail"
         >
           <div
-            className="thumbnail"
             onMouseOver={() => setTagOpacity(1)}
             onMouseLeave={() => setTagOpacity(0)}
             style={{
@@ -152,7 +158,9 @@ export default function Work() {
           lineHeight: "44px"
         }}
       >
-        The strategic design studio of Kade Tyler&mdash;specializing in
+        The strategic design studio of
+        <span style={{ color: theme.colors.grey }}> Kade Tyler</span>
+        &mdash;specializing in
         <br />
         thoughtful visual identities &amp; custom lettering.
       </p>

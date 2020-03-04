@@ -23,7 +23,7 @@ export default function Communicate() {
         },
         {
           img: {
-            src: "/communicate/02_detail.jpg",
+            src: "/communicate/bezierreveal.gif",
             alt: "Communicate lettering zoomed in to show detail"
           }
         }
