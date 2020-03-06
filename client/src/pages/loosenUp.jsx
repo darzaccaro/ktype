@@ -18,7 +18,7 @@ export default function LoosenUp() {
           txt: {
             title: "PROJECT INITIATION",
             text:
-              "An opportunity to explore looser styles of lettering with bouncy rhythm and meandering baselines."
+              "An opportunity to explore looser styles of lettering with bouncy rhythm and meandering baselines. The lettering was influenced by rapid calligraphy with a chisel tip marker."
           }
         },
         {

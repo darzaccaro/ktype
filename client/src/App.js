@@ -10,7 +10,7 @@ import Humility from "./pages/humility";
 import Communicate from "./pages/communicate";
 import UBN from "./pages/ubn";
 import RibbonNumerals from "./pages/ribbonNumerals";
-import TapeTypography from "./pages/tapeTypography";
+import TapedNumerals from "./pages/tapedNumerals";
 import LoosenUp from "./pages/loosenUp";
 import Contact from "./pages/contact";
 import Work from "./pages/work";
@@ -35,7 +35,7 @@ function App(props) {
       <Route path="/communicate" component={Communicate} />
       <Route path="/undefined-by-numbers" component={UBN} />
       <Route path="/ribbon-numerals" component={RibbonNumerals} />
-      <Route path="/tape-typography" component={TapeTypography} />
+      <Route path="/taped-numerals" component={TapedNumerals} />
       <Route path="/loosen-up" component={LoosenUp} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />

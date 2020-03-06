@@ -169,7 +169,7 @@ function LinkSection({ isMobile, title, src, data }) {
             <ul style={{ marginBottom: theme.sizes.spacingV3 }}>
               <li>Branding & Strategy</li>
               <li>Identity Design</li>
-              <li>Logotype Design</li>
+              <li>3D Typography</li>
               <li>Custom Lettering</li>
               <li>Illustration</li>
               <li>Web Design</li>
@@ -240,7 +240,7 @@ function LinkSection({ isMobile, title, src, data }) {
           <ul>
             <li>Branding & Strategy</li>
             <li>Identity Design</li>
-            <li>Logotype Design</li>
+            <li>3D Typography</li>
             <li>Custom Lettering</li>
             <li>Illustration</li>
             <li>Web Design</li>

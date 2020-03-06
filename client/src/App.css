@@ -176,7 +176,7 @@ a:hover {
 
 .trans-shrink {
   width: 100%;
-  padding: 165px 0px 140px 0px;
+  padding: 165px 0px 134px 0px;
   transition: width 0.4s;
   transition-timing-function: ease-in-out;
 }

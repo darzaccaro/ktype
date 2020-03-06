@@ -5,7 +5,7 @@ export default function Humility() {
   return (
     <WorkTemplateB
       title="Humility"
-      description="Services: Identity Design, Logotype Design, Custom Lettering"
+      description="Services: Identity Design, Custom Lettering"
       data={[
         { img: { src: "/humility/01_logotype.jpg", alt: "Humility logotype" } },
         {

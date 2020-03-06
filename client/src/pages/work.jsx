@@ -7,14 +7,14 @@ export default function Work() {
   const width = useWindowWidth();
   const works = [
     {
-      title: "TAPE TYPOGRAPHY",
-      description: "3D Lettering",
+      title: "TAPED NUMERALS",
+      description: "3D Typography",
       imgSrc: "/work/tape_typography_thumbnail.jpg",
-      to: "/tape-typography"
+      to: "/taped-numerals"
     },
     {
       title: "RIBBON NUMERALS",
-      description: "3D Lettering",
+      description: "3D Typography",
       imgSrc: "/work/ribbon_numerals_thumbnail.jpg",
       to: "/ribbon-numerals"
     },

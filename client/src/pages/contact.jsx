@@ -89,7 +89,7 @@ function Contact(props) {
         </div>
         <div className="contact-subcontainer">
           <div>
-            <label for="company">Company Name: *</label>
+            <label for="company">Company Name:</label>
             <br />
             <input
               value={company}
@@ -166,15 +166,13 @@ function Contact(props) {
           <button
             className="k-button"
             onClick={e => handleSubmit(e)}
-            disabled={
-              submitted || !(name && email && company && details && deadline)
-            }
+            disabled={submitted || !(name && email && details && deadline)}
           >
             {submitted ? "Processing" : "Submit"}
           </button>
-          {(name || email || company || details || deadline) &&
-            !(name && email && company && details && deadline) && (
-              <p style={{ fontSize: "14px", display: "inline" }}>
+          {(name || email || details || deadline) &&
+            !(name && email && details && deadline) && (
+              <p style={{ fontSize: "16px", display: "inline" }}>
                 <font color="#b53737">
                   * Please enter all required fields before submitting this
                   form.

@@ -27,7 +27,7 @@ function generateContactEmail({
   return {
     from: "darbot9002@hotmail.com",
     to: dev ? "darzaccaro@gmail.com" : "hi@ktype.xyz",
-    subject: `New form submission from ${name}`,
+    subject: `New Form Submission from ${name}`,
     text: `
     Name: ${name}\n
     Email: ${email}\n
@@ -36,7 +36,7 @@ function generateContactEmail({
     Details: ${details}\n
     Deadline: ${deadline}\n
     PriceRange: ${priceRange}\n
-    \n\nGLHF!\n—darbot9000`
+    \n\n—Submitted via ktype.xyz/contact`
   };
 }
 
@@ -45,19 +45,18 @@ app.use(bodyParser.json());
 app.use(morgan("combined"));
 
 // Forward to https(heroku)
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === "production") {
   app.use((req, res, next) => {
-    if (req.header('x-forwarded-proto') !== 'https')
-      res.redirect(`https://${req.header('host')}${req.url}`)
-    else
-      next()
-  })
+    if (req.header("x-forwarded-proto") !== "https")
+      res.redirect(`https://${req.header("host")}${req.url}`);
+    else next();
+  });
 }
 
 app.post("/api/mail", (req, res) => {
   console.log("Sending Mail");
   console.log(req.body);
-  transporter.sendMail(generateContactEmail(req.body), function (error, info) {
+  transporter.sendMail(generateContactEmail(req.body), function(error, info) {
     if (error) {
       console.log(error);
       res.status(500).send("Something broke!");
