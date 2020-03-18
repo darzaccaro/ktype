@@ -8,7 +8,9 @@ const morgan = require("morgan");
 const app = express();
 
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  host: "smtp.gmail.com",
+  port: 587,
+  secure: false,
   auth: {
     user: "hi@ktype.xyz",
     pass: process.env.EMAIL_PASSWORD
@@ -26,7 +28,7 @@ function generateContactEmail({
 }) {
   return {
     from: "hi@ktype.xyz",
-    to: dev ? "hi@ktype.xyz",
+    to: "hi@ktype.xyz",
     subject: `New Form Submission from ${name}`,
     text: `
     Name: ${name}\n
