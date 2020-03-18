@@ -8,9 +8,9 @@ const morgan = require("morgan");
 const app = express();
 
 const transporter = nodemailer.createTransport({
-  service: "Hotmail",
+  service: "gmail",
   auth: {
-    user: "darbot9002@hotmail.com",
+    user: "hi@ktype.xyz",
     pass: process.env.EMAIL_PASSWORD
   }
 });
@@ -25,8 +25,8 @@ function generateContactEmail({
   priceRange
 }) {
   return {
-    from: "darbot9002@hotmail.com",
-    to: dev ? "darzaccaro@gmail.com" : "hi@ktype.xyz",
+    from: "hi@ktype.xyz",
+    to: dev ? "hi@ktype.xyz",
     subject: `New Form Submission from ${name}`,
     text: `
     Name: ${name}\n

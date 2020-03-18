@@ -52,7 +52,12 @@ function Contact(props) {
       <p>
         If you have a question, inquiry, or just want to say hi, you can write
         me at <br></br>
-        <a href="mailto:hi@ktype.xyz">hi@ktype.xyz</a> or use the form below.
+        <a href="mailto:hi@ktype.xyz" className="underline">
+          hi@ktype.xyz
+        </a>{" "}
+        or use the form below.
+        <br></br>
+        <br></br>I'm quick to respond, so we'll be in touch soon!
       </p>
       <form
         onSubmit={handleSubmit}
@@ -64,7 +69,7 @@ function Contact(props) {
       >
         <div className="contact-subcontainer">
           <div>
-            <label for="name">Full Name: *</label>
+            <label for="name"> Full Name: *</label>
             <br />
             <input
               value={name}

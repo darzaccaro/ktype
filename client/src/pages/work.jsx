@@ -70,9 +70,10 @@ export default function Work() {
           style={{
             color: theme.colors.black,
             textAlign: alignLeft ? "left" : "center",
-            marginTop: 13,
+            marginTop: 7,
             marginBottom: 0,
-            lineHeight: 1
+            fontSize: 17,
+            lineHeight: 1.5
           }}
         >
           {title}
@@ -82,7 +83,7 @@ export default function Work() {
             textAlign: alignLeft ? "left" : "center",
             marginTop: 0,
             fontStyle: "italic",
-            fontSize: 17,
+            fontSize: 18,
             color: theme.colors.grey,
             letterSpacing: 0
           }}
@@ -158,8 +159,10 @@ export default function Work() {
           lineHeight: "44px"
         }}
       >
-        The strategic design studio of
-        <span style={{ color: theme.colors.grey }}> Kade Tyler</span>
+        The strategic design studio of{" "}
+        <Link to="/about" onClick={() => window.scrollTo(0, 0)}>
+          <span className="underline">Kade Tyler</span>
+        </Link>
         &mdash;specializing in
         <br />
         thoughtful visual identities &amp; custom lettering.

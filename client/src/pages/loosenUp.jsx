@@ -9,7 +9,7 @@ export default function LoosenUp() {
       data={[
         {
           img: {
-            src: "/loosen_up/loosenup.jpg",
+            src: "/loosen_up/loosen-up-final.jpg",
             alt:
               "Brown handlettering on a yellow background that reads 'Loosen Up'"
           }

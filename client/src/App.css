@@ -9,7 +9,7 @@ textarea {
   height: 40px;
   font-family: "PT Serif", serif;
   font-size: 19px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   width: 448px;
   box-sizing: border-box;
   padding-left: 10px;
@@ -86,6 +86,7 @@ ul {
 a {
   color: #61512d;
   text-decoration: none;
+  transition: 0.2s ease-in-out;
 }
 a:hover {
   color: #b9b9b9;
@@ -174,14 +175,11 @@ a:hover {
   margin-bottom: 60px;
 }
 
-.trans-shrink {
+.email-container {
   width: 100%;
-  padding: 165px 0px 134px 0px;
+  padding: 170px 0px 134px 0px;
   transition: width 0.4s;
   transition-timing-function: ease-in-out;
-}
-.trans-shrink:hover {
-  width: 85%;
 }
 
 .trans-fade {
@@ -195,7 +193,7 @@ a:hover {
 }
 
 .thumbnail:hover {
-  transform: scale(1.06);
+  transform: scale(1.05);
   outline: 4px solid black;
 }
 
@@ -215,14 +213,11 @@ a:hover {
 }
 
 @media (max-width: 925px) {
-  .trans-shrink {
+  .email-container {
     padding: 185px 5px 165px 5px;
     width: calc(100% - 10px);
   }
 
-  .trans-shrink:hover {
-    width: calc(100% - 10px);
-  }
   .contact-container {
     width: 325px;
     margin: 0 auto;
@@ -242,4 +237,8 @@ a:hover {
 ::-moz-selection {
   background-color: #b9b9b9;
   color: #fff;
+}
+
+.underline {
+  border-bottom: 1.2px dotted currentColor;
 }

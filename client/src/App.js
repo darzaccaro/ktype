@@ -16,10 +16,19 @@ import Contact from "./pages/contact";
 import Work from "./pages/work";
 import Success from "./pages/success";
 import theme from "./theme";
-// Google Analytics
+// Import Google Tag Manager
+import TagManager from "react-gtm-module";
+// Import Google Analytics
 import ReactGA from "react-ga";
+
+// Initialize Google Analytics
 ReactGA.initialize("UA-155272033-1");
 ReactGA.pageview(window.location.pathname + window.location.search);
+// Initialize Google Tag Manager
+const tagManagerArgs = {
+  gtmId: "GTM-TTFHHDC"
+};
+TagManager.initialize(tagManagerArgs);
 
 function App(props) {
   return (

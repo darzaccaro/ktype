@@ -19,13 +19,13 @@ export default function Footer() {
             margin: "0 auto",
             backgroundColor: theme.colors.light
           }}
-          className={"trans-shrink"}
+          className={"email-container"}
         >
           <p
             style={{
               fontSize: width > theme.breakpoints.mobile ? "2.8em" : "2.4em",
               fontWeight: "bold",
-              marginBottom: 20
+              marginBottom: 30
             }}
           >
             hi@ktype.xyz
@@ -33,13 +33,13 @@ export default function Footer() {
           <p
             style={{
               fontFamily: theme.fonts.sans,
-              letterSpacing: 6,
+              letterSpacing: 4,
               fontWeight: 300,
               color: theme.colors.black,
-              fontSize: width > theme.breakpoints.mobile ? 18 : 15
+              fontSize: width > theme.breakpoints.mobile ? 20 : 18
             }}
           >
-            LET'S START A PROJECT
+            LET'S BUILD, <strong>JUST REACH OUT!</strong>
           </p>
         </div>
       </a>

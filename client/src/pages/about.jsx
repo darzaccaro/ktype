@@ -182,7 +182,7 @@ function LinkSection({ isMobile, title, src, data }) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Instagram
+                  <span className="underline">Instagram</span>
                 </a>
               </li>
               <li>
@@ -191,7 +191,7 @@ function LinkSection({ isMobile, title, src, data }) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Behance
+                  <span className="underline">Behance</span>
                 </a>
               </li>
               <li>
@@ -200,7 +200,7 @@ function LinkSection({ isMobile, title, src, data }) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Dribbble
+                  <span className="underline">Dribbble</span>
                 </a>
               </li>
             </ul>
@@ -253,7 +253,7 @@ function LinkSection({ isMobile, title, src, data }) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Instagram
+                <span className="underline">Instagram</span>
               </a>
             </li>
             <li>
@@ -262,7 +262,7 @@ function LinkSection({ isMobile, title, src, data }) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Behance
+                <span className="underline">Behance</span>
               </a>
             </li>
             <li>
@@ -271,7 +271,7 @@ function LinkSection({ isMobile, title, src, data }) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Dribbble
+                <span className="underline">Dribbble</span>
               </a>
             </li>
           </ul>
@@ -437,12 +437,11 @@ function Signature({ isMobile }) {
                 marginBottom: theme.sizes.spacingV3
               }}
             >
-              Thank you for reading a bit about my process. If you have a
-              project consideration or just have a question, I'd be glad to
-              help...{" "}
+              Thank you for reading a bit about my process. If you want to work
+              together or just have a general question, I'd be glad to help!{" "}
               <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
                 {" "}
-                Come say hi.
+                <span className="underline">Get in touch</span>
               </Link>
             </p>
           </div>
@@ -512,12 +511,11 @@ function Signature({ isMobile }) {
                 marginBottom: theme.sizes.spacingV3 + 10
               }}
             >
-              Thank you for reading a bit about my process. If you have a
-              project consideration or just have a question, I'd be glad to
-              help...{" "}
+              Thank you for reading a bit about my process. If you want to work
+              together or just have a general question, I'd be glad to help!{" "}
               <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
                 {" "}
-                Come say hi.
+                <span className="underline">Get in touch</span>
               </Link>
             </p>
           </div>

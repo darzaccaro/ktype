@@ -49,7 +49,10 @@ export default function WorkTemplateA({ title, description, data }) {
                 key={i}
                 src={e.img.src}
                 alt={e.img.alt}
-                style={{ marginBottom: theme.sizes.spacingV2, width: "100%" }}
+                style={{
+                  marginBottom: theme.sizes.spacingV2,
+                  width: "100%"
+                }}
               />
             );
           } else if (e.txt) {
