@@ -70,10 +70,10 @@ export default function Work() {
           style={{
             color: theme.colors.black,
             textAlign: alignLeft ? "left" : "center",
-            marginTop: 7,
+            marginTop: 8,
             marginBottom: 0,
-            fontSize: 17,
-            lineHeight: 1.5
+            fontSize: 16,
+            lineHeight: 1.4
           }}
         >
           {title}
@@ -83,7 +83,7 @@ export default function Work() {
             textAlign: alignLeft ? "left" : "center",
             marginTop: 0,
             fontStyle: "italic",
-            fontSize: 18,
+            fontSize: 17,
             color: theme.colors.grey,
             letterSpacing: 0
           }}

@@ -51,12 +51,14 @@ function Contact(props) {
     <div className="contact-container anim-fade-in">
       <p>
         If you have a question, inquiry, or just want to say hi, you can write
-        <br></br> me at{" "}
+        me at <br></br>
         <a href="mailto:hi@ktype.xyz" className="underline">
           hi@ktype.xyz
         </a>{" "}
-        or use the form below. I'm quick to respond, so <br></br>we'll be in
-        touch ASAP.
+        or use the form below.
+        <br></br>
+        <br></br>
+        I'm quick to respond, so we'll be in touch ASAP.
       </p>
       <form
         onSubmit={handleSubmit}

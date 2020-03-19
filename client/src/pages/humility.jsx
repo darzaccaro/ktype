@@ -18,7 +18,13 @@ export default function Humility() {
           txt: {
             title: "PROJECT INITIATION",
             text:
-              "Humility was self-initiated as a way of developing a logotype with a sense of friendliness and modesty. Typically, I take the time to perfect a sketch before I move onto the computer. However, for this project, I wanted to explore digitally as quickly as possible — so really rough thumbnail sketches had to suffice."
+              "Humility was self-initiated as a way of developing a logotype with a sense of friendliness and modesty. Typically, I take the time to perfect sketches before I move onto the computer. However, for this project I wanted to explore digitally as quickly as possible, so I moved forward with loose preliminary sketches."
+          }
+        },
+        {
+          img: {
+            src: "/humility/roughsketches.jpg",
+            alt: "Scan of quick logo sketches."
           }
         },
         {
@@ -32,7 +38,7 @@ export default function Humility() {
           txt: {
             title: "LOGOTYPE REVISIONS",
             text:
-              "The resemblance of the ‘H’ and ‘Y’ adds a familiar touch while also providing an enclosure for the tagline/wordmark. With so much letterform similarity, however, it was important to ensure that every element was unique, but similar enough to maintain consistency. "
+              "The resemblance of the ‘H’ and ‘Y’ adds a familiar touch while also providing an enclosure for the tagline/wordmark. Yet with so much letterform similarity, it was important to ensure that every element was unique but similar enough to be consistent."
           }
         },
         {
@@ -48,23 +54,15 @@ export default function Humility() {
           }
         },
         {
-          txt: {
-            title: "TAGLINE EXPLORATION",
-            text:
-              "Although uppercase nicely contrasted the lowercase wordmark, finalizing a lowercase tagline felt more appropriate due to the humbleness of the project."
-          }
-        },
-        {
           img: {
-            src: "/humility/06_tagline.jpg",
-            alt: "Digital tagline testing"
+            src: "/humility/humility_tote.jpg",
+            alt: "The final logotype on a tote bag."
           }
         },
-
         {
           img: {
             src: "/humility/07_image.jpg",
-            alt: "The final logotype on a blurred image of a sewing machine"
+            alt: "The final logotype on a blurred background image."
           }
         }
       ]}

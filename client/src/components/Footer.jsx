@@ -23,7 +23,7 @@ export default function Footer() {
         >
           <p
             style={{
-              fontSize: width > theme.breakpoints.mobile ? "2.8em" : "2.4em",
+              fontSize: width > theme.breakpoints.mobile ? "2.8em" : "2.1em",
               fontWeight: "bold",
               marginBottom: 30
             }}
@@ -36,7 +36,7 @@ export default function Footer() {
               letterSpacing: 4,
               fontWeight: 300,
               color: theme.colors.black,
-              fontSize: width > theme.breakpoints.mobile ? 20 : 18
+              fontSize: width > theme.breakpoints.mobile ? 19 : 15
             }}
           >
             LET'S BUILD,{" "}
