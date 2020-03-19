@@ -12,7 +12,7 @@ const transporter = nodemailer.createTransport({
   port: 465,
   secure: true,
   auth: {
-    user: "hi@ktype.xyz",
+    user: "zaccaro.kade@gmail.com",
     pass: process.env.EMAIL_PASSWORD
   }
 });
@@ -27,7 +27,7 @@ function generateContactEmail({
   priceRange
 }) {
   return {
-    from: "hi@ktype.xyz",
+    from: "zaccaro.kade@gmail.com",
     to: "hi@ktype.xyz",
     subject: `New Form Submission from ${name}`,
     text: `
