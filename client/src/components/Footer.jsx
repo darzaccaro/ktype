@@ -39,7 +39,8 @@ export default function Footer() {
               fontSize: width > theme.breakpoints.mobile ? 20 : 18
             }}
           >
-            LET'S BUILD, <strong>JUST REACH OUT!</strong>
+            LET'S BUILD,{" "}
+            <span style={{ fontWeight: "bold" }}>JUST REACH OUT!</span>
           </p>
         </div>
       </a>
