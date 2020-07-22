@@ -19,7 +19,7 @@ function Header({ location }) {
           zIndex: 5,
           top: 0,
           right: 0,
-          padding: "24px 20px",
+          padding: "14px 25px",
         }}
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
@@ -30,7 +30,7 @@ function Header({ location }) {
               position: "fixed",
               top: 0,
               right: 0,
-              padding: "24px 20px",
+              padding: "14px 25px",
             }}
             src="/icons/x.svg"
             alt="x"
@@ -61,7 +61,7 @@ function Header({ location }) {
               width: "100%",
               position: "fixed",
               display: "block",
-              padding: 20,
+              padding: "10px 25px",
               zIndex: 2,
             }}
           >
@@ -128,8 +128,8 @@ function Header({ location }) {
                   }}
                   style={{
                     display: "block",
-                    paddingBottom: 50,
-                    paddingTop: 15,
+                    paddingBottom: 25,
+                    paddingTop: 30,
                   }}
                 >
                   <img
