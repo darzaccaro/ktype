@@ -1,197 +1,145 @@
-import React, { useState } from "react";
+import React from "react";
 import theme from "../theme";
 import { Link } from "react-router-dom";
-import useWindowWidth from "../hooks/useWindowWidth";
 
 export default function Work() {
-  const width = useWindowWidth();
-  const works = [
-    {
-      title: "TAPED NUMERALS",
-      description: "3D Typography",
-      imgSrc: "/work/tape_typography_thumbnail.jpg",
-      to: "/taped-numerals"
-    },
-    {
-      title: "RIBBON NUMERALS",
-      description: "3D Typography",
-      imgSrc: "/work/ribbon_numerals_thumbnail.jpg",
-      to: "/ribbon-numerals"
-    },
-    {
-      title: "LETTERING SET",
-      description: "Custom Lettering",
-      imgSrc: "/work/01_lettering_set.jpg",
-      to: "/lettering-set"
-    },
-    {
-      title: "COMMUNICATE",
-      description: "Custom Lettering",
-      imgSrc: "/work/03_communicate.jpg",
-      to: "/communicate"
-    },
-    {
-      title: "UNDEFINED BY NUMBERS",
-      description: "Custom Lettering",
-      imgSrc: "/work/04_undefined_by_numbers.jpg",
-      to: "/undefined-by-numbers"
-    },
-    {
-      title: "LOOSEN UP",
-      description: "Custom Lettering",
-      imgSrc: "/work/loosenup_thumbnail.jpg",
-      to: "/loosen-up"
-    },
-    {
-      title: "HUMILITY",
-      description: "Identity Design",
-      imgSrc: "/work/02_humility.jpg",
-      to: "/humility"
-    }
-  ];
-
-  function CardTag({ title, description, alignLeft, style }) {
-    return (
+  return (
+    <div className="page">
+      {/* Intro Statement */}
       <div
+        className="intro-background"
         style={{
-          backgroundColor: "white",
-          /* maxWidth: theme.sizes.cardWidth - 85, */
-          maxHeight: theme.sizes.cardHeight / 4,
+          width: "100%",
+          backgroundColor: theme.colors.light,
           position: "relative",
-          /* top: alignLeft ? 0 : 30, */
-          margin: alignLeft ? 0 : "0 auto",
-          padding: 15,
-          paddingLeft: alignLeft ? theme.sizes.spacingV2 : 15,
-          ...style
+          overflow: "hidden",
         }}
-        className={"trans-fade"}
       >
-        <h6
-          style={{
-            color: theme.colors.black,
-            textAlign: alignLeft ? "left" : "center",
-            marginTop: 8,
-            marginBottom: 0,
-            fontSize: 16,
-            lineHeight: 1.4
-          }}
-        >
-          {title}
-        </h6>
-        <p
-          style={{
-            textAlign: alignLeft ? "left" : "center",
-            marginTop: 0,
-            fontStyle: "italic",
-            fontSize: 17,
-            color: theme.colors.grey,
-            letterSpacing: 0
-          }}
-        >
-          {description}
-        </p>
-      </div>
-    );
-  }
-
-  function Card({ title, description, imgSrc, to, isMobile }) {
-    const [tagOpacity, setTagOpacity] = useState(0);
-    if (isMobile) {
-      return (
-        <Link
-          to={to}
-          onClick={() => window.scrollTo(0, 0)}
-          style={{ marginBottom: theme.sizes.spacingV3 }}
-        >
-          <div>
-            <img src={imgSrc} width={"100%"} maxWidth="400px" alt={title}></img>
-          </div>
-          <CardTag
-            title={title}
-            description={description}
-            alignLeft
-            style={{ opacity: 1 }}
-          />
-        </Link>
-      );
-    } else {
-      return (
-        <Link
-          to={to}
-          onClick={() => window.scrollTo(0, 0)}
-          style={{ marginBottom: theme.sizes.spacingV3 + 25 }}
-          className="thumbnail"
-        >
-          <div
-            onMouseOver={() => setTagOpacity(1)}
-            onMouseLeave={() => setTagOpacity(0)}
+        <div className="centering-work">
+          <h1
+            className="intro-statement"
             style={{
-              backgroundImage: `url(${imgSrc})`,
-              backgroundSize: `${theme.sizes.cardWidth}px ${theme.sizes.cardHeight}px`,
-              width: theme.sizes.cardWidth,
-              height: theme.sizes.cardHeight
+              fontWeight: 400,
             }}
           >
-            <CardTag
-              title={title}
-              description={description}
-              style={{ opacity: tagOpacity }}
-            />
-          </div>
-        </Link>
-      );
-    }
-  }
-  return (
-    <div
-      style={{
-        marginTop: theme.sizes.spacingV1 - 65,
-        width: "100%"
-      }}
-      className="anim-fade-in"
-    >
-      <p
-        style={{
-          fontSize: "27px",
-          textAlign: "center",
-          marginBottom: theme.sizes.spacingV1,
-          padding: 20,
-          lineHeight: "44px"
-        }}
-      >
-        The strategic design studio of{" "}
-        <Link to="/about" onClick={() => window.scrollTo(0, 0)}>
-          <span className="underline">Kade Tyler</span>
-        </Link>
-        &mdash;specializing in
-        <br />
-        thoughtful visual identities &amp; custom lettering.
+            <span className="main-underline">KTYPE</span> is the purpose-driven
+            design studio of <span className="main-underline">Kade Tyler.</span>
+            <br></br>
+            Thoughtful Brand Identities &amp; Custom Type.
+          </h1>
+          <img
+            className="logo-v2"
+            style={{
+              display: "block",
+              margin: "0 auto",
+            }}
+            src="/pentool-gods-simplified.svg"
+            alt="Logo V2"
+          />
+        </div>
+      </div>
+
+      <p className="project-notice">
+        Full projects on the inside
+        <img
+          className="mouse-click"
+          style={{
+            position: "absolute",
+            width: 30,
+            padding: 4,
+          }}
+          src="/icons/mouse-click.svg"
+          alt="Mouse click"
+        ></img>
       </p>
+
       <div
+        className="work-flex"
         style={{
           display: "flex",
-          justifyContent:
-            width < theme.breakpoints.mobile ? "center" : "space-between",
-          maxWidth:
-            width < theme.breakpoints.mobile
-              ? "100%"
-              : theme.sizes.contentWidth,
+          justifyContent: "space-between",
+          flexWrap: "wrap",
+          width: "100%",
+          maxWidth: "1800px",
           margin: "0 auto",
-          marginBottom: theme.sizes.spacingV1 - 32,
-          flexWrap: "wrap"
         }}
       >
-        {works.map((w, i) => (
-          <Card
-            isMobile={width < theme.breakpoints.mobile}
-            key={i}
-            title={w.title}
-            description={w.description}
-            imgSrc={w.imgSrc}
-            to={w.to}
-          />
-        ))}
+        <article
+          className="work-flex-item"
+          style={{ width: "50%", height: "auto", position: "relative" }}
+        >
+          <Link className="card-link" to="/logos">
+            <img
+              src="/work/work-logos-black.gif"
+              className="thumbnail"
+              alt="4"
+            />
+            <figcaption className="card-overlay">
+              <div className="card-inner">
+                <h3 className="card-title">Logotypes &amp; Trademarks</h3>
+                <h3 className="card-details">Identity Design</h3>
+              </div>
+            </figcaption>
+          </Link>
+        </article>
+
+        <article
+          className="work-flex-item"
+          style={{ width: "50%", height: "auto", position: "relative" }}
+        >
+          <Link className="card-link" to="/lettering">
+            <img src="/work/work-b.jpg" className="thumbnail" alt="1" />
+            <figcaption className="card-overlay">
+              <div className="card-inner">
+                <h3 className="card-title">Lettering Collection</h3>
+                <h3 className="card-details">Custom Type</h3>
+              </div>
+            </figcaption>
+          </Link>
+        </article>
+
+        <article
+          className="work-flex-item"
+          style={{ width: "50%", height: "auto", position: "relative" }}
+        >
+          <Link className="card-link" to="/daily-render">
+            <img
+              src="/work/work-w-postwork.png"
+              className="thumbnail"
+              alt="2"
+            />
+            <figcaption className="card-overlay">
+              <div className="card-inner">
+                <h3 className="card-title">Daily Render</h3>
+                <h3 className="card-details">3D Typography</h3>
+              </div>
+            </figcaption>
+          </Link>
+        </article>
+
+        <article
+          className="work-flex-item"
+          style={{ width: "50%", height: "auto", position: "relative" }}
+        >
+          <Link className="card-link" to="/letter-love">
+            <img
+              src="/work/work-letterlove.png"
+              className="thumbnail"
+              alt="3"
+            />
+            <figcaption className="card-overlay">
+              <div className="card-inner">
+                <h3 className="card-title">Letter Love</h3>
+                <h3 className="card-details">3D Typography</h3>
+              </div>
+            </figcaption>
+          </Link>
+        </article>
       </div>
+
+      <p className="project-notice">
+        <br></br>
+      </p>
     </div>
   );
 }

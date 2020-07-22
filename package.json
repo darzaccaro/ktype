@@ -8,8 +8,7 @@
     "morgan": "^1.9.1",
     "nodemailer": "^6.3.0",
     "react-ga": "^2.7.0",
-    "react-gtm-module": "^2.0.8",
-    "react-player": "^1.15.2"
+    "react-gtm-module": "^2.0.8"
   },
   "scripts": {
     "start": "node server.js",
@@ -30,5 +29,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {}
 }

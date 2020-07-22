@@ -1,21 +1,19 @@
 //@flow
-import React, { useEffect, Component } from "react";
+import React from "react";
 import { Route } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import About from "./pages/about";
-import LetteringSet from "./pages/letteringSet";
-import Humility from "./pages/humility";
-import Communicate from "./pages/communicate";
-import UBN from "./pages/ubn";
-import RibbonNumerals from "./pages/ribbonNumerals";
-import TapedNumerals from "./pages/tapedNumerals";
-import LoosenUp from "./pages/loosenUp";
+import Logos from "./pages/logos";
+import Lettering from "./pages/lettering";
+import DailyRender from "./pages/dailyRender";
+import LetterLove from "./pages/letterLove";
 import Contact from "./pages/contact";
 import Work from "./pages/work";
 import Success from "./pages/success";
-import theme from "./theme";
+
+/* -- DISABLE Google Anaylytics
 // Import Google Tag Manager
 import TagManager from "react-gtm-module";
 // Import Google Analytics
@@ -24,31 +22,31 @@ import ReactGA from "react-ga";
 // Initialize Google Analytics
 ReactGA.initialize("UA-155272033-1");
 ReactGA.pageview(window.location.pathname + window.location.search);
+
 // Initialize Google Tag Manager
 const tagManagerArgs = {
-  gtmId: "GTM-TTFHHDC"
+  gtmId: "GTM-TTFHHDC",
 };
 TagManager.initialize(tagManagerArgs);
+ -- DISABLE Google Anaylytics */
 
-function App(props) {
+function App() {
   return (
-    <div>
+    <div className="App">
       <Header />
-      {/* This is a hack to maintain consistent spacing when resizing. */}
-      <div style={{ marginBottom: theme.sizes.spacingV1 - 15 }} />
 
       <Route exact path="/" component={Work} />
       <Route path="/work" component={Work} />
-      <Route path="/lettering-set" component={LetteringSet} />
-      <Route path="/humility" component={Humility} />
-      <Route path="/communicate" component={Communicate} />
-      <Route path="/undefined-by-numbers" component={UBN} />
-      <Route path="/ribbon-numerals" component={RibbonNumerals} />
-      <Route path="/taped-numerals" component={TapedNumerals} />
-      <Route path="/loosen-up" component={LoosenUp} />
       <Route path="/about" component={About} />
+
+      <Route path="/logos" component={Logos} />
+      <Route path="/lettering" component={Lettering} />
+      <Route path="/daily-render" component={DailyRender} />
+      <Route path="/letter-love" component={LetterLove} />
+
       <Route path="/contact" component={Contact} />
       <Route path="/success" component={Success} />
+
       <Footer />
     </div>
   );

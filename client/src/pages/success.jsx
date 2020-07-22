@@ -1,38 +1,37 @@
 import React from "react";
 import theme from "../theme";
-import useWindowWidth from "../hooks/useWindowWidth";
-import { useEffect } from 'react';
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
+
 export default function Success() {
-  const width = useWindowWidth();
   useEffect(() => {
     window.scrollTo(0, 0);
-  })
+  });
 
   return (
     <div
       className="anim-fade-in"
       style={{
-        marginTop: theme.sizes.spacingV1 - 65,
-        width: "100%"
+        width: "100%",
       }}
     >
       <div
-        style={{
-          maxWidth:
-            width < theme.breakpoints.mobile
-              ? "325px"
-              : theme.sizes.contentWidth,
-          margin: "0 auto",
-          marginTop: 64,
-          marginBottom: theme.sizes.spacingV1 - 10,
-          minHeight: 800
-        }}
+        className="background-color"
+        style={{ backgroundColor: theme.colors.light }}
       >
-        <h1>Thank you for your submission!</h1>
-        <p>
-          We'll be in touch as soon as possible. I do my best to respond within
-          1-2 days.
-        </p>
+        <div className="centering">
+          {/* Project Intro */}
+          <h1>Thank you for your submission!</h1>
+          <p style={{ textAlign: "center" }}>
+            We'll be in touch as soon as possible. I do my best to respond
+            within 24 hours.
+          </p>
+          <p style={{ textAlign: "center" }}>
+            <Link to="/work" onClick={() => window.scrollTo(0, 0)}>
+              <span className="underline">Back to Work</span>
+            </Link>
+          </p>
+        </div>
       </div>
     </div>
   );

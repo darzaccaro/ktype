@@ -16,20 +16,20 @@ const BarLink = ({ text, to }) => {
       <div
         style={{
           transition: "background-color 0.4s, color 0.2s",
-          backgroundColor: isHover ? theme.colors.white : theme.colors.brown
+          backgroundColor: isHover ? theme.colors.light : theme.colors.yellow,
         }}
       >
         <h2
           style={{
-            color: isHover ? theme.colors.brown : theme.colors.white,
+            color: isHover ? theme.colors.yellow : theme.colors.white,
             textAlign: "center",
             padding: 50,
             paddingLeft: width > theme.breakpoints.mobile ? 50 : 10,
             paddingRight: width > theme.breakpoints.mobile ? 50 : 10,
             paddingTop: 55,
             marginBottom: 0,
-            fontSize: width > theme.breakpoints.mobile ? 21 : 18,
-            letterSpacing: 10
+            fontSize: width > theme.breakpoints.mobile ? 34 : 28,
+            letterSpacing: 10,
           }}
         >
           {text}

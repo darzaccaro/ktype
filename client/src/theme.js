@@ -2,26 +2,19 @@ export default {
   colors: {
     white: "#ffffff",
     black: "#000000",
-    light: "#f3f3f3",
+    dark: "#1a1a1a",
+    light: "#fffcf8",
     grey: "#b9b9b9",
-    brown: "#61512D"
+    yellow: "#F9B110",
+    old: "#f3f3f3",
   },
   fonts: {
-    serif: "'PT Serif', serif",
-    sans: "'Josefin Sans', sans-serif"
+    sans: "'Roboto Condensed', sans-serif",
   },
   sizes: {
-    contentWidth: 960,
-    cardHeight: 256,
-    cardWidth: 448,
-    spacingV1: 60,
-    spacingV2: 25,
-    spacingV3: 40,
-    indent: 20,
-    triangleHeight: 20
+    contentWidth: 1800,
   },
   breakpoints: {
-    work: 1140,
-    mobile: 800
-  }
+    mobile: 800,
+  },
 };

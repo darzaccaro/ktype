@@ -1,30 +1,33 @@
 import React from "react";
 import theme from "../theme";
 import BarLink from "./BarLink";
-import useWindowWidth from "../hooks/useWindowWidth";
 
 export default function WorkTemplateA({ title, description, data }) {
-  const windowWidth = useWindowWidth();
   return (
     <div className="anim-fade-in">
       <div
         style={{
-          maxWidth: theme.sizes.contentWidth,
+          width: "100%",
           margin: "0 auto",
           marginBottom: theme.sizes.spacingV1 + 5,
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
           flexWrap: "wrap",
-          paddingLeft:
-            windowWidth < theme.breakpoints.mobile ? theme.sizes.spacingV2 : 0
         }}
       >
-        <h1 style={{ display: "inline-block" }}>{title}</h1>
+        <h1
+          style={{
+            display: "inline-block",
+            textAlign: "center",
+          }}
+        >
+          {title}
+        </h1>
         <p
           style={{
+            textAlign: "center",
             color: theme.colors.grey,
-            fontStyle: "italic"
           }}
         >
           {description}
@@ -34,9 +37,9 @@ export default function WorkTemplateA({ title, description, data }) {
         style={{
           display: "flex",
           flexDirection: "column",
-          maxWidth: theme.sizes.contentWidth,
+          width: "100%",
           margin: "0 auto",
-          marginBottom: theme.sizes.spacingV1
+          marginBottom: theme.sizes.spacingV1,
         }}
       >
         {data.map((e, i) => {
@@ -53,12 +56,11 @@ export default function WorkTemplateA({ title, description, data }) {
             return (
               <div
                 style={{
-                  paddingLeft:
-                    windowWidth < theme.breakpoints.mobile
-                      ? theme.sizes.spacingV2
-                      : 0,
+                  paddingLeft: theme.breakpoints.mobile
+                    ? theme.sizes.spacingV2
+                    : 0,
                   marginBottom: theme.sizes.spacingV3 - 2,
-                  width: windowWidth < theme.breakpoints.mobile ? "85%" : "65%"
+                  width: "100%",
                 }}
               >
                 <h2
@@ -66,7 +68,7 @@ export default function WorkTemplateA({ title, description, data }) {
                     color: theme.colors.grey,
                     marginTop: theme.sizes.spacingV3 - 15,
                     fontWeight: "normal",
-                    fontSize: 15
+                    fontSize: 15,
                   }}
                 >
                   {e.txt.title}

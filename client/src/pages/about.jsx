@@ -1,535 +1,125 @@
 import React from "react";
-import theme from "../theme";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import useWindowWidth from "../hooks/useWindowWidth";
 
-//TODO (cleanup): pass all data in once to two seperate full templates (one mobile, and one desktop)
 export default function About() {
-  const width = useWindowWidth();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   return (
-    <div className="anim-fade-in">
-      <div
-        style={{
-          maxWidth: theme.sizes.contentWidth,
-          margin: "0 auto",
-          overflow: "hidden"
-        }}
-      >
-        <LinkSection isMobile={width < theme.breakpoints.mobile} />
-      </div>
-      <div
-        style={{
-          backgroundColor: theme.colors.brown,
-          marginTop:
-            width < theme.breakpoints.mobile
-              ? theme.sizes.spacingV1
-              : theme.sizes.spacingV1 + 32
-        }}
-      >
-        <h2
-          style={{
-            color: theme.colors.white,
-            textAlign: "center",
-            padding: 50,
-            paddingTop: 55,
-            marginBottom: 0,
-            fontSize: width < theme.breakpoints.mobile ? 18 : 21,
-            letterSpacing: 10
-          }}
-        >
-          MY APPROACH{width > theme.breakpoints.mobile && " & CORE VALUES"}
-        </h2>
-      </div>
-      <div
-        style={{
-          backgroundColor: theme.colors.black
-        }}
-      >
+    <div>
+      <div className="centering">
         <div
+          className="about-flex"
           style={{
-            margin: "0 auto",
-            width: 43,
-            position: "relative",
-            bottom: 6,
-            height: theme.sizes.triangleHeight
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "start",
+            flexWrap: "wrap",
+            width: "100%",
           }}
         >
-          <img
-            src="/icons/triangle.png"
-            alt="triangle icon"
-            style={{ margin: 0, height: theme.sizes.triangleHeight }}
-          ></img>
+          <div
+            className="about-flex-item"
+            style={{
+              width: "calc(50%)",
+              paddingBottom: 100,
+            }}
+          >
+            <h2>
+              Hi, I'm Kade Tyler, a designer and typographic artist (aka problem
+              solver).
+            </h2>
+
+            <p>
+              I'm dedicated to designing meaningful brands and expressive visual
+              communication. This means that I ask questions, plan strategic
+              approaches, and build enduring solutions.
+            </p>
+            <p>
+              My introduction to graphic design came at a young age. At
+              fourteen, I taught myself graphics software in order to build 3D
+              web banners for e-sports teams. Over the years, original ambitions
+              of learning and creating beautiful work still lead my current
+              projects.
+            </p>
+            <p>
+              Aside from honing my design skills, I enjoy video games, writing
+              front-end code, exercising, and seeking new approaches to creative
+              insight.
+            </p>
+            <p>
+              I’m currently available for freelance and exploring new
+              opportunities.{" "}
+              <Link
+                className="underline"
+                to="/contact"
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                I'd love to hear from you
+              </Link>{" "}
+              about your new project!
+            </p>
+          </div>
+
+          <div
+            className="about-flex-item"
+            style={{
+              width: "calc(30%)",
+              paddingBottom: 100,
+            }}
+          >
+            <h2>Services I Focus on</h2>
+
+            <ul className="services-stack">
+              <li>+ Brand Strategy</li>
+              <hr className="spacer-line"></hr>
+              <li>+ Identity Design</li>
+              <hr className="spacer-line"></hr>
+              <li>+ 3D Typography</li>
+              <hr className="spacer-line"></hr>
+              <li>+ Custom Lettering</li>
+              <hr className="spacer-line"></hr>
+              <li>+ Illustration</li>
+              <hr className="spacer-line"></hr>
+              <li>+ Web Design</li>
+              <hr className="spacer-line"></hr>
+            </ul>
+          </div>
+
+          <div
+            className="about-flex-item"
+            style={{
+              display: "flex",
+              width: "100%",
+              alignItems: "center",
+              paddingTop: 150,
+              paddingBottom: 150,
+            }}
+          >
+            <img
+              style={{
+                width: "65%",
+                height: "auto",
+                position: "relative",
+                filter: "drop-shadow(0px 0px 10px #000000)",
+              }}
+              src="/about/kt-profile.jpg"
+              alt="Kade Tyler"
+            />
+            <img
+              style={{
+                width: "calc(35% + 150px)",
+                height: "auto",
+                margin: -150,
+              }}
+              src="/about/kt-working.jpg"
+              alt="Lettering Revisions"
+            />
+          </div>
         </div>
-        <Section
-          isMobile={width < theme.breakpoints.mobile}
-          title="Approach"
-          src="/about/03_approach.jpg"
-          alt="Vector bezier curves and anchor points"
-          data={[
-            {
-              title1: "PHASE 1 — ",
-              title2: "DISCOVERY",
-              description:
-                "Understand your goals and what drives you. Establish a personalized project road map."
-            },
-            {
-              title1: "PHASE 2 — ",
-              title2: "STRATEGY",
-              description:
-                "Analyze your industry landscape. Uncover an opportunistic pathway while taking note of avoidances."
-            },
-            {
-              title1: "PHASE 3 — ",
-              title2: "DESIGN",
-              description:
-                "Explore, trial, and reflect on various solutions. Carefully refine and bring meaningful ideas to life."
-            },
-            {
-              title1: "PHASE 4 — ",
-              title2: "DEADLINE",
-              description:
-                "Finalize and prepare all project deliverables. Launch forward-looking solutions to the world."
-            }
-          ]}
-        />
-        <Section
-          isMobile={width < theme.breakpoints.mobile}
-          title="Core Values"
-          src="/about/04_approach2.jpg"
-          alt="Lettering refinement"
-          data={[
-            {
-              title2: "DESIGN WITH PURPOSE.",
-              description:
-                "Design needs a clear purpose for existing; therefore, it should always be prompted by a foundational blueprint. Consider the “why?” throughout every project."
-            },
-            {
-              title2: "FAILURE IS ALLOWED.",
-              description:
-                "Visual problems have unlimited solutions. The valid solutions are identified through the result of many failed explorations."
-            },
-            {
-              title2: "CRITICAL EYES.",
-              description:
-                "Critically accept and provide mindful feedback. Observe problems objectively with openness and a dynamic perspective."
-            }
-          ]}
-        />
-        {/* <div style={{ padding: 40 }}></div> */}
-        <Signature isMobile={width < theme.breakpoints.mobile} />
-        <div
-          style={{
-            padding: 16,
-            marginTop: 0
-          }}
-        ></div>
       </div>
     </div>
   );
-}
-
-function LinkSection({ isMobile, title, src, data }) {
-  if (isMobile) {
-    return (
-      <div>
-        <div
-          style={{
-            marginTop: theme.sizes.spacingV3,
-            width: "90%",
-            margin: "0 auto",
-            maxWidth: "400px"
-          }}
-        >
-          <div>
-            <img
-              style={{ marginTop: theme.sizes.spacingV3 - 6 }}
-              src="/about/kade_portrait.jpg"
-              alt="A photo of Kade Tyler"
-              width="100%"
-            ></img>
-            <h2
-              style={{
-                color: theme.colors.grey,
-                marginTop: theme.sizes.spacingV3,
-                fontWeight: "normal",
-                fontSize: 15
-              }}
-            >
-              DESIGN &amp; LETTERING
-            </h2>
-            <p>
-              My name is Kade Tyler, a designer focused on mindful typographic
-              arts. I enjoy translating meaning into enduring solutions through
-              my passion-driven process.
-            </p>
-          </div>
-
-          <div>
-            <h3 style={{ marginTop: theme.sizes.spacingV3 }}>Services</h3>
-            <ul style={{ marginBottom: theme.sizes.spacingV3 }}>
-              <li>Branding & Strategy</li>
-              <li>Identity Design</li>
-              <li>3D Typography</li>
-              <li>Custom Lettering</li>
-              <li>Illustration</li>
-              <li>Web Design</li>
-            </ul>
-            <h3 style={{ marginTop: theme.sizes.spacingV3 }}>Elsewhere</h3>
-            <ul style={{ marginBottom: theme.sizes.spacingV3 }}>
-              <li>
-                <a
-                  href="https://instagram.com/ktype.xyz"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className="underline">Instagram</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://behance.net/ktype"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className="underline">Behance</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://dribbble.com/ktype"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className="underline">Dribbble</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    );
-  } else {
-    return (
-      <div style={{ overflow: "hidden" }}>
-        <div>
-          <img
-            style={{ float: "left", paddingTop: "24px" }}
-            src="/about/kade_portrait.jpg"
-            alt="A photo of Kade Tyler"
-            width="450px"
-          ></img>
-        </div>
-
-        <div style={{ paddingLeft: "511px" }}>
-          <h2
-            style={{
-              color: theme.colors.grey,
-              fontWeight: "normal",
-              fontSize: 15
-            }}
-          >
-            DESIGN &amp; LETTERING
-          </h2>
-
-          <p>
-            My name is Kade Tyler, a designer focused on mindful typographic
-            arts. I enjoy translating meaning into enduring solutions through my
-            passion-driven process.
-          </p>
-          <h3 style={{ marginTop: theme.sizes.spacingV3 + 7 }}>Services</h3>
-          <ul>
-            <li>Branding & Strategy</li>
-            <li>Identity Design</li>
-            <li>3D Typography</li>
-            <li>Custom Lettering</li>
-            <li>Illustration</li>
-            <li>Web Design</li>
-          </ul>
-          <h3 style={{ marginTop: theme.sizes.spacingV3 + 7 }}>Elsewhere</h3>
-          <ul>
-            <li>
-              <a
-                href="https://instagram.com/ktype.xyz"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="underline">Instagram</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://behance.net/ktype"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="underline">Behance</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://dribbble.com/ktype"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="underline">Dribbble</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    );
-  }
-}
-
-function Section({ isMobile, title, src, data }) {
-  if (isMobile) {
-    return (
-      <div>
-        <div
-          style={{
-            overflow: "hidden",
-            margin: "0 auto",
-            width: "90%",
-            maxWidth: "400px",
-            marginTop: theme.sizes.spacingV1 + 22 - theme.sizes.triangleHeight,
-            marginBottom: theme.sizes.spacingV1
-          }}
-        >
-          <div>
-            <h3
-              style={{
-                color: theme.colors.brown,
-                marginBottom: theme.sizes.spacingV3
-              }}
-            >
-              {title}
-            </h3>
-            {data.map((e, i) => (
-              <div
-                key={i}
-                style={{ marginLeft: theme.sizes.indent, width: 400 }}
-              >
-                <h5 style={{ color: theme.colors.white }}>
-                  {e.title1}
-                  <span style={{ color: theme.colors.brown }}>{e.title2}</span>
-                </h5>
-                <p
-                  style={{
-                    color: theme.colors.white,
-                    marginBottom: theme.sizes.spacingV3,
-                    width: "75%"
-                  }}
-                >
-                  {e.description}
-                </p>
-              </div>
-            ))}
-          </div>
-          <div style={{ marginBottom: theme.sizes.spacingV1 }}></div>
-          <img
-            style={{
-              display: "block",
-              margin: "0 auto",
-              marginTop: 5
-            }}
-            src={src}
-            alt={title}
-            width={"100%"}
-            maxWidth={"400px"}
-          ></img>
-        </div>
-      </div>
-    );
-  } else {
-    return (
-      <div
-        style={{
-          overflow: "hidden",
-          width: theme.sizes.contentWidth,
-          margin: "0 auto",
-          marginTop: theme.sizes.spacingV1 + 30,
-          marginBottom: theme.sizes.spacingV1 + 4
-        }}
-      >
-        <img
-          style={{
-            float: "right",
-            marginTop: 5,
-            maxWidth: 400
-          }}
-          src={src}
-          alt={title}
-        ></img>
-        <div>
-          <h3
-            style={{
-              color: theme.colors.brown,
-              marginBottom: theme.sizes.spacingV3 + 10
-            }}
-          >
-            {title}
-          </h3>
-          {data.map((e, i) => {
-            let marginBottom =
-              i !== Object.keys(data).length - 1
-                ? theme.sizes.spacingV3 + 10
-                : 25;
-            return (
-              <div
-                key={i}
-                style={{
-                  marginLeft: theme.sizes.indent + theme.sizes.spacingV3,
-                  maxWidth: 400
-                }}
-              >
-                <h5 style={{ color: theme.colors.white }}>
-                  {e.title1}
-                  <span style={{ color: theme.colors.brown }}>{e.title2}</span>
-                </h5>
-                <p
-                  style={{
-                    color: theme.colors.white,
-                    marginBottom
-                  }}
-                >
-                  {e.description}
-                </p>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    );
-  }
-}
-
-function Signature({ isMobile }) {
-  if (isMobile) {
-    return (
-      <div
-        style={{
-          overflow: "auto",
-          width: "90%",
-          maxWidth: "400px",
-          margin: "0 auto",
-          paddingBottom: theme.sizes.spacingV1
-        }}
-      >
-        <div style={{ maxWidth: 465 + theme.sizes.indent }}>
-          <div>
-            <p
-              style={{
-                color: theme.colors.white,
-                marginTop: 0,
-                marginBottom: theme.sizes.spacingV3
-              }}
-            >
-              <em>
-                &ldquo;Design is not a thing you do. It is a way of life.&rdquo;
-              </em>
-              <br />
-              &mdash;Alan Fletcher, circa 1956
-            </p>
-            <p
-              style={{
-                color: theme.colors.white,
-                marginTop: 0,
-                marginBottom: theme.sizes.spacingV3
-              }}
-            >
-              Thank you for reading a bit about my process. If you want to work
-              together or just have a general question, I'd be glad to help!{" "}
-              <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
-                {" "}
-                <span className="underline">Get in touch</span>
-              </Link>
-            </p>
-          </div>
-          <img
-            style={{
-              marginLeft: theme.sizes.indent,
-              marginBottom: theme.sizes.spacingV3
-            }}
-            width="140px"
-            src="/about/05_signature.png"
-            alt="Artist signature"
-          ></img>
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <div>
-              <img
-                style={{
-                  display: "block",
-                  margin: "0 auto",
-                  marginTop: 5,
-                  maxWidth: 400
-                }}
-                src="/about/06_studiobooks.jpg"
-                alt="A collection of Graphic Design books; topics consist of lettering, branding, and typography"
-                width={"100%"}
-              ></img>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  } else {
-    return (
-      <div
-        style={{
-          overflow: "hidden",
-          width: theme.sizes.contentWidth,
-          margin: "0 auto",
-          paddingBottom: theme.sizes.spacingV1 + 22,
-          paddingTop: theme.sizes.spacingV1 - 30
-        }}
-      >
-        <img
-          style={{ float: "right" }}
-          src="/about/06_studiobooks.jpg"
-          alt="A collection of Graphic Design books; topics consist of lettering, branding, and typography"
-          width={400}
-        ></img>
-        <div style={{ width: 435 + theme.sizes.indent }}>
-          <div>
-            <p
-              style={{
-                color: theme.colors.white,
-                marginTop: -5,
-                marginBottom: theme.sizes.spacingV3
-              }}
-            >
-              <em>
-                &ldquo;Design is not a thing you do. It is a way of life.&rdquo;
-              </em>
-              <br></br>
-              &mdash;Alan Fletcher, circa 1956
-            </p>
-            <p
-              style={{
-                color: theme.colors.white,
-                marginTop: 48,
-                marginBottom: theme.sizes.spacingV3 + 10
-              }}
-            >
-              Thank you for reading a bit about my process. If you want to work
-              together or just have a general question, I'd be glad to help!{" "}
-              <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
-                {" "}
-                <span className="underline">Get in touch</span>
-              </Link>
-            </p>
-          </div>
-          <div
-            style={{ marginLeft: theme.sizes.indent + theme.sizes.spacingV3 }}
-          >
-            <img
-              width="140px"
-              src="/about/05_signature.png"
-              alt="Artist signature"
-            ></img>
-          </div>
-        </div>
-      </div>
-    );
-  }
 }

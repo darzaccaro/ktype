@@ -1,30 +1,27 @@
 import React from "react";
 import theme from "../theme";
 import BarLink from "./BarLink";
-import useWindowWidth from "../hooks/useWindowWidth";
 
 export default function WorkTemplateA({ title, description, images }) {
-  const width = useWindowWidth();
   return (
     <div className="anim-fade-in">
       <div
         style={{
-          maxWidth: theme.sizes.contentWidth,
+          width: "100%",
           margin: "0 auto",
           marginBottom: theme.sizes.spacingV1 + 5,
           display: "flex",
           justifyContent: "space-between",
           flexWrap: "wrap",
-          paddingLeft:
-            width < theme.breakpoints.mobile ? theme.sizes.spacingV2 : 0
+          paddingLeft: theme.breakpoints.mobile ? theme.sizes.spacingV2 : 0,
         }}
       >
         <h1 style={{ display: "inline-block" }}>{title}</h1>
         <p
           style={{
             display: "inline-block",
-            marginTop: width < theme.breakpoints.mobile ? 0 : 23,
-            paddingRight: 0
+            marginTop: theme.breakpoints.mobile ? 0 : 23,
+            paddingRight: 0,
           }}
         >
           {description}
@@ -34,9 +31,9 @@ export default function WorkTemplateA({ title, description, images }) {
         style={{
           display: "flex",
           flexDirection: "column",
-          maxWidth: theme.sizes.contentWidth,
+          width: "100%",
           margin: "0 auto",
-          marginBottom: theme.sizes.spacingV1
+          marginBottom: theme.sizes.spacingV1,
         }}
       >
         {images.map((img, i) => (
