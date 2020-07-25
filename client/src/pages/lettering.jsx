@@ -26,9 +26,10 @@ export default function Lettering() {
           <p
             style={{
               textAlign: "center",
+              color: theme.colors.yellow,
             }}
           >
-            As a lettering artist, I am to convey messages with character and
+            As a lettering artist, I aim to convey messages with character and
             emotion through technically precise letters.
           </p>
 
@@ -55,25 +56,6 @@ export default function Lettering() {
             >
               <img
                 style={{
-                  width: "calc(50% - 40px)",
-                  height: "auto",
-                  margin: 20,
-                }}
-                src="/lettering/artiswork.jpg"
-                alt="Art Is Work"
-              ></img>
-              <img
-                style={{
-                  width: "calc(50% - 40px)",
-                  height: "auto",
-                  margin: 20,
-                }}
-                src="/lettering/loosenup.svg"
-                alt="Loosen Up"
-              ></img>
-
-              <img
-                style={{
                   width: "calc(60% - 50px)",
                   height: "auto",
                   margin: 20,
@@ -91,51 +73,73 @@ export default function Lettering() {
                 src="/lettering/letter-n.svg"
                 alt="Letter N"
               ></img>
-
               <img
                 style={{
-                  width: "calc(100% - 20px)",
+                  width: "calc(50% - 40px)",
                   height: "auto",
                   margin: 20,
                 }}
-                src="/lettering/jfs.svg"
-                alt="JFS"
+                src="/lettering/artiswork.jpg"
+                alt="Art Is Work"
+              ></img>
+              <img
+                style={{
+                  width: "calc(50% - 40px)",
+                  height: "auto",
+                  margin: 20,
+                }}
+                src="/lettering/loosenup.svg"
+                alt="Loosen Up"
               ></img>
 
-              <img
+              <div
+                className="project-flex-item"
                 style={{
-                  width: "calc(33.33% - 40px)",
-                  height: "auto",
-                  margin: 20,
+                  display: "flex",
+                  flexWrap: "wrap",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  width: "100%",
                 }}
-                src="/lettering/letter-a.svg"
-                alt="Letter A"
-              ></img>
-              <img
-                style={{
-                  width: "calc(33.33% - 40px)",
-                  height: "auto",
-                  margin: 20,
-                }}
-                src="/lettering/letter-b.svg"
-                alt="Letter B"
-              ></img>
-              <img
-                style={{
-                  width: "calc(33.33% - 40px)",
-                  height: "auto",
-                  margin: 20,
-                }}
-                src="/lettering/letter-c.svg"
-                alt="Letter C"
-              ></img>
+              >
+                <img
+                  style={{
+                    width: "calc(70% - 60px)",
+                    height: "auto",
+                    margin: 20,
+                  }}
+                  src="/lettering/jfs.svg"
+                  alt="JFS"
+                ></img>
+
+                <figure
+                  style={{
+                    width: "calc(30% - 140px)",
+                    margin: 20,
+                    padding: 60,
+                  }}
+                >
+                  <img
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                    }}
+                    src="/lettering/typism-book.png"
+                    alt="Typism Book 6"
+                  />
+                  <figcaption className="caption">
+                    I'm excited to have my work published in{" "}
+                    <span className="main-underline">Typism Book 6</span> among
+                    so many admirable artists!
+                  </figcaption>
+                </figure>
+              </div>
 
               <img
                 style={{
                   width: "calc(50% - 40px)",
                   height: "auto",
                   margin: 20,
-                  paddingTop: 80,
                 }}
                 src="/lettering/sunday.svg"
                 alt="Sunday"
@@ -145,11 +149,42 @@ export default function Lettering() {
                   width: "calc(50% - 40px)",
                   height: "auto",
                   margin: 20,
-                  paddingTop: 80,
                 }}
                 src="/lettering/refine.svg"
                 alt="Refine"
               ></img>
+
+              <img
+                style={{
+                  width: "calc(33.33% - 40px)",
+                  height: "auto",
+                  margin: 20,
+                  paddingTop: 20,
+                }}
+                src="/lettering/letter-a.svg"
+                alt="Letter A"
+              ></img>
+              <img
+                style={{
+                  width: "calc(33.33% - 40px)",
+                  height: "auto",
+                  margin: 20,
+                  paddingTop: 20,
+                }}
+                src="/lettering/letter-b.svg"
+                alt="Letter B"
+              ></img>
+              <img
+                style={{
+                  width: "calc(33.33% - 40px)",
+                  height: "auto",
+                  margin: 20,
+                  paddingTop: 20,
+                }}
+                src="/lettering/letter-c.svg"
+                alt="Letter C"
+              ></img>
+
               <img
                 style={{
                   width: "calc(50% - 40px)",
@@ -258,7 +293,7 @@ export default function Lettering() {
                 NEXT PROJECT:
               </p>
               <h2 style={{ margin: -5 }}>
-                <span className="underline">Daily Render</span>
+                <span className="underline">Daily Renders</span>
               </h2>
             </div>
           </button>

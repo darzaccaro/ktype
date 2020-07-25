@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import theme from "../theme";
 
-export default function DailyRender() {
+export default function LetterLove() {
   useEffect(() => {
     window.scrollTo(0, 0);
   });

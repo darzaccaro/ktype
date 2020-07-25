@@ -240,12 +240,15 @@ function Header({ location }) {
             height: "100%",
             top: 0,
             left: 0,
-            width: 400,
-            paddingLeft: 20,
-            paddingRight: 20,
+            width: "16vw",
+            /*
+            width: 315,
+            */
+            paddingLeft: "0.781vw",
+            paddingRight: "0.781vw",
             display: "block",
             position: "fixed",
-            borderRight: "2px solid #f9b110",
+            borderRight: "0.0781vw solid #f9b110",
             backgroundColor: theme.colors.red,
             zIndex: 2,
             overflowX: "hidden",
@@ -260,9 +263,12 @@ function Header({ location }) {
               }}
               style={{
                 position: "relative",
-                paddingTop: 35,
+                paddingTop: "1.367vw",
                 display: "block",
-                width: 380,
+                width: "16vw",
+                /*
+            width: 315,
+            */
                 height: "auto",
                 margin: "0 auto",
                 zIndex: 1,

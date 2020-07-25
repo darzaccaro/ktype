@@ -23,74 +23,78 @@ export default function Lettering() {
         <div className="centering">
           {/* Project Intro */}
           <h1>Logotypes &amp; Trademarks</h1>
-        </div>
 
-        <div
-          className="project-flex"
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            flexWrap: "wrap",
-            width: "100%",
-          }}
-        >
           <div
-            className="project-flex-item"
+            className="project-flex"
             style={{
               display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
               flexWrap: "wrap",
+              width: "100%",
             }}
           >
-            <img
-              style={{ width: "50%", height: "auto" }}
-              src="/logos/variant-v1.svg"
-              alt="Variant Logotype V1"
-            ></img>
-            <img
-              style={{ width: "50%", height: "auto" }}
-              src="/logos/variant-v2.svg"
-              alt="Variant Logotype V2"
-            ></img>
-            <img
-              style={{ width: "50%", height: "auto" }}
-              src="/logos/humility-tagline.svg"
-              alt="Humility Logotype"
-            ></img>
-            <img
-              style={{ width: "50%", height: "auto" }}
-              src="/logos/d-mark.svg"
-              alt="D Logomark"
-            ></img>
-            <img
-              style={{ width: "50%", height: "auto" }}
-              src="/logos/yield-and-co-script.svg"
-              alt="Yield Script Logotype"
-            ></img>
-            <img
-              style={{ width: "50%", height: "auto" }}
-              src="/logos/yield-and-co-serif.svg"
-              alt="Yield Serif Logotype"
-            ></img>
-            <img
-              style={{ width: "50%", height: "auto" }}
-              src="/logos/ktype-script.svg"
-              alt="KTYPE Logotype"
-            ></img>
-            <img
-              style={{ width: "50%", height: "auto" }}
-              src="/logos/plant-mark.svg"
-              alt="Plant Logomark"
-            ></img>
-            <img
-              style={{ width: "50%", height: "auto" }}
-              src="/logos/m-mark.svg"
-              alt="M Logomark"
-            ></img>
-            <img
-              style={{ width: "50%", height: "auto" }}
-              src="/logos/format.svg"
-              alt="Format Logotype"
-            ></img>
+            <div
+              className="project-flex-item"
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                justifyContent: "center",
+                alignItems: "center",
+                paddingTop: 150,
+              }}
+            >
+              <img
+                style={{ width: "50%", height: "auto" }}
+                src="/logos/variant-v1.svg"
+                alt="Variant Logotype V1"
+              ></img>
+              <img
+                style={{ width: "50%", height: "auto" }}
+                src="/logos/variant-v2.svg"
+                alt="Variant Logotype V2"
+              ></img>
+              <img
+                style={{ width: "50%", height: "auto" }}
+                src="/logos/humility-tagline.svg"
+                alt="Humility Logotype"
+              ></img>
+              <img
+                style={{ width: "50%", height: "auto" }}
+                src="/logos/d-mark.svg"
+                alt="D Logomark"
+              ></img>
+              <img
+                style={{ width: "50%", height: "auto" }}
+                src="/logos/yield-and-co-script.svg"
+                alt="Yield Script Logotype"
+              ></img>
+              <img
+                style={{ width: "50%", height: "auto" }}
+                src="/logos/yield-and-co-serif.svg"
+                alt="Yield Serif Logotype"
+              ></img>
+              <img
+                style={{ width: "50%", height: "auto" }}
+                src="/logos/ktype-script.svg"
+                alt="KTYPE Logotype"
+              ></img>
+              <img
+                style={{ width: "50%", height: "auto" }}
+                src="/logos/plant-mark.svg"
+                alt="Plant Logomark"
+              ></img>
+              <img
+                style={{ width: "50%", height: "auto" }}
+                src="/logos/m-mark.svg"
+                alt="M Logomark"
+              ></img>
+              <img
+                style={{ width: "50%", height: "auto" }}
+                src="/logos/format.svg"
+                alt="Format Logotype"
+              ></img>
+            </div>
           </div>
         </div>
       </div>

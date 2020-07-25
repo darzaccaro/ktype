@@ -7,7 +7,7 @@ import Header from "./components/Header";
 import About from "./pages/about";
 import Logos from "./pages/logos";
 import Lettering from "./pages/lettering";
-import DailyRender from "./pages/dailyRender";
+import DailyRenders from "./pages/dailyRenders";
 import LetterLove from "./pages/letterLove";
 import Contact from "./pages/contact";
 import Work from "./pages/work";
@@ -41,7 +41,7 @@ function App() {
 
       <Route path="/logos" component={Logos} />
       <Route path="/lettering" component={Lettering} />
-      <Route path="/daily-render" component={DailyRender} />
+      <Route path="/daily-renders" component={DailyRenders} />
       <Route path="/letter-love" component={LetterLove} />
 
       <Route path="/contact" component={Contact} />

@@ -60,7 +60,7 @@ export default function Work() {
           justifyContent: "space-between",
           flexWrap: "wrap",
           width: "100%",
-          maxWidth: "1800px",
+          maxWidth: "1600px",
           margin: "0 auto",
         }}
       >
@@ -102,7 +102,7 @@ export default function Work() {
           className="work-flex-item"
           style={{ width: "50%", height: "auto", position: "relative" }}
         >
-          <Link className="card-link" to="/daily-render">
+          <Link className="card-link" to="/daily-renders">
             <img
               src="/work/work-w-postwork.png"
               className="thumbnail"
@@ -110,7 +110,7 @@ export default function Work() {
             />
             <figcaption className="card-overlay">
               <div className="card-inner">
-                <h3 className="card-title">Daily Render</h3>
+                <h3 className="card-title">Daily Renders</h3>
                 <h3 className="card-details">3D Typography</h3>
               </div>
             </figcaption>
