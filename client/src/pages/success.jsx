@@ -28,7 +28,7 @@ export default function Success() {
           </p>
           <p style={{ textAlign: "center" }}>
             <Link to="/work" onClick={() => window.scrollTo(0, 0)}>
-              <span className="underline">Back to Work</span>
+              <span className="underline-yellow">Back to Work</span>
             </Link>
           </p>
         </div>

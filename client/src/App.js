@@ -12,6 +12,7 @@ import LetterLove from "./pages/letterLove";
 import Contact from "./pages/contact";
 import Work from "./pages/work";
 import Success from "./pages/success";
+import Details from "./pages/details";
 
 /* -- DISABLE Google Anaylytics
 // Import Google Tag Manager
@@ -38,14 +39,13 @@ function App() {
       <Route exact path="/" component={Work} />
       <Route path="/work" component={Work} />
       <Route path="/about" component={About} />
-
       <Route path="/logos" component={Logos} />
       <Route path="/lettering" component={Lettering} />
       <Route path="/daily-renders" component={DailyRenders} />
       <Route path="/letter-love" component={LetterLove} />
-
       <Route path="/contact" component={Contact} />
       <Route path="/success" component={Success} />
+      <Route path="/details" component={Details} />
 
       <Footer />
     </div>

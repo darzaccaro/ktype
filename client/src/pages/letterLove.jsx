@@ -23,39 +23,56 @@ export default function LetterLove() {
         }}
       >
         <div
-          className="intro-flex"
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "space-between",
-          }}
-        >
-          <img
-            style={{ width: "100%", height: "auto" }}
-            src="/letter_love/letterlove-postwork-v2.png"
-            alt="1"
-          ></img>
-        </div>
-
-        <div
           className="project-flex"
           style={{
             display: "flex",
-            justifyContent: "space-between",
             flexWrap: "wrap",
-            width: "100%",
+            justifyContent: "space-between",
+            alignItems: "center",
+            position: "relative",
           }}
         >
           <div
             className="project-flex-item"
             style={{
-              width: "calc(30% - 60px)",
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "space-between",
+              alignItems: "center",
+              width: "100%",
+            }}
+          >
+            <div
+              className="image-block"
+              style={{
+                display: "flex",
+                width: "calc((100% / 1) - 0rem)",
+              }}
+            >
+              <img
+                style={{
+                  alignSelf: "center",
+                  width: "100%",
+                  height: "auto",
+                }}
+                src="/letter_love/letterlove-postwork-v2.png"
+                alt="Letter Love Chrome"
+              ></img>
+            </div>
+          </div>
+
+          <div
+            className="project-flex-item"
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              width: "60%",
+              margin: "0 auto",
               paddingTop: 250,
-              paddingRight: 60,
             }}
           >
             <h2>Letter Love</h2>
-            <p>
+            <p style={{ marginTop: 0 }}>
               This project uses an elegant typographic style built to express my
               love for letters. From my quick concept sketches, I knew I wanted
               to progress the idea of using an entangled heart within the
@@ -69,34 +86,71 @@ export default function LetterLove() {
           <div
             className="project-flex-item"
             style={{
-              width: "70%",
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "space-between",
+              alignItems: "center",
               paddingTop: 250,
-            }}
-          >
-            <img
-              style={{ width: "100%", height: "auto" }}
-              src="/letter_love/letterlove-postwork-v3.png"
-              alt="1"
-            ></img>
-            <img
-              style={{ width: "100%", height: "auto" }}
-              src="/letter_love/letter-love-xray.jpg"
-              alt="1"
-            ></img>
-          </div>
-
-          <div
-            className="project-flex-item"
-            style={{
               width: "100%",
-              paddingTop: 250,
             }}
           >
-            <img
-              style={{ width: "100%", height: "auto" }}
-              src="/letter_love/letter-love-process.png"
-              alt="1"
-            ></img>
+            <div
+              className="image-block"
+              style={{
+                display: "flex",
+                width: "calc((100% / 1) - 0rem)",
+                marginBottom: "2rem",
+              }}
+            >
+              <img
+                style={{
+                  alignSelf: "center",
+                  width: "100%",
+                  height: "auto",
+                }}
+                src="/letter_love/letterlove-postwork-v3.png"
+                alt="Letter Love: purple/blue gradient"
+              ></img>
+            </div>
+
+            <div
+              className="image-block"
+              style={{
+                display: "flex",
+                width: "calc((100% / 1) - 0rem)",
+                padding: "0% 10%",
+                marginBottom: "2rem",
+              }}
+            >
+              <img
+                style={{
+                  alignSelf: "center",
+                  width: "100%",
+                  height: "auto",
+                }}
+                src="/letter_love/letter-love-xray.jpg"
+                alt="Process of Letter Love"
+              ></img>
+            </div>
+
+            <div
+              className="image-block"
+              style={{
+                display: "flex",
+                width: "calc((100% / 1) - 0rem)",
+                padding: "0% 10%",
+              }}
+            >
+              <img
+                style={{
+                  alignSelf: "center",
+                  width: "100%",
+                  height: "auto",
+                }}
+                src="/letter_love/letter-love-process.png"
+                alt="Side view of Letter Love to show dimensional effects"
+              ></img>
+            </div>
           </div>
         </div>
       </div>
@@ -106,7 +160,8 @@ export default function LetterLove() {
         <div
           className="project-flex-item"
           style={{
-            width: "50%",
+            margin: "0 auto",
+            width: "60%",
             paddingBottom: 150,
           }}
         >
@@ -140,7 +195,9 @@ export default function LetterLove() {
                 NEXT PROJECT:
               </p>
               <h2 style={{ margin: -5 }}>
-                <span className="underline">Logotypes &amp; Trademarks</span>
+                <span className="underline-yellow">
+                  Logotypes &amp; Trademarks
+                </span>
               </h2>
             </div>
           </button>

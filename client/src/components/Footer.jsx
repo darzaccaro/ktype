@@ -1,5 +1,6 @@
 import React from "react";
 import theme from "../theme";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -24,7 +25,7 @@ export default function Footer() {
             <div
               className="copyright footer-flex-item"
               style={{
-                width: "calc(50% - 20px)",
+                width: "calc(35% - 20px)",
                 paddingRight: 20,
               }}
             >
@@ -32,15 +33,20 @@ export default function Footer() {
               <p
                 style={{
                   color: theme.colors.white,
-                  fontSize: 20,
-                  marginBottom: 0,
                 }}
               >
                 &copy; 2020 Kade Tyler
               </p>
             </div>
 
-            <div className="social-icons footer-flex-item">
+            <div
+              className="social-icons footer-flex-item"
+              style={{
+                width: "calc(35% - 20px)",
+                paddingRight: 20,
+                marginBottom: 20,
+              }}
+            >
               <p>Keep in touch ♥</p>
               <a
                 href="https://instagram.com/ktype.xyz"
@@ -90,6 +96,23 @@ export default function Footer() {
                   alt="Behance"
                 ></img>
               </a>
+            </div>
+
+            <div
+              className="site-details footer-flex-item"
+              style={{
+                width: "10%",
+              }}
+            >
+              <p>
+                <Link
+                  style={{ color: theme.colors.grey }}
+                  to="/details"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  Site Details
+                </Link>
+              </p>
             </div>
           </div>
         </div>

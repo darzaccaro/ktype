@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import ResponsivePlayer from "../components/ResponsivePlayer";
 
-export default function DailyRender() {
+export default function DailyRenders() {
   useEffect(() => {
     window.scrollTo(0, 0);
   });
@@ -36,11 +36,60 @@ export default function DailyRender() {
           <div
             className="project-flex-item"
             style={{
-              /* Correct */
+              display: "flex",
+              flexWrap: "wrap",
+              width: "60%",
+              margin: "0 auto",
+            }}
+          >
+            <h2>Daily Renders</h2>
+            <p style={{ marginTop: 0 }}>
+              I tasked myself with the challenge of creating a 3D
+              custom-lettered render each day for a month. I set some rules for
+              myself being that I had to explore new lettering styles or 3D
+              methods everyday.
+            </p>
+            <p style={{ marginTop: 0 }}>
+              Beginning as sketches, the letters were then refined digitally and
+              rendered using Cinema 4D + Arnold. For proper type, it is
+              important to focus on the quality of the flat letterforms first
+              before adding dimensional effects.
+            </p>
+            <p style={{ marginTop: 0 }}>
+              These are the select works of the completed challenge. You can
+              follow me on{" "}
+              <a
+                className="underline"
+                href="https://instagram.com/ktype.xyz"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram
+              </a>{" "}
+              to see the full project live next year!
+            </p>
+          </div>
+
+          <div
+            className="project-flex-item"
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              width: "100%",
+              paddingTop: 200,
+            }}
+          >
+            <p>Curated Letters:</p>
+          </div>
+
+          <div
+            className="project-flex-item"
+            style={{
               display: "flex",
               flexWrap: "wrap",
               justifyContent: "space-between",
               alignItems: "center",
+              width: "100%",
             }}
           >
             <div
@@ -48,7 +97,7 @@ export default function DailyRender() {
               style={{
                 /* Correct */
                 display: "flex",
-                width: "calc((100% / 1) - 0rem)",
+                width: "calc((100% / 2) - 1rem)",
               }}
             >
               <img
@@ -62,45 +111,12 @@ export default function DailyRender() {
                 alt="Letter D"
               ></img>
             </div>
-          </div>
 
-          <div
-            className="project-flex-item"
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              width: "55%",
-              margin: "0 auto",
-              paddingTop: 250,
-            }}
-          >
-            <h2>Daily Renders</h2>
-            <p style={{ marginTop: 0 }}>
-              I tasked myself with the challenge of creating a 3D
-              custom-lettered render each day for a month. I set some rules for
-              myself being that I had to explore new lettering styles or 3D
-              methods everyday. All letters were sketched by hand, refined
-              digitally, and rendered using Cinema 4D + Arnold. These are the
-              select works of the completed challenge.
-            </p>
-          </div>
-
-          <div
-            className="project-flex-item"
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              justifyContent: "space-between",
-              alignItems: "center",
-              paddingTop: 250,
-            }}
-          >
             <div
               className="image-block"
               style={{
                 display: "flex",
-                width: "calc((100% / 1) - 0rem)",
-                padding: "0% 10%",
+                width: "calc((100% / 2) - 1rem)",
               }}
             >
               <img
@@ -120,46 +136,35 @@ export default function DailyRender() {
             style={{
               display: "flex",
               flexWrap: "wrap",
-              justifyContent: "center",
-              alignItems: "center",
-              width: "55%",
-              margin: "0 auto",
-              paddingTop: 250,
-            }}
-          >
-            <p>
-              When developing type, it is important to focus on the quality of
-              the flat letterforms first before adding dimensional effects.
-            </p>
-          </div>
-
-          <div
-            className="project-flex-item"
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              width: "100%",
-              paddingTop: 250,
-            }}
-          >
-            <p>Selected Letters:</p>
-          </div>
-
-          <div
-            className="project-flex-item"
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
               justifyContent: "space-between",
               alignItems: "center",
+              width: "100%",
+              paddingTop: 200,
             }}
           >
             <div
               className="image-block"
               style={{
                 display: "flex",
-                width: "calc((100% / 1) - 0rem)",
-                marginBottom: "2rem",
+                width: "calc((100% / 2) - 1rem)",
+              }}
+            >
+              <img
+                style={{
+                  alignSelf: "center",
+                  width: "100%",
+                  height: "auto",
+                }}
+                src="/daily_renders/e-postwork.jpg"
+                alt="Letter E"
+              ></img>
+            </div>
+
+            <div
+              className="image-block"
+              style={{
+                display: "flex",
+                width: "calc((100% / 2) - 1rem)",
               }}
             >
               <img
@@ -172,7 +177,67 @@ export default function DailyRender() {
                 alt="Letter G"
               ></img>
             </div>
+          </div>
 
+          <div
+            className="project-flex-item"
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "space-between",
+              alignItems: "center",
+              width: "100%",
+              paddingTop: 200,
+            }}
+          >
+            <div
+              className="image-block"
+              style={{
+                display: "flex",
+                width: "calc((100% / 2) - 1rem)",
+              }}
+            >
+              <img
+                style={{
+                  alignSelf: "center",
+                  width: "100%",
+                  height: "auto",
+                }}
+                src="/daily_renders/h-postwork.png"
+                alt="Letter H"
+              ></img>
+            </div>
+
+            <div
+              className="image-block"
+              style={{
+                display: "flex",
+                width: "calc((100% / 2) - 1rem)",
+              }}
+            >
+              <img
+                style={{
+                  alignSelf: "center",
+                  width: "100%",
+                  height: "auto",
+                }}
+                src="/daily_renders/k-postwork.png"
+                alt="Letter K"
+              ></img>
+            </div>
+          </div>
+
+          <div
+            className="project-flex-item"
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "space-between",
+              alignItems: "center",
+              width: "100%",
+              paddingTop: 200,
+            }}
+          >
             <div
               className="image-block"
               style={{
@@ -204,8 +269,8 @@ export default function DailyRender() {
                   width: "100%",
                   height: "auto",
                 }}
-                src="/daily_renders/o-postwork.png"
-                alt="Letter O"
+                src="/daily_renders/m-postwork.png"
+                alt="Letter M"
               ></img>
             </div>
           </div>
@@ -217,15 +282,33 @@ export default function DailyRender() {
               flexWrap: "wrap",
               justifyContent: "space-between",
               alignItems: "center",
-              paddingTop: 250,
+              width: "100%",
+              paddingTop: 200,
             }}
           >
             <div
               className="image-block"
               style={{
                 display: "flex",
-                width: "calc((100% / 1) - 0rem)",
-                marginBottom: "2rem",
+                width: "calc((100% / 2) - 1rem)",
+              }}
+            >
+              <img
+                style={{
+                  alignSelf: "center",
+                  width: "100%",
+                  height: "auto",
+                }}
+                src="/daily_renders/o-postwork.png"
+                alt="Letter O"
+              ></img>
+            </div>
+
+            <div
+              className="image-block"
+              style={{
+                display: "flex",
+                width: "calc((100% / 2) - 1rem)",
               }}
             >
               <img
@@ -238,7 +321,19 @@ export default function DailyRender() {
                 alt="Letter P"
               ></img>
             </div>
+          </div>
 
+          <div
+            className="project-flex-item"
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "space-between",
+              alignItems: "center",
+              width: "100%",
+              paddingTop: 200,
+            }}
+          >
             <div
               className="image-block"
               style={{
@@ -283,7 +378,8 @@ export default function DailyRender() {
               flexWrap: "wrap",
               justifyContent: "space-between",
               alignItems: "center",
-              padding: "250px 10%",
+              width: "100%",
+              paddingTop: 200,
             }}
           >
             <div
@@ -299,8 +395,8 @@ export default function DailyRender() {
                   width: "100%",
                   height: "auto",
                 }}
-                src="/daily_renders/v-postwork.png"
-                alt="Letter V"
+                src="/daily_renders/u-postwork2.png"
+                alt="Letter U"
               ></img>
             </div>
 
@@ -317,8 +413,8 @@ export default function DailyRender() {
                   width: "100%",
                   height: "auto",
                 }}
-                src="/daily_renders/v-wireframe.jpg"
-                alt="Letter V Process"
+                src="/daily_renders/u-flat.png"
+                alt="Letter U Process"
               ></img>
             </div>
           </div>
@@ -330,14 +426,47 @@ export default function DailyRender() {
               flexWrap: "wrap",
               justifyContent: "space-between",
               alignItems: "center",
+              width: "100%",
+              paddingTop: 200,
             }}
           >
+            <section
+              className="image-block"
+              style={{
+                display: "flex",
+                width: "calc((100% / 2) - 1rem)",
+                position: "relative",
+              }}
+            >
+              <img
+                className="top"
+                style={{
+                  alignSelf: "center",
+                  width: "100%",
+                  height: "auto",
+                  position: "absolute",
+                }}
+                src="/daily_renders/v-wireframe.png"
+                alt="Letter V Process"
+              ></img>
+
+              <img
+                className="bottom"
+                style={{
+                  alignSelf: "center",
+                  width: "100%",
+                  height: "auto",
+                }}
+                src="/daily_renders/v-postwork.png"
+                alt="Letter V"
+              ></img>
+            </section>
+
             <div
               className="image-block"
               style={{
                 display: "flex",
-                width: "calc((100% / 1) - 0rem)",
-                marginBottom: "2rem",
+                width: "calc((100% / 2) - 1rem)",
               }}
             >
               <img
@@ -350,7 +479,19 @@ export default function DailyRender() {
                 alt="Letter W"
               ></img>
             </div>
+          </div>
 
+          <div
+            className="project-flex-item"
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "space-between",
+              alignItems: "center",
+              width: "100%",
+              paddingTop: 200,
+            }}
+          >
             <div
               className="image-block"
               style={{
@@ -394,10 +535,10 @@ export default function DailyRender() {
               display: "flex",
               flexWrap: "wrap",
               width: "100%",
-              paddingTop: 250,
+              paddingTop: 200,
             }}
           >
-            <p>Selected Numerals:</p>
+            <p>Curated Numbers:</p>
           </div>
 
           <div
@@ -407,14 +548,14 @@ export default function DailyRender() {
               flexWrap: "wrap",
               justifyContent: "space-between",
               alignItems: "center",
+              width: "100%",
             }}
           >
             <div
               className="image-block"
               style={{
                 display: "flex",
-                width: "calc((100% / 1) - 0rem)",
-                marginBottom: "2rem",
+                width: "calc((100% / 2) - 1rem)",
               }}
             >
               <img
@@ -445,7 +586,19 @@ export default function DailyRender() {
                 alt="Numeral 1"
               ></img>
             </div>
+          </div>
 
+          <div
+            className="project-flex-item"
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "space-between",
+              alignItems: "center",
+              width: "100%",
+              paddingTop: 200,
+            }}
+          >
             <div
               className="image-block"
               style={{
@@ -463,24 +616,12 @@ export default function DailyRender() {
                 alt="Numeral 2"
               ></img>
             </div>
-          </div>
 
-          <div
-            className="project-flex-item"
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              justifyContent: "space-between",
-              alignItems: "center",
-              paddingTop: 250,
-            }}
-          >
             <div
               className="image-block"
               style={{
                 display: "flex",
-                width: "calc((100% / 1) - 0rem)",
-                marginBottom: "2rem",
+                width: "calc((100% / 2) - 1rem)",
               }}
             >
               <img
@@ -493,7 +634,19 @@ export default function DailyRender() {
                 alt="Numeral 3"
               ></img>
             </div>
+          </div>
 
+          <div
+            className="project-flex-item"
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "space-between",
+              alignItems: "center",
+              width: "100%",
+              paddingTop: 200,
+            }}
+          >
             <div
               className="image-block"
               style={{
@@ -512,14 +665,28 @@ export default function DailyRender() {
               ></img>
             </div>
 
-            <div
+            <section
               className="image-block"
               style={{
                 display: "flex",
                 width: "calc((100% / 2) - 1rem)",
+                position: "relative",
               }}
             >
               <img
+                className="top"
+                style={{
+                  alignSelf: "center",
+                  width: "100%",
+                  height: "auto",
+                  position: "absolute",
+                }}
+                src="/daily_renders/tapeirl3.png"
+                alt="5 Tape Process"
+              ></img>
+
+              <img
+                className="bottom"
                 style={{
                   alignSelf: "center",
                   width: "100%",
@@ -528,38 +695,23 @@ export default function DailyRender() {
                 src="/daily_renders/5-postwork.png"
                 alt="Numeral 5"
               ></img>
-            </div>
+            </section>
+          </div>
+
+          <div
+            className="project-flex-item"
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              width: "100%",
+              paddingTop: 200,
+            }}
+          >
+            <p>3D Process Video:</p>
           </div>
         </div>
 
         <ResponsivePlayer />
-
-        <div
-          className="project-flex-item"
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            alignItems: "center",
-            width: "55%",
-            margin: "0 auto",
-            paddingTop: 250,
-            paddingBottom: 250,
-          }}
-        >
-          <p>
-            Feel free to follow me on{" "}
-            <a
-              className="underline"
-              href="https://instagram.com/ktype.xyz"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Instagram
-            </a>{" "}
-            to see the daily progression of it next time!
-          </p>
-        </div>
       </div>
 
       {/* Deliverables + Next Project - START */}
@@ -567,7 +719,8 @@ export default function DailyRender() {
         <div
           className="project-flex-item"
           style={{
-            width: "50%",
+            margin: "0 auto",
+            width: "60%",
             paddingBottom: 150,
           }}
         >
@@ -601,7 +754,7 @@ export default function DailyRender() {
                 NEXT PROJECT:
               </p>
               <h2 style={{ margin: -5 }}>
-                <span className="underline">Letter Love</span>
+                <span className="underline-yellow">Letter Love</span>
               </h2>
             </div>
           </button>

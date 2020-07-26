@@ -37,11 +37,11 @@ export default function Lettering() {
             className="project-flex"
             style={{
               display: "flex",
+              flexWrap: "wrap",
               justifyContent: "space-between",
               alignItems: "center",
-              flexWrap: "wrap",
-              width: "100%",
               overflow: "hidden",
+              position: "relative",
             }}
           >
             <div
@@ -52,79 +52,118 @@ export default function Lettering() {
                 justifyContent: "center",
                 alignItems: "center",
                 paddingTop: 150,
+                width: "100%",
               }}
             >
-              <img
-                style={{
-                  width: "calc(60% - 50px)",
-                  height: "auto",
-                  margin: 20,
-                }}
-                src="/lettering/thanks.svg"
-                alt="Thanks"
-              ></img>
-              <img
-                className="rotate"
-                style={{
-                  width: "calc(40% - 50px)",
-                  height: "auto",
-                  margin: 30,
-                }}
-                src="/lettering/letter-n.svg"
-                alt="Letter N"
-              ></img>
-              <img
-                style={{
-                  width: "calc(50% - 40px)",
-                  height: "auto",
-                  margin: 20,
-                }}
-                src="/lettering/artiswork.jpg"
-                alt="Art Is Work"
-              ></img>
-              <img
-                style={{
-                  width: "calc(50% - 40px)",
-                  height: "auto",
-                  margin: 20,
-                }}
-                src="/lettering/loosenup.svg"
-                alt="Loosen Up"
-              ></img>
-
               <div
-                className="project-flex-item"
+                className="image-block"
                 style={{
                   display: "flex",
-                  flexWrap: "wrap",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  width: "100%",
+                  width: "calc(60% - 1rem)",
                 }}
               >
                 <img
                   style={{
-                    width: "calc(70% - 60px)",
+                    alignSelf: "center",
+                    width: "100%",
                     height: "auto",
-                    margin: 20,
+                  }}
+                  src="/lettering/thanks.svg"
+                  alt="Thanks"
+                ></img>
+              </div>
+
+              <div
+                className="image-block rotate"
+                style={{
+                  display: "flex",
+                  width: "calc(40% - 1rem)",
+                }}
+              >
+                <img
+                  style={{
+                    alignSelf: "center",
+                    width: "100%",
+                    height: "auto",
+                  }}
+                  src="/lettering/letter-n.svg"
+                  alt="Letter N"
+                ></img>
+              </div>
+
+              <div
+                className="image-block"
+                style={{
+                  display: "flex",
+                  width: "calc((100% / 2) - 1rem)",
+                }}
+              >
+                <img
+                  style={{
+                    alignSelf: "center",
+                    width: "100%",
+                    height: "auto",
+                  }}
+                  src="/lettering/artiswork.jpg"
+                  alt="Art Is Work"
+                ></img>
+              </div>
+
+              <div
+                className="image-block"
+                style={{
+                  display: "flex",
+                  width: "calc((100% / 2) - 1rem)",
+                }}
+              >
+                <img
+                  style={{
+                    alignSelf: "center",
+                    width: "100%",
+                    height: "auto",
+                  }}
+                  src="/lettering/loosenup.svg"
+                  alt="Loosen Up"
+                ></img>
+              </div>
+
+              <div
+                className="image-block"
+                style={{
+                  display: "flex",
+                  width: "calc(65% - 1rem)",
+                }}
+              >
+                <img
+                  style={{
+                    alignSelf: "center",
+                    width: "100%",
+                    height: "auto",
                   }}
                   src="/lettering/jfs.svg"
                   alt="JFS"
                 ></img>
+              </div>
 
+              <div
+                className="image-block"
+                style={{
+                  display: "flex",
+                  width: "calc(35% - 1rem)",
+                }}
+              >
                 <figure
                   style={{
-                    width: "calc(30% - 140px)",
-                    margin: 20,
-                    padding: 60,
+                    margin: 40,
                   }}
                 >
                   <img
                     style={{
+                      alignSelf: "center",
                       width: "100%",
                       height: "auto",
                     }}
-                    src="/lettering/typism-book.png"
+                    src="/lettering/typism-book-feature.jpg"
                     alt="Typism Book 6"
                   />
                   <figcaption className="caption">
@@ -135,122 +174,224 @@ export default function Lettering() {
                 </figure>
               </div>
 
-              <img
+              <div
+                className="image-block"
                 style={{
-                  width: "calc(50% - 40px)",
-                  height: "auto",
-                  margin: 20,
+                  display: "flex",
+                  width: "calc((100% / 2) - 1rem)",
                 }}
-                src="/lettering/sunday.svg"
-                alt="Sunday"
-              ></img>
-              <img
-                style={{
-                  width: "calc(50% - 40px)",
-                  height: "auto",
-                  margin: 20,
-                }}
-                src="/lettering/refine.svg"
-                alt="Refine"
-              ></img>
+              >
+                <img
+                  style={{
+                    alignSelf: "center",
+                    width: "100%",
+                    height: "auto",
+                  }}
+                  src="/lettering/sunday.svg"
+                  alt="Sunday"
+                ></img>
+              </div>
 
-              <img
+              <div
+                className="image-block"
                 style={{
-                  width: "calc(33.33% - 40px)",
-                  height: "auto",
-                  margin: 20,
+                  display: "flex",
+                  width: "calc((100% / 2) - 1rem)",
+                }}
+              >
+                <img
+                  style={{
+                    alignSelf: "center",
+                    width: "100%",
+                    height: "auto",
+                  }}
+                  src="/lettering/refine.svg"
+                  alt="Refine"
+                ></img>
+              </div>
+
+              <div
+                className="image-block"
+                style={{
+                  display: "flex",
+                  width: "calc((100% / 3) - 1rem)",
                   paddingTop: 20,
                 }}
-                src="/lettering/letter-a.svg"
-                alt="Letter A"
-              ></img>
-              <img
+              >
+                <img
+                  style={{
+                    alignSelf: "center",
+                    width: "100%",
+                    height: "auto",
+                  }}
+                  src="/lettering/letter-a.svg"
+                  alt="Letter A"
+                ></img>
+              </div>
+
+              <div
+                className="image-block"
                 style={{
-                  width: "calc(33.33% - 40px)",
-                  height: "auto",
-                  margin: 20,
+                  display: "flex",
+                  width: "calc((100% / 3) - 1rem)",
                   paddingTop: 20,
                 }}
-                src="/lettering/letter-b.svg"
-                alt="Letter B"
-              ></img>
-              <img
+              >
+                <img
+                  style={{
+                    alignSelf: "center",
+                    width: "100%",
+                    height: "auto",
+                  }}
+                  src="/lettering/letter-b.svg"
+                  alt="Letter B"
+                ></img>
+              </div>
+
+              <div
+                className="image-block"
                 style={{
-                  width: "calc(33.33% - 40px)",
-                  height: "auto",
-                  margin: 20,
+                  display: "flex",
+                  width: "calc((100% / 3) - 1rem)",
                   paddingTop: 20,
                 }}
-                src="/lettering/letter-c.svg"
-                alt="Letter C"
-              ></img>
+              >
+                <img
+                  style={{
+                    alignSelf: "center",
+                    width: "100%",
+                    height: "auto",
+                  }}
+                  src="/lettering/letter-c.svg"
+                  alt="Letter C"
+                ></img>
+              </div>
 
-              <img
+              <div
+                className="image-block"
                 style={{
-                  width: "calc(50% - 40px)",
-                  height: "auto",
-                  margin: 20,
+                  display: "flex",
+                  width: "calc((100% / 2) - 1rem)",
                 }}
-                src="/lettering/ubn-collection.jpg"
-                alt="Undefined By Numbers"
-              ></img>
-              <img
-                style={{
-                  width: "calc(50% - 40px)",
-                  height: "auto",
-                  margin: 20,
-                }}
-                src="/lettering/t-flourished.svg"
-                alt="Letter T"
-              ></img>
+              >
+                <img
+                  style={{
+                    alignSelf: "center",
+                    width: "100%",
+                    height: "auto",
+                  }}
+                  src="/lettering/ubn-collection.jpg"
+                  alt="Undefined By Numbers"
+                ></img>
+              </div>
 
-              <img
+              <div
+                className="image-block"
                 style={{
-                  width: "calc(100% - 20px)",
-                  height: "auto",
-                  margin: 20,
+                  display: "flex",
+                  width: "calc((100% / 2) - 1rem)",
                 }}
-                src="/lettering/communicate.svg"
-                alt="Communicate"
-              ></img>
+              >
+                <img
+                  style={{
+                    alignSelf: "center",
+                    width: "100%",
+                    height: "auto",
+                  }}
+                  src="/lettering/t-flourished.svg"
+                  alt="Letter T"
+                ></img>
+              </div>
 
-              <img
+              <div
+                className="image-block"
                 style={{
-                  width: "calc(50% - 40px)",
-                  height: "auto",
-                  margin: 20,
+                  display: "flex",
+                  width: "calc((100% / 1) - 0rem)",
                 }}
-                src="/lettering/faux.svg"
-                alt="Faux"
-              ></img>
-              <img
-                style={{
-                  width: "calc(50% - 40px)",
-                  height: "auto",
-                  margin: 20,
-                }}
-                src="/lettering/surreal.svg"
-                alt="Surreal"
-              ></img>
+              >
+                <img
+                  style={{
+                    alignSelf: "center",
+                    width: "100%",
+                    height: "auto",
+                  }}
+                  src="/lettering/communicate.svg"
+                  alt="Communicate"
+                ></img>
+              </div>
 
-              <img
+              <div
+                className="image-block"
                 style={{
-                  width: "calc(50% - 40px)",
-                  height: "auto",
-                  margin: 20,
+                  display: "flex",
+                  width: "calc((100% / 2) - 1rem)",
                 }}
-                src="/lettering/balance.svg"
-                alt="Balance"
-              ></img>
-              <img
+              >
+                <img
+                  style={{
+                    alignSelf: "center",
+                    width: "100%",
+                    height: "auto",
+                  }}
+                  src="/lettering/faux.svg"
+                  alt="Faux"
+                ></img>
+              </div>
+
+              <div
+                className="image-block"
                 style={{
-                  width: "calc(50% - 40px)",
-                  height: "auto",
-                  margin: 20,
+                  display: "flex",
+                  width: "calc((100% / 2) - 1rem)",
                 }}
-                src="/lettering/rhythm.svg"
-                alt="Rhythm"
-              ></img>
+              >
+                <img
+                  style={{
+                    alignSelf: "center",
+                    width: "100%",
+                    height: "auto",
+                  }}
+                  src="/lettering/surreal.svg"
+                  alt="Surreal"
+                ></img>
+              </div>
+
+              <div
+                className="image-block"
+                style={{
+                  display: "flex",
+                  width: "calc((100% / 2) - 1rem)",
+                }}
+              >
+                <img
+                  style={{
+                    alignSelf: "center",
+                    width: "100%",
+                    height: "auto",
+                  }}
+                  src="/lettering/balance.svg"
+                  alt="Balance"
+                ></img>
+              </div>
+
+              <div
+                className="image-block"
+                style={{
+                  display: "flex",
+                  width: "calc((100% / 2) - 1rem)",
+                }}
+              >
+                <img
+                  style={{
+                    alignSelf: "center",
+                    width: "100%",
+                    height: "auto",
+                  }}
+                  src="/lettering/rhythm.svg"
+                  alt="Rhythm"
+                ></img>
+              </div>
             </div>
           </div>
         </div>
@@ -261,7 +402,8 @@ export default function Lettering() {
         <div
           className="project-flex-item"
           style={{
-            width: "50%",
+            margin: "0 auto",
+            width: "60%",
             paddingBottom: 150,
           }}
         >
@@ -272,7 +414,7 @@ export default function Lettering() {
           </ul>
         </div>
 
-        <Link to="/daily-render" onClick={() => window.scrollTo(0, 0)}>
+        <Link to="/daily-renders" onClick={() => window.scrollTo(0, 0)}>
           <button
             className="k-button"
             style={{
@@ -293,7 +435,7 @@ export default function Lettering() {
                 NEXT PROJECT:
               </p>
               <h2 style={{ margin: -5 }}>
-                <span className="underline">Daily Renders</span>
+                <span className="underline-yellow">Daily Renders</span>
               </h2>
             </div>
           </button>

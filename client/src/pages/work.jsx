@@ -23,7 +23,8 @@ export default function Work() {
             }}
           >
             <span className="main-underline">KTYPE</span> is the purpose-driven
-            design studio of <span className="main-underline">Kade Tyler.</span>
+            design studio of{" "}
+            <span className="main-underline line">Kade Tyler.</span>
             <br></br>
             Thoughtful Brand Identities &amp; Custom Type.
           </h1>
@@ -60,7 +61,7 @@ export default function Work() {
           justifyContent: "space-between",
           flexWrap: "wrap",
           width: "100%",
-          maxWidth: "1600px",
+          maxWidth: "1400px",
           margin: "0 auto",
         }}
       >

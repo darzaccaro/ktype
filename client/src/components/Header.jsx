@@ -3,11 +3,13 @@ import { withRouter, Link } from "react-router-dom";
 import theme from "../theme";
 import NavLink from "./NavLink";
 import useWindowWidth from "../hooks/useWindowWidth";
+import useWindowHeight from "../hooks/useWindowHeight";
 import { useState } from "react";
 
 /* START -- Mobile Menu */
 function Header({ location }) {
   const width = useWindowWidth();
+  const height = useWindowHeight();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function MobileMenuButton() {
@@ -38,7 +40,7 @@ function Header({ location }) {
           ></img>
         ) : (
           <div
-            className="underline"
+            className="underline-yellow"
             style={{
               fontWeight: "bold",
             }}
@@ -50,7 +52,7 @@ function Header({ location }) {
     );
   }
 
-  if (width < theme.breakpoints.mobile) {
+  if (width < theme.breakpoints.mobile || height < theme.breakpoints.height) {
     return (
       <header>
         <nav>
@@ -240,7 +242,7 @@ function Header({ location }) {
             height: "100%",
             top: 0,
             left: 0,
-            width: "16vw",
+            width: "14.5vw",
             /*
             width: 315,
             */
@@ -249,7 +251,6 @@ function Header({ location }) {
             display: "block",
             position: "fixed",
             borderRight: "0.0781vw solid #f9b110",
-            backgroundColor: theme.colors.red,
             zIndex: 2,
             overflowX: "hidden",
           }}
@@ -263,9 +264,11 @@ function Header({ location }) {
               }}
               style={{
                 position: "relative",
-                paddingTop: "1.367vw",
+                paddingTop: "1.4vw",
                 display: "block",
-                width: "16vw",
+                maxWidth: "28vh",
+                width: "90%",
+
                 /*
             width: 315,
             */
@@ -293,6 +296,7 @@ function Header({ location }) {
               top: "100%",
               left: 0,
               margin: 0,
+              zIndex: 2,
             }}
           >
             <NavLink

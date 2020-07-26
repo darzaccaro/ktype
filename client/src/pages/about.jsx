@@ -14,16 +14,17 @@ export default function About() {
           className="about-flex"
           style={{
             display: "flex",
+            flexWrap: "wrap",
             justifyContent: "space-between",
             alignItems: "start",
-            flexWrap: "wrap",
+            position: "relative",
             width: "100%",
           }}
         >
           <div
             className="about-flex-item"
             style={{
-              width: "calc(50%)",
+              width: "calc(60% - 2rem)",
               paddingBottom: 100,
             }}
           >
@@ -66,7 +67,7 @@ export default function About() {
           <div
             className="about-flex-item"
             style={{
-              width: "calc(30%)",
+              width: "30%",
               paddingBottom: 100,
             }}
           >
@@ -92,31 +93,52 @@ export default function About() {
             className="about-flex-item"
             style={{
               display: "flex",
-              width: "100%",
+              flexWrap: "wrap",
+              justifyContent: "flex-start",
               alignItems: "center",
               paddingTop: 150,
               paddingBottom: 150,
+              width: "100%",
             }}
           >
-            <img
+            <div
+              className="image-block"
               style={{
+                display: "flex",
                 width: "65%",
-                height: "auto",
-                position: "relative",
-                filter: "drop-shadow(0px 0px 10px #000000)",
               }}
-              src="/about/kt-profile.jpg"
-              alt="Kade Tyler"
-            />
-            <img
+            >
+              <img
+                style={{
+                  alignSelf: "center",
+                  width: "100%",
+                  height: "auto",
+                  filter: "drop-shadow(0px 0px 10px #000000)",
+                }}
+                src="/about/kt-profile.jpg"
+                alt="Kade Tyler"
+              ></img>
+            </div>
+
+            <div
+              className="image-block"
               style={{
+                display: "flex",
                 width: "calc(35% + 150px)",
-                height: "auto",
                 margin: -150,
+                zIndex: -1,
               }}
-              src="/about/kt-working.jpg"
-              alt="Lettering Revisions"
-            />
+            >
+              <img
+                style={{
+                  alignSelf: "center",
+                  width: "100%",
+                  height: "auto",
+                }}
+                src="/about/kt-working.jpg"
+                alt="Lettering Revisions"
+              ></img>
+            </div>
           </div>
         </div>
       </div>
