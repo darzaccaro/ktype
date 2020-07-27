@@ -395,13 +395,6 @@ a:visited {
   margin: 0 auto;
   padding: 100px 50px;
 }
-.centering-extra {
-  display: block;
-  position: relative;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 400px 0px;
-}
 
 .project-notice {
   text-align: center;
@@ -438,6 +431,20 @@ a:visited {
 
 span.line {
   display: inline-block;
+}
+
+.mobile-menu-button {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-family: "Roboto Condensed", sans-serif;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 23px;
+}
+.mobile-menu-button:hover {
+  color: #f9b110;
+  cursor: pointer;
 }
 
 /*** 1600px - RESPONSIVE ***/
@@ -496,26 +503,13 @@ span.line {
   body {
     margin-left: 0px; /* Same as the width of the sidebar */
   }
-  .mobile-menu-button {
-    color: #1a1a1a;
-    text-decoration: none;
-    font-family: "Roboto Condensed", sans-serif;
-    border: none;
-    outline: none;
-    background: none;
-    font-size: 23px;
-  }
-  .mobile-menu-button:hover {
-    color: #f9b110;
-    cursor: pointer;
-  }
   .nav-link {
-    font-size: 60px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    font-size: 56px;
+    padding-top: 46px;
+    padding-bottom: 46px;
   }
   .nav-active {
-    padding: 50px 0px;
+    padding: 46px 0px;
   }
   .intro-statement {
     font-size: 34px;
@@ -572,29 +566,16 @@ span.line {
   body {
     margin-left: 0px; /* Same as the width of the sidebar */
   }
-  .mobile-menu-button {
-    color: #1a1a1a;
-    text-decoration: none;
-    font-family: "Roboto Condensed", sans-serif;
-    border: none;
-    outline: none;
-    background: none;
-    font-size: 23px;
-  }
-  .mobile-menu-button:hover {
-    color: #f9b110;
-    cursor: pointer;
-  }
   .logo {
     max-width: 150px;
   }
   .nav-link {
-    font-size: 40px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    font-size: 36px;
+    padding-top: 26px;
+    padding-bottom: 26px;
   }
   .nav-active {
-    padding: 30px 0px;
+    padding: 26px 0px;
   }
   .footer-flex-item {
     flex: 100%;

@@ -136,7 +136,7 @@ function Header({ location }) {
                 >
                   <img
                     className="logo"
-                    style={{ width: 250, height: "auto" }}
+                    style={{ width: 230, height: "auto" }}
                     src="/kt-logo.svg"
                     alt="Logo"
                   />

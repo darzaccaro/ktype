@@ -400,46 +400,64 @@ export default function Lettering() {
       {/* Deliverables + Next Project - START */}
       <div className="centering">
         <div
-          className="project-flex-item"
+          className="project-flex"
           style={{
-            margin: "0 auto",
-            width: "60%",
-            paddingBottom: 150,
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "space-between",
+            alignItems: "center",
+            position: "relative",
           }}
         >
-          <h2>Deliverables</h2>
-          <ul className="services-stack">
-            <li>+ Custom Lettering</li>
-            <hr className="spacer-line"></hr>
-          </ul>
-        </div>
-
-        <Link to="/daily-renders" onClick={() => window.scrollTo(0, 0)}>
-          <button
-            className="k-button"
+          <div
+            className="project-flex-item"
             style={{
-              width: "100%",
-              textAlign: "right",
-              height: 180,
-              paddingRight: 50,
+              margin: "0 auto",
+              width: "60%",
+              paddingBottom: 150,
             }}
           >
-            <div>
-              <p
+            <h2>Deliverables</h2>
+            <ul className="services-stack">
+              <li>+ Custom Lettering</li>
+              <hr className="spacer-line"></hr>
+            </ul>
+          </div>
+
+          <div
+            className="project-flex-item"
+            style={{
+              width: "100%",
+            }}
+          >
+            <Link to="/daily-renders" onClick={() => window.scrollTo(0, 0)}>
+              <button
+                className="k-button"
                 style={{
-                  color: theme.colors.white,
-                  letterSpacing: 2,
-                  margin: 0,
+                  width: "100%",
+                  textAlign: "right",
+                  height: 180,
+                  paddingRight: 50,
                 }}
               >
-                NEXT PROJECT:
-              </p>
-              <h2 style={{ margin: -5 }}>
-                <span className="underline-yellow">Daily Renders</span>
-              </h2>
-            </div>
-          </button>
-        </Link>
+                <div>
+                  <p
+                    style={{
+                      color: theme.colors.white,
+                      letterSpacing: 2,
+                      margin: 0,
+                    }}
+                  >
+                    NEXT PROJECT:
+                  </p>
+                  <h2 style={{ margin: -5 }}>
+                    <span className="underline-yellow">Daily Renders</span>
+                  </h2>
+                </div>
+              </button>
+            </Link>
+          </div>
+        </div>
       </div>
       {/* Deliverables + Next Project - END */}
     </div>
