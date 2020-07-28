@@ -19,7 +19,7 @@ const transporter = nodemailer.createTransport(nodemailerMailgun(auth));
 
 function generateContactEmail({ name, email, details }) {
   return {
-    from: "app150492301@heroku.com",
+    from: "postmaster@sandbox34c5b27273cb47d9bb8dc8fd3ed64660.mailgun.org",
     to: "zaccaro.kade@gmail.com",
     subject: `New Form Submission from ${name}`,
     text: `
