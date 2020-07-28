@@ -10,8 +10,6 @@ const app = express();
 
 const auth = {
   auth: {
-    host: process.env.MAILGUN_SMTP_SERVER,
-    port: process.env.MAILGUN_SMTP_PORT,
     api_key: process.env.MAILGUN_API_KEY,
     domain: process.env.MAILGUN_DOMAIN,
   },
@@ -21,7 +19,7 @@ const transporter = nodemailer.createTransport(nodemailerMailgun(auth));
 
 function generateContactEmail({ name, email, details }) {
   return {
-    from: "zaccaro.kade@gmail.com",
+    from: "app150492301@heroku.com",
     to: "zaccaro.kade@gmail.com",
     subject: `New Form Submission from ${name}`,
     text: `
