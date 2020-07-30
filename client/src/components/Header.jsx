@@ -94,7 +94,7 @@ function Header({ location }) {
           <MobileMenuButton />
 
           <div
-            className="mobile-nav-bg"
+            className="mobile-nav-bg menu-anim"
             style={{
               zIndex: 3,
               top: 0,

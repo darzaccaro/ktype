@@ -8,7 +8,12 @@ export default function About() {
   });
 
   return (
-    <div>
+    <div
+      className="page-anim"
+      style={{
+        width: "100%",
+      }}
+    >
       <div className="centering">
         <div
           className="about-flex"

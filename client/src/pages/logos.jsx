@@ -11,7 +11,7 @@ export default function Logos() {
   return (
     // Page fade in
     <div
-      className="anim-fade-in"
+      className="page-anim"
       style={{
         width: "100%",
       }}

@@ -10,7 +10,7 @@ export default function Success() {
 
   return (
     <div
-      className="anim-fade-in"
+      className="page-anim"
       style={{
         width: "100%",
       }}

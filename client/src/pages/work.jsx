@@ -4,7 +4,12 @@ import { Link } from "react-router-dom";
 
 export default function Work() {
   return (
-    <div className="page">
+    <div
+      className="page-anim"
+      style={{
+        width: "100%",
+      }}
+    >
       {/* Intro Statement */}
       <div
         className="intro-background"

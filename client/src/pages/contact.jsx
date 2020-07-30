@@ -35,7 +35,7 @@ function Contact(props) {
   return (
     // Page fade in
     <div
-      className="anim-fade-in"
+      className="page-anim"
       style={{
         width: "100%",
       }}

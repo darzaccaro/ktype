@@ -348,13 +348,6 @@ a:visited {
   }
 }
 
-.anim-fade-in {
-  animation-name: fadein;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
-}
-
 .header-line {
   display: block;
   height: 4px;
@@ -446,6 +439,63 @@ span.line {
   color: #f9b110;
   cursor: pointer;
 }
+
+/* -- PAGE ANIMATION - START -- */
+.page-anim {
+  -webkit-animation: transitionIn 0.75s; /* Safari 4+ */
+  -moz-animation: transitionIn 0.75s; /* Fx 5+ */
+  -o-animation: transitionIn 0.75s; /* Opera 12+ */
+  animation: transitionIn 0.75s; /* IE 10+, Fx 29+ */
+  animation-timing-function: ease-in-out;
+}
+.menu-anim {
+  -webkit-animation: transitionIn 0.25s; /* Safari 4+ */
+  -moz-animation: transitionIn 0.25s; /* Fx 5+ */
+  -o-animation: transitionIn 0.25s; /* Opera 12+ */
+  animation: transitionIn 0.25s; /* IE 10+, Fx 29+ */
+  animation-timing-function: ease-in-out;
+}
+@-webkit-keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-moz-keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-o-keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* -- PAGE ANIMATION - END -- */
 
 /*** 1600px - RESPONSIVE ***/
 @media only screen and (max-width: 1600px) {

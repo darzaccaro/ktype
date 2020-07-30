@@ -12,7 +12,7 @@ export default function DailyRenders() {
   return (
     // Page fade in --- Start
     <div
-      className="anim-fade-in"
+      className="page-anim"
       style={{
         width: "100%",
       }}
