@@ -43,6 +43,7 @@ export default function Success() {
             <p>
               This website was made in collaboration with{" "}
               <a
+                className="underline"
                 href=" https://www.linkedin.com/in/darzaccaro/"
                 target="_blank"
                 rel="noopener noreferrer"

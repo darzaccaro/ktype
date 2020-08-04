@@ -235,103 +235,109 @@ function Header({ location }) {
     );
   } else {
     return (
-      <header>
-        <nav
-          className="nav-container"
-          style={{
-            height: "100%",
-            top: 0,
-            left: 0,
-            width: "14.5vw",
-            /*
-            width: 315,
-            */
-            paddingLeft: "0.781vw",
-            paddingRight: "0.781vw",
-            display: "block",
-            position: "fixed",
-            borderRight: "0.0781vw solid #f9b110",
-            zIndex: 2,
-            overflowX: "hidden",
-          }}
-        >
-          <div className="nav-logo">
-            <Link
-              to={"/"}
-              onClick={() => {
-                window.scrollTo(0, 0);
-                setIsMenuOpen(false);
-              }}
-              style={{
-                position: "relative",
-                paddingTop: "1.4vw",
-                display: "block",
-                maxWidth: "28vh",
-                width: "90%",
-
-                /*
-            width: 315,
-            */
-                height: "auto",
-                margin: "0 auto",
-                zIndex: 1,
-              }}
-            >
-              <img className="logo" src="/kt-logo.svg" alt="KTYPE logo" />
-            </Link>
-          </div>
-
-          {/* WORK - ABOUT - CONTACT */}
-          <div
-            className="nav-links"
+      <div
+        className="page-anim"
+        style={{
+          width: "100%",
+        }}
+      >
+        <header>
+          <nav
+            className="nav-container"
             style={{
-              display: "flex",
-              position: "absolute",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              width: "100%",
-              msTransform: "translateY(-100%)",
-              transform: "translateY(-100%)",
-              top: "100%",
+              height: "100%",
+              top: 0,
               left: 0,
-              margin: 0,
+              width: "14.5vw",
+              /*
+            width: 315,
+            */
+              paddingLeft: "0.781vw",
+              paddingRight: "0.781vw",
+              display: "block",
+              position: "fixed",
+              borderRight: "0.0781vw solid #f9b110",
               zIndex: 2,
+              overflowX: "hidden",
             }}
           >
-            <NavLink
-              text="WORK"
-              to="/work"
-              isActive={
-                location.pathname.split("/")[1] === "work" ||
-                location.pathname === "/"
-              }
-              onClick={() => {
-                window.scrollTo(0, 0);
-                setIsMenuOpen(false);
-              }}
-            ></NavLink>
-            <NavLink
-              text="ABOUT"
-              to="/about"
-              isActive={location.pathname.split("/")[1] === "about"}
-              onClick={() => {
-                window.scrollTo(0, 0);
-                setIsMenuOpen(false);
-              }}
-            ></NavLink>
-            <NavLink
-              text="CONTACT"
-              to="/contact"
-              isActive={location.pathname.split("/")[1] === "contact"}
-              onClick={() => {
-                window.scrollTo(0, 0);
-                setIsMenuOpen(false);
-              }}
-            ></NavLink>
-          </div>
+            <div className="nav-logo">
+              <Link
+                to={"/"}
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                  setIsMenuOpen(false);
+                }}
+                style={{
+                  position: "relative",
+                  paddingTop: "1.4vw",
+                  display: "block",
+                  maxWidth: "28vh",
+                  width: "90%",
 
-          {/* Social Icons - REMOVE
+                  /*
+            width: 315,
+            */
+                  height: "auto",
+                  margin: "0 auto",
+                  zIndex: 1,
+                }}
+              >
+                <img className="logo" src="/kt-logo.svg" alt="KTYPE logo" />
+              </Link>
+            </div>
+
+            {/* WORK - ABOUT - CONTACT */}
+            <div
+              className="nav-links"
+              style={{
+                display: "flex",
+                position: "absolute",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                width: "100%",
+                msTransform: "translateY(-100%)",
+                transform: "translateY(-100%)",
+                top: "100%",
+                left: 0,
+                margin: 0,
+                zIndex: 2,
+              }}
+            >
+              <NavLink
+                text="WORK"
+                to="/work"
+                isActive={
+                  location.pathname.split("/")[1] === "work" ||
+                  location.pathname === "/"
+                }
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                  setIsMenuOpen(false);
+                }}
+              ></NavLink>
+              <NavLink
+                text="ABOUT"
+                to="/about"
+                isActive={location.pathname.split("/")[1] === "about"}
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                  setIsMenuOpen(false);
+                }}
+              ></NavLink>
+              <NavLink
+                text="CONTACT"
+                to="/contact"
+                isActive={location.pathname.split("/")[1] === "contact"}
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                  setIsMenuOpen(false);
+                }}
+              ></NavLink>
+            </div>
+
+            {/* Social Icons - REMOVE
           <div
             className="nav-social"
             style={{
@@ -392,8 +398,9 @@ function Header({ location }) {
             </a>
           </div>
           */}
-        </nav>
-      </header>
+          </nav>
+        </header>
+      </div>
     );
   }
 }
