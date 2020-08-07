@@ -76,7 +76,7 @@ export default function Logos() {
                     width: "100%",
                     height: "auto",
                   }}
-                  src="/logos/variant-v2.svg"
+                  src="/logos/variant-v2-update.svg"
                   alt="Variant Logotype V2"
                 ></img>
               </div>
