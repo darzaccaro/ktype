@@ -17,6 +17,80 @@ export default function DailyRenders() {
         width: "100%",
       }}
     >
+      {/* Project Title */}
+      <div
+        className="background-color"
+        style={{ backgroundColor: theme.colors.light }}
+      >
+        <div className="centering-title">
+          <h1 style={{ color: theme.colors.black, textAlign: "left" }}>
+            Daily Renders
+          </h1>
+        </div>
+      </div>
+
+      {/* Services + Intro Paragraph - START */}
+      <div
+        className="background-color"
+        style={{ backgroundColor: theme.colors.black }}
+      >
+        <div className="centering-tags">
+          <div
+            className="project-flex"
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "space-between",
+              alignItems: "start",
+              position: "relative",
+              width: "100%",
+            }}
+          >
+            <div className="project-flex-item">
+              <h4
+                style={{
+                  color: theme.colors.yellow,
+                  margin: 0,
+                  fontWeight: 700,
+                  paddingBottom: 10,
+                }}
+              >
+                SERVICES:
+              </h4>
+              <h4 className="service-tags">+ 3d Typography</h4>
+              <h4 className="service-tags">+ Custom Lettering</h4>
+            </div>
+
+            <div
+              className="project-flex-item"
+              style={{
+                width: "calc(60%)",
+              }}
+            >
+              <div className="intro-paragraph">
+                <p style={{ color: theme.colors.grey, marginTop: 0 }}>
+                  I tasked myself with the challenge of creating a
+                  custom-lettered 3D render each day for a month. I set some
+                  rules for myself being that I had to explore new lettering
+                  styles or 3D methods everyday.
+                </p>
+                <p style={{ color: theme.colors.grey, marginTop: 0 }}>
+                  Each letter began with sessions of sketching before moving to
+                  the computer for refinement. To achieve proper lettering in
+                  3D, it's important to focus on the quality of the flat letters
+                  before adding dimensional effects. The renders were completed
+                  using Cinema 4D + Arnold software.
+                </p>
+                <p style={{ color: theme.colors.grey, margin: 0 }}>
+                  These are the select works of the completed challenge.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Services + Intro Paragraph - END */}
+
       <div
         className="centering"
         style={{
@@ -38,48 +112,17 @@ export default function DailyRenders() {
             style={{
               display: "flex",
               flexWrap: "wrap",
-              width: "60%",
-              margin: "0 auto",
-            }}
-          >
-            <h2>Daily Renders</h2>
-            <p style={{ marginTop: 0 }}>
-              I tasked myself with the challenge of creating a 3D
-              custom-lettered render each day for a month. I set some rules for
-              myself being that I had to explore new lettering styles or 3D
-              methods everyday.
-            </p>
-            <p style={{ marginTop: 0 }}>
-              Beginning as sketches, the letters were then refined digitally and
-              rendered using Cinema 4D + Arnold. For proper type, it is
-              important to focus on the quality of the flat letterforms first
-              before adding dimensional effects.
-            </p>
-            <p style={{ marginTop: 0 }}>
-              These are the select works of the completed challenge. You can
-              follow me on{" "}
-              <a
-                className="underline"
-                href="https://instagram.com/ktype.xyz"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Instagram
-              </a>{" "}
-              to see the full project live next year!
-            </p>
-          </div>
-
-          <div
-            className="project-flex-item"
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
               width: "100%",
-              paddingTop: 200,
             }}
           >
-            <p>Curated Letters:</p>
+            <p
+              style={{
+                color: theme.colors.grey,
+                marginTop: 0,
+              }}
+            >
+              Curated Letters:
+            </p>
           </div>
 
           <div
@@ -139,7 +182,7 @@ export default function DailyRenders() {
               justifyContent: "space-between",
               alignItems: "center",
               width: "100%",
-              paddingTop: 200,
+              paddingTop: "2rem",
             }}
           >
             <div
@@ -187,7 +230,7 @@ export default function DailyRenders() {
               justifyContent: "space-between",
               alignItems: "center",
               width: "100%",
-              paddingTop: 200,
+              paddingTop: "2rem",
             }}
           >
             <div
@@ -235,7 +278,7 @@ export default function DailyRenders() {
               justifyContent: "space-between",
               alignItems: "center",
               width: "100%",
-              paddingTop: 200,
+              paddingTop: "2rem",
             }}
           >
             <div
@@ -283,7 +326,7 @@ export default function DailyRenders() {
               justifyContent: "space-between",
               alignItems: "center",
               width: "100%",
-              paddingTop: 200,
+              paddingTop: "2rem",
             }}
           >
             <div
@@ -331,7 +374,7 @@ export default function DailyRenders() {
               justifyContent: "space-between",
               alignItems: "center",
               width: "100%",
-              paddingTop: 200,
+              paddingTop: "2rem",
             }}
           >
             <div
@@ -379,7 +422,7 @@ export default function DailyRenders() {
               justifyContent: "space-between",
               alignItems: "center",
               width: "100%",
-              paddingTop: 200,
+              paddingTop: "2rem",
             }}
           >
             <div
@@ -427,7 +470,7 @@ export default function DailyRenders() {
               justifyContent: "space-between",
               alignItems: "center",
               width: "100%",
-              paddingTop: 200,
+              paddingTop: "2rem",
             }}
           >
             <section
@@ -489,7 +532,7 @@ export default function DailyRenders() {
               justifyContent: "space-between",
               alignItems: "center",
               width: "100%",
-              paddingTop: 200,
+              paddingTop: "2rem",
             }}
           >
             <div
@@ -535,10 +578,12 @@ export default function DailyRenders() {
               display: "flex",
               flexWrap: "wrap",
               width: "100%",
-              paddingTop: 200,
+              paddingTop: 100,
             }}
           >
-            <p>Curated Numbers:</p>
+            <p style={{ color: theme.colors.grey, marginTop: 0 }}>
+              Curated Numbers:
+            </p>
           </div>
 
           <div
@@ -596,7 +641,7 @@ export default function DailyRenders() {
               justifyContent: "space-between",
               alignItems: "center",
               width: "100%",
-              paddingTop: 200,
+              paddingTop: "2rem",
             }}
           >
             <div
@@ -644,7 +689,7 @@ export default function DailyRenders() {
               justifyContent: "space-between",
               alignItems: "center",
               width: "100%",
-              paddingTop: 200,
+              paddingTop: "2rem",
             }}
           >
             <div
@@ -704,81 +749,109 @@ export default function DailyRenders() {
               display: "flex",
               flexWrap: "wrap",
               width: "100%",
-              paddingTop: 200,
+              paddingTop: 100,
             }}
           >
-            <p>3D Process Video:</p>
+            <p style={{ color: theme.colors.grey, marginTop: 0 }}>
+              3D Process Video:
+            </p>
           </div>
         </div>
 
         <ResponsivePlayer />
       </div>
 
-      {/* Deliverables + Next Project - START */}
-      <div className="centering">
+      {/* Next Project - START */}
+      <div
+        className="project-flex"
+        style={{
+          paddingTop: 150,
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "space-between",
+          alignItems: "center",
+          position: "relative",
+        }}
+      >
         <div
-          className="project-flex"
+          className="project-flex-item"
           style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "space-between",
-            alignItems: "center",
-            position: "relative",
+            width: "100%",
           }}
         >
-          <div
-            className="project-flex-item"
-            style={{
-              margin: "0 auto",
-              width: "60%",
-              paddingBottom: 150,
-            }}
-          >
-            <h2>Deliverables</h2>
-            <ul className="services-stack">
-              <li>+ 3D Typography</li>
-              <hr className="spacer-line"></hr>
-              <li>+ Custom Lettering</li>
-              <hr className="spacer-line"></hr>
-            </ul>
-          </div>
+          <Link to="/letter-love" onClick={() => window.scrollTo(0, 0)}>
+            <button
+              className="project-navigation"
+              style={{
+                textAlign: "right",
+                paddingRight: 25,
+              }}
+            >
+              Next project →
+            </button>
+          </Link>
+        </div>
+      </div>
+      {/* Next Project - END */}
 
+      {/* Let's work together - START */}
+      <div
+        className="background-color"
+        style={{ backgroundColor: theme.colors.dark }}
+      >
+        <div className="centering">
           <div
-            className="project-flex-item"
+            className="project-flex"
             style={{
-              width: "100%",
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              alignItems: "center",
+              position: "relative",
             }}
           >
-            <Link to="/letter-love" onClick={() => window.scrollTo(0, 0)}>
-              <button
-                className="k-button"
+            <div
+              className="project-flex-item"
+              style={{
+                margin: "0 auto",
+                width: "80%",
+                paddingBottom: 25,
+              }}
+            >
+              <h1
                 style={{
-                  width: "100%",
-                  textAlign: "right",
-                  height: 180,
-                  paddingRight: 50,
+                  color: theme.colors.white,
                 }}
               >
-                <div>
-                  <p
-                    style={{
-                      color: theme.colors.white,
-                      letterSpacing: 2,
-                      margin: 0,
-                    }}
-                  >
-                    NEXT PROJECT:
-                  </p>
-                  <h2 style={{ margin: -5 }}>
-                    <span className="underline-yellow">Letter Love</span>
-                  </h2>
-                </div>
-              </button>
-            </Link>
+                Let's build together.
+              </h1>
+              <p
+                style={{
+                  textAlign: "center",
+                  fontSize: "23px",
+                  lineHeight: "38px",
+                }}
+              >
+                I'm always interested in hearing about new projects. I'd love to
+                know more about your story.
+              </p>
+            </div>
+
+            <div
+              className="project-flex-item"
+              style={{
+                width: "50%",
+                textAlign: "center",
+              }}
+            >
+              <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
+                <button className="lets-start-button">LET'S START</button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-      {/* Deliverables + Next Project - END */}
+      {/* Let's work together - END */}
     </div>
   );
 }

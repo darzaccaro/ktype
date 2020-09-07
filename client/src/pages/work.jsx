@@ -51,7 +51,7 @@ export default function Work() {
           className="mouse-click"
           style={{
             position: "absolute",
-            width: 30,
+            width: 28,
             padding: 4,
           }}
           src="/icons/mouse-click.svg"
@@ -146,6 +146,68 @@ export default function Work() {
       <p className="project-notice">
         <br></br>
       </p>
+
+      {/* Let's work together - START */}
+      <div
+        className="background-color"
+        style={{ backgroundColor: theme.colors.dark }}
+      >
+        <div className="centering">
+          <div
+            className="project-flex"
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              alignItems: "center",
+              position: "relative",
+            }}
+          >
+            <div
+              className="project-flex-item"
+              style={{
+                margin: "0 auto",
+                width: "80%",
+                paddingBottom: 25,
+              }}
+            >
+              <h1
+                style={{
+                  color: theme.colors.white,
+                }}
+              >
+                Let's build together.
+              </h1>
+              <p
+                style={{
+                  textAlign: "center",
+                  fontSize: "23px",
+                  lineHeight: "38px",
+                }}
+              >
+                I have a strong passion for design and unique letters that
+                portray the important values of your brand. Through close
+                attention to detail, I build custom typography, logos, and
+                branding systems for others. If you would like to work together,
+                I'm excited to hear your story.
+              </p>
+            </div>
+
+            <div
+              className="project-flex-item"
+              style={{
+                width: "50%",
+                textAlign: "center",
+              }}
+            >
+              <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
+                <button className="lets-start-button">LET'S START</button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Let's work together - END */}
     </div>
   );
 }

@@ -1,12 +1,12 @@
 export default {
   colors: {
     white: "#ffffff",
-    black: "#000000",
-    dark: "#1a1a1a",
     light: "#fffcf8",
-    grey: "#b9b9b9",
-    yellow: "#F9B110",
     old: "#f3f3f3",
+    grey: "#a1a1a1",
+    dark: "#1a1a1a",
+    black: "#000000",
+    yellow: "#F9B110",
   },
   fonts: {
     sans: "'Roboto Condensed', sans-serif",

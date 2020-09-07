@@ -74,22 +74,21 @@ body {
 }
 */
 .caption {
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: 18px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
   color: #f9b110;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 23px;
   text-align: left;
 }
 
 p {
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: 24px;
-  color: #b9b9b9;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  color: #a1a1a1;
   font-weight: 400;
-  line-height: 40px;
+  line-height: 33px;
 }
-
 p + p {
   margin-top: 1rem;
 }
@@ -104,8 +103,8 @@ h1 {
   line-height: 112px;
   margin: 0;
   text-align: center;
+  color: #1a1a1a;
 }
-
 h2 {
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 700;
@@ -115,10 +114,16 @@ h2 {
   line-height: 76px;
   color: #fff;
 }
-
 h3 {
   font-family: "Roboto Condensed", sans-serif;
   margin: 0;
+}
+h4 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 24px;
+  color: #a1a1a1;
+  font-weight: 400;
+  line-height: 36px;
 }
 
 li {
@@ -135,7 +140,7 @@ a {
   transition: 0.5s ease-in-out;
 }
 a:hover {
-  color: #b9b9b9;
+  color: #a1a1a1;
 }
 a:active,
 a:focus,
@@ -202,10 +207,50 @@ a:visited {
 .k-button:disabled,
 .k-button:disabled:hover {
   background-color: #f3f3f3;
-  color: #b9b9b9;
+  color: #a1a1a1;
 }
 .k-button:hover {
   background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.lets-start-button {
+  width: 100%;
+  height: 70px;
+  font-family: "Roboto Condensed", sans-serif;
+  color: white;
+  background-color: #f9b110;
+  border: none;
+  outline: none;
+  font-weight: 700;
+  font-size: 32px;
+  transition: background-color 0.2s, color 0.2s;
+  transition-timing-function: linear;
+  margin-top: -10px;
+}
+.lets-start-button:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.project-navigation {
+  width: 100%;
+  height: 80px;
+  font-family: "Roboto Condensed", sans-serif;
+  color: white;
+  background-color: black;
+  border: none;
+  outline: none;
+  font-weight: 400;
+  font-size: 2rem;
+  transition: background-color 0.2s, color 0.2s;
+  transition-timing-function: linear;
+  margin-top: -10px;
+}
+.project-navigation:hover {
+  background-color: #f9b110;
   color: white;
   cursor: pointer;
 }
@@ -270,12 +315,12 @@ a:visited {
 /* END - Work Cards */
 
 ::selection {
-  background: #b9b9b9;
+  background: #a1a1a1;
   color: #ffffff;
 }
 
 ::-moz-selection {
-  background: #b9b9b9;
+  background: #a1a1a1;
   color: #ffffff;
 }
 
@@ -292,6 +337,9 @@ a:visited {
 .underline-yellow {
   border-bottom: 5px solid #f9b110;
 }
+.underline-dark {
+  border-bottom: 5px solid #1a1a1a;
+}
 
 /* About Page */
 .services-stack {
@@ -299,7 +347,7 @@ a:visited {
   line-height: 5rem;
   font-weight: 400;
   font-family: "Roboto Condensed", sans-serif;
-  color: #b9b9b9;
+  color: #a1a1a1;
 }
 
 /* Rotation Animation */
@@ -352,10 +400,10 @@ a:visited {
   display: block;
   height: 4px;
   border: 0;
-  border-top: 4px solid #ffffff;
-  margin: 0 auto;
+  border-top: 4px solid #1a1a1a;
+  margin: 0;
   padding: 0;
-  width: 40px;
+  width: 20px;
 }
 .spacer-line {
   display: block;
@@ -367,12 +415,55 @@ a:visited {
   padding: 0;
 }
 
+.service-tags {
+  background-color: #1a1a1a;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: fit-content;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
 .centering {
   display: block;
   position: relative;
   max-width: 1400px;
   margin: 0 auto;
   padding: 150px 50px;
+}
+.centering-logos {
+  display: block;
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 150px 0px;
+}
+.centering-title {
+  display: block;
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 250px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 1em;
+}
+.centering-tags {
+  display: block;
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 40px;
 }
 .centering-work {
   display: block;
@@ -386,26 +477,28 @@ a:visited {
   position: relative;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 100px 50px;
+  padding: 50px 50px 50px 50px;
 }
 
 .project-notice {
   text-align: center;
-  font-size: 1.25rem;
+  font-size: 18px;
   color: #f9b110;
   margin: 0;
   padding: 20px 0px;
 }
 
 .logo-v2 {
-  width: 160px;
+  width: 146px;
   height: auto;
   padding-top: 25px;
 }
 
+/*
 .footer-flex-item.social-icons {
   padding-right: 150px;
 }
+*/
 
 .player-wrapper {
   position: relative;
@@ -418,10 +511,9 @@ a:visited {
 }
 
 .intro-statement {
-  font-size: 60px;
-  line-height: 98px;
+  font-size: 54px;
+  line-height: 86px;
 }
-
 span.line {
   display: inline-block;
 }
@@ -544,9 +636,13 @@ span.line {
     font-size: 34px;
     line-height: 50px;
   }
-  p {
+  h4 {
     font-size: 20px;
     line-height: 32px;
+  }
+  p {
+    font-size: 18px;
+    line-height: 30px;
   }
   .work-flex-item h3 {
     font-size: 44px;
@@ -555,6 +651,14 @@ span.line {
   .work-flex-item .card-details {
     font-size: 1.625rem;
     line-height: 2.75rem;
+  }
+  .intro-statement {
+    font-size: 44px;
+    line-height: 74px;
+  }
+  .logo-v2 {
+    max-width: 120px;
+    padding-top: 20px;
   }
 }
 
@@ -577,7 +681,7 @@ span.line {
   }
   .caption {
     font-size: 12px;
-    line-height: 16px;
+    line-height: 20px;
   }
 }
 
@@ -613,10 +717,10 @@ span.line {
     padding: 150px 25px;
   }
   .project-notice {
-    font-size: 0.875rem;
+    font-size: 14px;
   }
   .mouse-click {
-    max-width: 1.5rem;
+    max-width: 24px;
   }
   h1 {
     font-size: 50px;
@@ -641,6 +745,9 @@ span.line {
     max-width: 0px;
     padding-top: 0px;
     visibility: hidden;
+  }
+  .intro-paragraph {
+    padding-top: 40px;
   }
 }
 

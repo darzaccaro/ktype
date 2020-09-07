@@ -13,7 +13,7 @@ export default function Footer() {
       <footer>
         <div
           className="footer-background"
-          style={{ backgroundColor: theme.colors.dark }}
+          style={{ backgroundColor: theme.colors.grey }}
         >
           <div className="centering-footer">
             <div
@@ -26,34 +26,38 @@ export default function Footer() {
                 width: "100%",
               }}
             >
-              <hr className="spacer-line"></hr>
-
               <div
                 className="copyright footer-flex-item"
                 style={{
                   width: "calc(35% - 20px)",
-                  paddingRight: 20,
+                  paddingRight: 40,
                 }}
               >
-                <p>Copyright</p>
-                <p
+                <h4 style={{ color: theme.colors.light, fontWeight: "bold" }}>
+                  COPYRIGHT
+                </h4>
+
+                <h4
                   style={{
                     color: theme.colors.white,
                   }}
                 >
-                  &copy; 2020 Kade Tyler
-                </p>
+                  &copy; 2020 Kade Tyler. All rights reserved.
+                </h4>
               </div>
 
               <div
                 className="social-icons footer-flex-item"
                 style={{
                   width: "calc(35% - 20px)",
-                  paddingRight: 20,
+                  paddingRight: 40,
                   marginBottom: 20,
                 }}
               >
-                <p>Keep in touch ♥</p>
+                <h4 style={{ color: theme.colors.light, fontWeight: "bold" }}>
+                  KEEP IN TOUCH ♥
+                </h4>
+
                 <a
                   href="https://instagram.com/ktype.xyz"
                   target="_blank"
@@ -102,26 +106,58 @@ export default function Footer() {
                     alt="Behance"
                   ></img>
                 </a>
+                <a
+                  href="https://www.linkedin.com/in/ktype"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    className="social-icons"
+                    style={{
+                      width: "1.8rem",
+                      paddingTop: "6px",
+                      marginRight: "0px",
+                    }}
+                    src="/icons/linkedin.svg"
+                    alt="LinkedIn"
+                  ></img>
+                </a>
               </div>
 
               <div
                 className="site-details footer-flex-item"
-                style={{
-                  width: "10%",
-                }}
+                style={{ width: "10%" }}
               >
-                <p>
+                <h4>
                   <Link
-                    style={{ color: theme.colors.grey }}
+                    className="underline"
+                    style={{ color: theme.colors.light, fontWeight: "bold" }}
                     to="/details"
                     onClick={() => window.scrollTo(0, 0)}
                   >
-                    Site Details
+                    SITE DETAILS
                   </Link>
-                </p>
+                </h4>
               </div>
             </div>
           </div>
+        </div>
+        <div
+          className="footer-background"
+          style={{ backgroundColor: theme.colors.light }}
+        >
+          <h4
+            style={{
+              margin: 0,
+              textAlign: "center",
+              padding: 12,
+              color: theme.colors.dark,
+              fontSize: "18px",
+              fontWeight: 700,
+            }}
+          >
+            PURPOSE + DEDICATION + PASSION
+          </h4>
         </div>
       </footer>
     </div>

@@ -16,14 +16,57 @@ export default function Logos() {
         width: "100%",
       }}
     >
+      {/* Project Title + Services - START */}
+      <div
+        className="background-color"
+        style={{ backgroundColor: theme.colors.black }}
+      >
+        <div className="centering">
+          <h1 style={{ color: theme.colors.white, textAlign: "center" }}>
+            Logotypes &amp; Trademarks
+          </h1>
+          <h4
+            style={{
+              color: theme.colors.yellow,
+              margin: 0,
+              fontWeight: 700,
+              textAlign: "center",
+              padding: 10,
+            }}
+          >
+            SERVICES:
+          </h4>
+
+          <div
+            className="project-flex"
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              alignItems: "center",
+              position: "relative",
+              width: "100%",
+            }}
+          >
+            <div className="project-flex-item-tags">
+              <h4 className="service-tags">+ Brand Strategy</h4>
+            </div>
+            <div className="project-flex-item-tags">
+              <h4 className="service-tags">+ Identity Design</h4>
+            </div>
+            <div className="project-flex-item-tags">
+              <h4 className="service-tags">+ Logotype Design</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Project Title + Services - END */}
+
       <div
         className="background-color"
         style={{ backgroundColor: theme.colors.light }}
       >
-        <div className="centering">
-          {/* Project Intro */}
-          <h1>Logotypes &amp; Trademarks</h1>
-
+        <div className="centering-logos">
           <div
             className="project-flex"
             style={{
@@ -41,7 +84,6 @@ export default function Logos() {
                 flexWrap: "wrap",
                 justifyContent: "space-between",
                 alignItems: "center",
-                paddingTop: 150,
                 width: "100%",
               }}
             >
@@ -50,6 +92,7 @@ export default function Logos() {
                 style={{
                   display: "flex",
                   width: "calc((100% / 2) - 1rem)",
+                  marginBottom: "2rem",
                 }}
               >
                 <img
@@ -58,43 +101,7 @@ export default function Logos() {
                     width: "100%",
                     height: "auto",
                   }}
-                  src="/logos/variant-v1.svg"
-                  alt="Variant Logotype V1"
-                ></img>
-              </div>
-
-              <div
-                className="image-block"
-                style={{
-                  display: "flex",
-                  width: "calc((100% / 2) - 1rem)",
-                }}
-              >
-                <img
-                  style={{
-                    alignSelf: "center",
-                    width: "100%",
-                    height: "auto",
-                  }}
-                  src="/logos/variant-v2-update.svg"
-                  alt="Variant Logotype V2"
-                ></img>
-              </div>
-
-              <div
-                className="image-block"
-                style={{
-                  display: "flex",
-                  width: "calc((100% / 2) - 1rem)",
-                }}
-              >
-                <img
-                  style={{
-                    alignSelf: "center",
-                    width: "100%",
-                    height: "auto",
-                  }}
-                  src="/logos/humility-tagline.svg"
+                  src="/logos/humility.svg"
                   alt="Humility Logotype"
                 ></img>
               </div>
@@ -104,6 +111,7 @@ export default function Logos() {
                 style={{
                   display: "flex",
                   width: "calc((100% / 2) - 1rem)",
+                  marginBottom: "2rem",
                 }}
               >
                 <img
@@ -122,6 +130,7 @@ export default function Logos() {
                 style={{
                   display: "flex",
                   width: "calc((100% / 2) - 1rem)",
+                  marginBottom: "2rem",
                 }}
               >
                 <img
@@ -130,7 +139,64 @@ export default function Logos() {
                     width: "100%",
                     height: "auto",
                   }}
-                  src="/logos/yield-and-co-script.svg"
+                  src="/logos/variant.svg"
+                  alt="Variant Logotype V1"
+                ></img>
+              </div>
+
+              <div
+                className="image-block"
+                style={{
+                  display: "flex",
+                  width: "calc((100% / 2) - 1rem)",
+                  marginBottom: "2rem",
+                }}
+              >
+                <img
+                  style={{
+                    alignSelf: "center",
+                    width: "100%",
+                    height: "auto",
+                  }}
+                  src="/logos/variant-v2.svg"
+                  alt="Variant Logotype V2"
+                ></img>
+              </div>
+
+              <div
+                className="image-block"
+                style={{
+                  display: "flex",
+                  width: "calc((100% / 2) - 1rem)",
+                  marginBottom: "2rem",
+                }}
+              >
+                <img
+                  style={{
+                    alignSelf: "center",
+                    width: "100%",
+                    height: "auto",
+                  }}
+                  src="/logos/yield-serif.svg"
+                  alt="Yield Serif Logotype"
+                ></img>
+              </div>
+
+              <div
+                className="image-block"
+                style={{
+                  display: "flex",
+                  width: "calc((100% / 2) - 1rem)",
+                  marginBottom: "2rem",
+                }}
+              >
+                <img
+                  style={{
+                    alignSelf: "center",
+                    width: "100%",
+                    height: "auto",
+                  }}
+                  src="/logos/yield-script.svg"
                   alt="Yield Script Logotype"
                 ></img>
               </div>
@@ -140,6 +206,7 @@ export default function Logos() {
                 style={{
                   display: "flex",
                   width: "calc((100% / 2) - 1rem)",
+                  marginBottom: "2rem",
                 }}
               >
                 <img
@@ -148,8 +215,27 @@ export default function Logos() {
                     width: "100%",
                     height: "auto",
                   }}
-                  src="/logos/yield-and-co-serif.svg"
-                  alt="Yield Serif Logotype"
+                  src="/logos/plant-mark.svg"
+                  alt="Plant Logomark"
+                ></img>
+              </div>
+
+              <div
+                className="image-block"
+                style={{
+                  display: "flex",
+                  width: "calc((100% / 2) - 1rem)",
+                  marginBottom: "2rem",
+                }}
+              >
+                <img
+                  style={{
+                    alignSelf: "center",
+                    width: "100%",
+                    height: "auto",
+                  }}
+                  src="/logos/m-mark.svg"
+                  alt="M Logomark"
                 ></img>
               </div>
 
@@ -184,26 +270,8 @@ export default function Logos() {
                     width: "100%",
                     height: "auto",
                   }}
-                  src="/logos/plant-mark.svg"
-                  alt="Plant Logomark"
-                ></img>
-              </div>
-
-              <div
-                className="image-block"
-                style={{
-                  display: "flex",
-                  width: "calc((100% / 2) - 1rem)",
-                }}
-              >
-                <img
-                  style={{
-                    alignSelf: "center",
-                    width: "100%",
-                    height: "auto",
-                  }}
-                  src="/logos/m-mark.svg"
-                  alt="M Logomark"
+                  src="/logos/pen-gods.png"
+                  alt="Griffin Badge"
                 ></img>
               </div>
             </div>
@@ -211,73 +279,97 @@ export default function Logos() {
         </div>
       </div>
 
-      {/* Deliverables + Next Project - START */}
-      <div className="centering">
+      {/* Next Project - START */}
+      <div
+        className="project-flex"
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "space-between",
+          alignItems: "center",
+          position: "relative",
+        }}
+      >
         <div
-          className="project-flex"
+          className="project-flex-item"
           style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "space-between",
-            alignItems: "center",
-            position: "relative",
+            width: "100%",
           }}
         >
-          <div
-            className="project-flex-item"
-            style={{
-              margin: "0 auto",
-              width: "60%",
-              paddingBottom: 150,
-            }}
-          >
-            <h2>Deliverables</h2>
-            <ul className="services-stack">
-              <li>+ Brand Stategy</li>
-              <hr className="spacer-line"></hr>
-              <li>+ Identity Design</li>
-              <hr className="spacer-line"></hr>
-            </ul>
-          </div>
+          <Link to="/lettering" onClick={() => window.scrollTo(0, 0)}>
+            <button
+              className="project-navigation"
+              style={{
+                textAlign: "right",
+                paddingRight: 25,
+              }}
+            >
+              Next project →
+            </button>
+          </Link>
+        </div>
+      </div>
+      {/* Next Project - END */}
 
+      {/* Let's work together - START */}
+      <div
+        className="background-color"
+        style={{ backgroundColor: theme.colors.dark }}
+      >
+        <div className="centering">
           <div
-            className="project-flex-item"
+            className="project-flex"
             style={{
-              width: "100%",
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              alignItems: "center",
+              position: "relative",
             }}
           >
-            <Link to="/lettering" onClick={() => window.scrollTo(0, 0)}>
-              <button
-                className="k-button"
+            <div
+              className="project-flex-item"
+              style={{
+                margin: "0 auto",
+                width: "80%",
+                paddingBottom: 25,
+              }}
+            >
+              <h1
                 style={{
-                  width: "100%",
-                  textAlign: "right",
-                  height: 180,
-                  paddingRight: 50,
+                  color: theme.colors.white,
                 }}
               >
-                <div>
-                  <p
-                    style={{
-                      color: theme.colors.white,
-                      letterSpacing: 2,
-                      margin: 0,
-                    }}
-                  >
-                    NEXT PROJECT:
-                  </p>
-                  <h2 style={{ margin: -5 }}>
-                    <span className="underline-yellow">
-                      Lettering Collection
-                    </span>
-                  </h2>
-                </div>
-              </button>
-            </Link>
+                Let's build together.
+              </h1>
+              <p
+                style={{
+                  textAlign: "center",
+                  fontSize: "23px",
+                  lineHeight: "38px",
+                }}
+              >
+                I enjoy contributing meaningful and well-planned logos that are
+                strong for your industry. If you're dreaming of a new identity
+                or are in need of a fresh update to an existing logo, let's go!
+              </p>
+            </div>
+
+            <div
+              className="project-flex-item"
+              style={{
+                width: "50%",
+                textAlign: "center",
+              }}
+            >
+              <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
+                <button className="lets-start-button">LET'S START</button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-      {/* Deliverables + Next Project - END */}
+      {/* Let's work together - END */}
     </div>
   );
 }

@@ -16,23 +16,59 @@ export default function Lettering() {
         width: "100%",
       }}
     >
+      {/* Project Title + Services - START */}
+      <div
+        className="background-color"
+        style={{ backgroundColor: theme.colors.black }}
+      >
+        <div className="centering">
+          <h1 style={{ color: theme.colors.white, textAlign: "center" }}>
+            Lettering Collection
+          </h1>
+          <h4
+            style={{
+              color: theme.colors.yellow,
+              margin: 0,
+              fontWeight: 700,
+              textAlign: "center",
+              padding: 10,
+            }}
+          >
+            SERVICES:
+          </h4>
+
+          <div
+            className="project-flex"
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              alignItems: "center",
+              position: "relative",
+              width: "100%",
+            }}
+          >
+            <div className="project-flex-item-tags">
+              <h4 className="service-tags">+ Custom Lettering</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Project Title + Services - END */}
+
       <div
         className="background-color"
         style={{ backgroundColor: theme.colors.light }}
       >
-        <div className="centering">
-          {/* Project Intro */}
-          <h1>Lettering Collection</h1>
+        <div className="centering" style={{ paddingBottom: 0 }}>
           <p
-            style={{
-              textAlign: "center",
-              color: theme.colors.yellow,
-            }}
+            style={{ textAlign: "center", color: theme.colors.dark, margin: 0 }}
           >
             As a lettering artist, I aim to convey messages with character and
             emotion through technically precise letters.
           </p>
-
+        </div>
+        <div className="centering">
           <div
             className="project-flex"
             style={{
@@ -51,7 +87,6 @@ export default function Lettering() {
                 flexWrap: "wrap",
                 justifyContent: "center",
                 alignItems: "center",
-                paddingTop: 150,
                 width: "100%",
               }}
             >
@@ -68,8 +103,44 @@ export default function Lettering() {
                     width: "100%",
                     height: "auto",
                   }}
+                  src="/lettering/truth-will-last.svg"
+                  alt="Truth Will Last"
+                ></img>
+              </div>
+
+              <div
+                className="image-block"
+                style={{
+                  display: "flex",
+                  width: "calc(100% - 1rem)",
+                }}
+              >
+                <img
+                  style={{
+                    alignSelf: "center",
+                    width: "100%",
+                    height: "auto",
+                  }}
+                  src="/lettering/pressure.svg"
+                  alt="Pressure"
+                ></img>
+              </div>
+
+              <div
+                className="image-block"
+                style={{
+                  display: "flex",
+                  width: "calc(60% - 1rem)",
+                }}
+              >
+                <img
+                  style={{
+                    alignSelf: "center",
+                    width: "100%",
+                    height: "auto",
+                  }}
                   src="/lettering/thanks.svg"
-                  alt="Thanks"
+                  alt="Thanks!"
                 ></img>
               </div>
 
@@ -96,6 +167,7 @@ export default function Lettering() {
                 style={{
                   display: "flex",
                   width: "calc((100% / 2) - 1rem)",
+                  paddingTop: 20,
                 }}
               >
                 <img
@@ -114,6 +186,7 @@ export default function Lettering() {
                 style={{
                   display: "flex",
                   width: "calc((100% / 2) - 1rem)",
+                  paddingTop: 20,
                 }}
               >
                 <img
@@ -397,69 +470,98 @@ export default function Lettering() {
         </div>
       </div>
 
-      {/* Deliverables + Next Project - START */}
-      <div className="centering">
+      {/* Next Project - START */}
+      <div
+        className="project-flex"
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "space-between",
+          alignItems: "center",
+          position: "relative",
+        }}
+      >
         <div
-          className="project-flex"
+          className="project-flex-item"
           style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "space-between",
-            alignItems: "center",
-            position: "relative",
+            width: "100%",
           }}
         >
-          <div
-            className="project-flex-item"
-            style={{
-              margin: "0 auto",
-              width: "60%",
-              paddingBottom: 150,
-            }}
-          >
-            <h2>Deliverables</h2>
-            <ul className="services-stack">
-              <li>+ Custom Lettering</li>
-              <hr className="spacer-line"></hr>
-            </ul>
-          </div>
+          <Link to="/daily-renders" onClick={() => window.scrollTo(0, 0)}>
+            <button
+              className="project-navigation"
+              style={{
+                textAlign: "right",
+                paddingRight: 25,
+              }}
+            >
+              Next project →
+            </button>
+          </Link>
+        </div>
+      </div>
+      {/* Next Project - END */}
 
+      {/* Let's work together - START */}
+      <div
+        className="background-color"
+        style={{ backgroundColor: theme.colors.dark }}
+      >
+        <div className="centering">
           <div
-            className="project-flex-item"
+            className="project-flex"
             style={{
-              width: "100%",
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              alignItems: "center",
+              position: "relative",
             }}
           >
-            <Link to="/daily-renders" onClick={() => window.scrollTo(0, 0)}>
-              <button
-                className="k-button"
+            <div
+              className="project-flex-item"
+              style={{
+                margin: "0 auto",
+                width: "80%",
+                paddingBottom: 25,
+              }}
+            >
+              <h1
                 style={{
-                  width: "100%",
-                  textAlign: "right",
-                  height: 180,
-                  paddingRight: 50,
+                  color: theme.colors.white,
                 }}
               >
-                <div>
-                  <p
-                    style={{
-                      color: theme.colors.white,
-                      letterSpacing: 2,
-                      margin: 0,
-                    }}
-                  >
-                    NEXT PROJECT:
-                  </p>
-                  <h2 style={{ margin: -5 }}>
-                    <span className="underline-yellow">Daily Renders</span>
-                  </h2>
-                </div>
-              </button>
-            </Link>
+                Let's build together.
+              </h1>
+              <p
+                style={{
+                  textAlign: "center",
+                  fontSize: "23px",
+                  lineHeight: "38px",
+                }}
+              >
+                Are you searching for an artist with lettering expertise to
+                elevate your brand's story? Well-designed letters will captivate
+                your audience and ensure it's clear about what you stand for.
+                Get in touch!
+              </p>
+            </div>
+
+            <div
+              className="project-flex-item"
+              style={{
+                width: "50%",
+                textAlign: "center",
+              }}
+            >
+              <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
+                <button className="lets-start-button">LET'S START</button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-      {/* Deliverables + Next Project - END */}
+      {/* Let's work together - END */}
     </div>
   );
 }

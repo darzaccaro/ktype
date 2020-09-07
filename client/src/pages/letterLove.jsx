@@ -16,6 +16,75 @@ export default function LetterLove() {
         width: "100%",
       }}
     >
+      {/* Project Title */}
+      <div
+        className="background-color"
+        style={{ backgroundColor: theme.colors.light }}
+      >
+        <div className="centering-title">
+          <h1 style={{ color: theme.colors.black, textAlign: "left" }}>
+            Letter Love
+          </h1>
+        </div>
+      </div>
+
+      {/* Services + Intro Paragraph - START */}
+      <div
+        className="background-color"
+        style={{ backgroundColor: theme.colors.black }}
+      >
+        <div className="centering-tags">
+          <div
+            className="project-flex"
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "space-between",
+              alignItems: "start",
+              position: "relative",
+              width: "100%",
+            }}
+          >
+            <div className="project-flex-item">
+              <h4
+                style={{
+                  color: theme.colors.yellow,
+                  margin: 0,
+                  fontWeight: 700,
+                  paddingBottom: 10,
+                }}
+              >
+                SERVICES:
+              </h4>
+              <h4 className="service-tags">+ 3d Typography</h4>
+              <h4 className="service-tags">+ Custom Lettering</h4>
+            </div>
+
+            <div
+              className="project-flex-item"
+              style={{
+                width: "calc(60%)",
+              }}
+            >
+              <div className="intro-paragraph">
+                <p style={{ color: theme.colors.grey, marginTop: 0 }}>
+                  This project uses an elegant typographic style built to
+                  express my love for letters.
+                </p>
+                <p style={{ color: theme.colors.grey, margin: 0 }}>
+                  Identified in my concept sketches, I progressed the idea of
+                  using an entangled heart within the flourishes. This heart
+                  also serves as a well-balanced container for the overall
+                  piece. I interlaced the letters in 3D space to achieve the
+                  desired effect.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Services + Intro Paragraph - END */}
+
       <div
         className="centering"
         style={{
@@ -47,6 +116,7 @@ export default function LetterLove() {
               style={{
                 display: "flex",
                 width: "calc((100% / 1) - 0rem)",
+                marginBottom: "2rem",
               }}
             >
               <img
@@ -66,31 +136,8 @@ export default function LetterLove() {
             style={{
               display: "flex",
               flexWrap: "wrap",
-              width: "60%",
-              margin: "0 auto",
-              paddingTop: 250,
-            }}
-          >
-            <h2>Letter Love</h2>
-            <p style={{ marginTop: 0 }}>
-              This project uses an elegant typographic style built to express my
-              love for letters. From my quick concept sketches, I knew I wanted
-              to progress the idea of using an entangled heart within the
-              flourishes (which also serves as a well-balanced container). I
-              interlaced the letters in 3D space to achieve this effect. As I
-              explored more noticeable heart alternatives, I decided that
-              subtlety broke the cliché in a pleasant way.
-            </p>
-          </div>
-
-          <div
-            className="project-flex-item"
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
               justifyContent: "space-between",
               alignItems: "center",
-              paddingTop: 250,
               width: "100%",
             }}
           >
@@ -99,7 +146,6 @@ export default function LetterLove() {
               style={{
                 display: "flex",
                 width: "calc((100% / 1) - 0rem)",
-                marginBottom: "2rem",
               }}
             >
               <img
@@ -111,6 +157,19 @@ export default function LetterLove() {
                 src="/letter_love/letterlove-postwork-v3.png"
                 alt="Letter Love: purple/blue gradient"
               ></img>
+            </div>
+
+            <div className="centering">
+              <p
+                style={{
+                  textAlign: "center",
+                  color: theme.colors.grey,
+                  margin: 0,
+                }}
+              >
+                As I explored more outstanding heart alternatives, I decided
+                that subtlety removed the cliché of love in a pleasant way.
+              </p>
             </div>
 
             <div
@@ -155,73 +214,99 @@ export default function LetterLove() {
         </div>
       </div>
 
-      {/* Deliverables + Next Project - START */}
-      <div className="centering">
+      {/* Next Project - START */}
+      <div
+        className="project-flex"
+        style={{
+          paddingTop: 150,
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "space-between",
+          alignItems: "center",
+          position: "relative",
+        }}
+      >
         <div
-          className="project-flex"
+          className="project-flex-item"
           style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "space-between",
-            alignItems: "center",
-            position: "relative",
+            width: "100%",
           }}
         >
-          <div
-            className="project-flex-item"
-            style={{
-              margin: "0 auto",
-              width: "60%",
-              paddingBottom: 150,
-            }}
-          >
-            <h2>Deliverables</h2>
-            <ul className="services-stack">
-              <li>+ 3D Typography</li>
-              <hr className="spacer-line"></hr>
-              <li>+ Custom Lettering</li>
-              <hr className="spacer-line"></hr>
-            </ul>
-          </div>
+          <Link to="/logos" onClick={() => window.scrollTo(0, 0)}>
+            <button
+              className="project-navigation"
+              style={{
+                textAlign: "right",
+                paddingRight: 25,
+              }}
+            >
+              Next project →
+            </button>
+          </Link>
+        </div>
+      </div>
+      {/* Next Project - END */}
 
+      {/* Let's work together - START */}
+      <div
+        className="background-color"
+        style={{ backgroundColor: theme.colors.dark }}
+      >
+        <div className="centering">
           <div
-            className="project-flex-item"
+            className="project-flex"
             style={{
-              width: "100%",
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              alignItems: "center",
+              position: "relative",
             }}
           >
-            <Link to="/logos" onClick={() => window.scrollTo(0, 0)}>
-              <button
-                className="k-button"
+            <div
+              className="project-flex-item"
+              style={{
+                margin: "0 auto",
+                width: "80%",
+                paddingBottom: 25,
+              }}
+            >
+              <h1
                 style={{
-                  width: "100%",
-                  textAlign: "right",
-                  height: 180,
-                  paddingRight: 50,
+                  color: theme.colors.white,
                 }}
               >
-                <div>
-                  <p
-                    style={{
-                      color: theme.colors.white,
-                      letterSpacing: 2,
-                      margin: 0,
-                    }}
-                  >
-                    NEXT PROJECT:
-                  </p>
-                  <h2 style={{ margin: -5 }}>
-                    <span className="underline-yellow">
-                      Logotypes &amp; Trademarks
-                    </span>
-                  </h2>
-                </div>
-              </button>
-            </Link>
+                Let's build together.
+              </h1>
+              <p
+                style={{
+                  textAlign: "center",
+                  fontSize: "23px",
+                  lineHeight: "38px",
+                }}
+              >
+                Are you searching for an artist with lettering expertise to
+                elevate your brand's story? Well-designed letters will captivate
+                your audience and ensure it's clear about what you stand for.
+                Get in touch!
+              </p>
+            </div>
+
+            <div
+              className="project-flex-item"
+              style={{
+                width: "50%",
+                textAlign: "center",
+              }}
+            >
+              <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
+                <button className="lets-start-button">LET'S START</button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-      {/* Deliverables + Next Project - END */}
+      {/* Let's work together - END */}
     </div>
   );
 }
