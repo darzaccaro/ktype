@@ -14,22 +14,18 @@ import Work from "./pages/work";
 import Success from "./pages/success";
 import Details from "./pages/details";
 
-/* -- DISABLE Google Anaylytics
 // Import Google Tag Manager
 import TagManager from "react-gtm-module";
 // Import Google Analytics
 import ReactGA from "react-ga";
-
 // Initialize Google Analytics
 ReactGA.initialize("UA-155272033-1");
 ReactGA.pageview(window.location.pathname + window.location.search);
-
 // Initialize Google Tag Manager
 const tagManagerArgs = {
   gtmId: "GTM-TTFHHDC",
 };
 TagManager.initialize(tagManagerArgs);
- -- DISABLE Google Anaylytics */
 
 function App() {
   return (
