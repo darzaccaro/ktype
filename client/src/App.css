@@ -86,11 +86,11 @@ p {
   font-family: "Inter", sans-serif;
   font-size: 20px;
   color: #a1a1a1;
-  font-weight: 400;
-  line-height: 33px;
+  font-weight: 300;
+  line-height: 40px;
 }
 p + p {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 p + h2 {
   margin-top: 1em;
@@ -124,14 +124,6 @@ h4 {
   color: #a1a1a1;
   font-weight: 400;
   line-height: 36px;
-}
-
-li {
-  list-style: none;
-}
-ul {
-  margin: 0;
-  padding: 0;
 }
 
 a {
@@ -273,44 +265,22 @@ a:visited {
 .card-link:hover .thumbnail {
   opacity: 0.3;
 }
-.card-link:hover .card-overlay {
+.card-link:hover {
   opacity: 1;
 }
-.card-overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #fffcf8;
-  opacity: 0;
-  -webkit-transition: opacity 0.2s linear;
-  transition: opacity 0.2s linear;
-}
-.card-inner {
-  position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  text-align: center;
-  width: 80%;
-}
 .card-title {
-  font-size: 70px;
-  font-weight: 700;
-  line-height: 82px;
-  color: #1a1a1a;
+  font-size: 52px;
+  line-height: 60px;
+  margin: 0;
 }
 .card-details {
-  font-size: 34px;
-  font-weight: 400;
-  line-height: 65px;
-  color: #f9b110;
-  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 40px;
+  margin: 0;
+}
+.info-container {
+  background-color: #1a1a1a;
+  padding: 25px;
 }
 /* END - Work Cards */
 
@@ -341,13 +311,39 @@ a:visited {
   border-bottom: 5px solid #1a1a1a;
 }
 
-/* About Page */
+/* List Items */
 .services-stack {
   font-size: 1.875rem;
   line-height: 5rem;
   font-weight: 400;
   font-family: "Roboto Condensed", sans-serif;
   color: #a1a1a1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  margin: 0;
+  margin-top: 1rem;
+}
+.bullet-list-title {
+  font-size: 20px;
+  line-height: 40px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 0;
+}
+.bullet-list {
+  font-size: 20px;
+  line-height: 40px;
+  font-weight: 300;
+  font-family: "Inter", sans-serif;
+  color: black;
+  list-style-type: square;
+  padding-inline-start: 20px;
+}
+.bullet-list li {
+  padding-left: 10px;
 }
 
 /* Rotation Animation */
@@ -414,6 +410,15 @@ a:visited {
   margin: 0;
   padding: 0;
 }
+.spacer-line-project {
+  display: block;
+  width: 100%;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid white;
+  margin: 0 auto;
+  padding: 0;
+}
 
 .service-tags {
   background-color: #1a1a1a;
@@ -434,7 +439,7 @@ a:visited {
 .centering {
   display: block;
   position: relative;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 150px 50px;
 }
@@ -445,37 +450,54 @@ a:visited {
   margin: 0 auto;
   padding: 150px 0px;
 }
-.centering-title {
+.centering-lettering {
   display: block;
   position: relative;
   max-width: 1400px;
+  margin: 0 auto;
+  padding: 150px 0px;
+}
+.centering-title {
+  display: block;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 250px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 2em;
+}
+.centering-more-space {
+  display: block;
+  position: relative;
+  max-width: 1200px;
   margin: 0 auto;
   padding-top: 250px;
   padding-left: 25px;
   padding-right: 25px;
-  padding-bottom: 1em;
+  padding-bottom: 250px;
 }
 .centering-tags {
   display: block;
   position: relative;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding-top: 40px;
+  padding-top: 120px;
   padding-left: 25px;
   padding-right: 25px;
-  padding-bottom: 40px;
+  padding-bottom: 120px;
 }
 .centering-work {
   display: block;
   position: relative;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 200px 100px;
 }
 .centering-footer {
   display: block;
   position: relative;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 50px 50px 50px 50px;
 }
@@ -511,8 +533,8 @@ a:visited {
 }
 
 .intro-statement {
-  font-size: 54px;
-  line-height: 86px;
+  font-size: 50px;
+  line-height: 82px;
 }
 span.line {
   display: inline-block;
@@ -622,6 +644,66 @@ span.line {
 }
 /* -- PAGE ANIMATION - END -- */
 
+/* Hero image for case studies */
+.hero-container {
+  width: 100%;
+  position: relative;
+  height: calc(100vh);
+  background-color: black;
+}
+.hero-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  opacity: 0.15;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.hero-text {
+  text-align: center;
+}
+.hero-title {
+  font-size: 110px;
+  line-height: 110px;
+}
+.hero-description {
+  font-size: 26px;
+  line-height: 52px;
+}
+
+/* Scroll Icon + Animation */
+.scroll-down {
+  position: absolute;
+  right: 0;
+  bottom: 55px;
+  left: 0;
+  margin: auto;
+  width: 35px;
+  height: 35px;
+  animation-name: scroll;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  z-index: 2;
+}
+@keyframes scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-8px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+}
+
 /*** 1600px - RESPONSIVE ***/
 @media only screen and (max-width: 1600px) {
   .services-stack {
@@ -633,8 +715,8 @@ span.line {
     line-height: 82px;
   }
   h2 {
-    font-size: 34px;
-    line-height: 50px;
+    font-size: 47px;
+    line-height: 71px;
   }
   h4 {
     font-size: 20px;
@@ -642,15 +724,11 @@ span.line {
   }
   p {
     font-size: 18px;
-    line-height: 30px;
+    line-height: 36px;
   }
   .work-flex-item h3 {
     font-size: 44px;
     line-height: 56px;
-  }
-  .work-flex-item .card-details {
-    font-size: 1.625rem;
-    line-height: 2.75rem;
   }
   .intro-statement {
     font-size: 44px;
@@ -660,6 +738,14 @@ span.line {
     max-width: 120px;
     padding-top: 20px;
   }
+  .bullet-list-title {
+    font-size: 18px;
+    line-height: 36px;
+  }
+  .bullet-list {
+    font-size: 18px;
+    line-height: 36px;
+  }
 }
 
 /*** 1200px - RESPONSIVE ***/
@@ -668,9 +754,13 @@ span.line {
     font-size: 34px;
     line-height: 46px;
   }
+  .work-flex-item .card-title {
+    font-size: 40px;
+    line-height: 50px;
+  }
   .work-flex-item .card-details {
-    font-size: 1.125rem;
-    line-height: 2.25rem;
+    font-size: 16px;
+    line-height: 29px;
   }
   .about-flex-item {
     flex: 100%;
@@ -683,12 +773,23 @@ span.line {
     font-size: 12px;
     line-height: 20px;
   }
+  .hero-title {
+    font-size: 80px;
+    line-height: 80px;
+  }
+  .hero-description {
+    font-size: 26px;
+    line-height: 52px;
+  }
 }
 
 /*** 800px - RESPONSIVE ***/
 @media only screen and (max-width: 800px) {
   body {
     margin-left: 0px; /* Same as the width of the sidebar */
+  }
+  .content {
+    padding-top: 67.677px; /* Exact height of the mobile nav bar, preventing it from overlapping the content */
   }
   .nav-link {
     font-size: 56px;
@@ -706,12 +807,13 @@ span.line {
     font-size: 24px;
     line-height: 34px;
   }
-  .work-flex-item .card-details {
-    font-size: 1rem;
-    line-height: 2.125rem;
-  }
+
   .centering {
-    padding: 150px 25px;
+    padding: 100px 25px;
+  }
+  .centering-title {
+    padding-left: 25px;
+    padding-right: 25px;
   }
   .centering-work {
     padding: 150px 25px;
@@ -735,7 +837,7 @@ span.line {
   .project-flex-item .image-block {
     display: flex;
     flex-basis: 100%;
-    margin: 1rem 0px;
+    margin: 0rem 0px;
   }
   .logo-v2 {
     /* Show -- Pen Tool Gods
@@ -748,6 +850,24 @@ span.line {
   }
   .intro-paragraph {
     padding-top: 40px;
+  }
+  .services {
+    padding-top: 32px;
+  }
+  .hero-container {
+    height: calc(100vh - 67.677px);
+  }
+  .hero-text {
+    text-align: left;
+  }
+  .hero-title {
+    font-size: 70px;
+    line-height: 70px;
+    text-align: left;
+  }
+  .hero-description {
+    font-size: 22px;
+    line-height: 44px;
   }
 }
 
@@ -766,6 +886,11 @@ span.line {
   }
   .nav-active {
     padding: 26px 0px;
+  }
+  /* Work Single Column Break */
+  .work-flex-item {
+    max-width: 100%;
+    flex-basis: 100%;
   }
   .footer-flex-item {
     flex: 100%;

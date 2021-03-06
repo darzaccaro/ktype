@@ -3,7 +3,7 @@ import theme from "../theme";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-export default function Logos() {
+export default function Fonts() {
   useEffect(() => {
     window.scrollTo(0, 0);
   });
@@ -24,7 +24,7 @@ export default function Logos() {
         >
           <div className="centering">
             <h1 style={{ color: theme.colors.white, textAlign: "center" }}>
-              Logotypes &amp; Trademarks
+              Fonts
             </h1>
             <h4
               style={{
@@ -67,7 +67,7 @@ export default function Logos() {
           className="background-color"
           style={{ backgroundColor: theme.colors.light }}
         >
-          <div className="centering-logos">
+          <div className="centering-lettering">
             <div
               className="project-flex"
               style={{
@@ -102,26 +102,8 @@ export default function Logos() {
                       width: "100%",
                       height: "auto",
                     }}
-                    src="/logos/quiver.svg"
-                    alt="Quiver Logotype"
-                  ></img>
-                </div>
-                <div
-                  className="image-block"
-                  style={{
-                    display: "flex",
-                    width: "calc((100% / 2) - 1rem)",
-                    marginBottom: "2rem",
-                  }}
-                >
-                  <img
-                    style={{
-                      alignSelf: "center",
-                      width: "100%",
-                      height: "auto",
-                    }}
-                    src="/logos/quiver.svg"
-                    alt="Quiver Logotype"
+                    src="/fonts/a-z.jpg"
+                    alt="Type Specimen"
                   ></img>
                 </div>
 
@@ -139,177 +121,8 @@ export default function Logos() {
                       width: "100%",
                       height: "auto",
                     }}
-                    src="/logos/humility.svg"
-                    alt="Humility Logotype"
-                  ></img>
-                </div>
-
-                <div
-                  className="image-block"
-                  style={{
-                    display: "flex",
-                    width: "calc((100% / 2) - 1rem)",
-                    marginBottom: "2rem",
-                  }}
-                >
-                  <img
-                    style={{
-                      alignSelf: "center",
-                      width: "100%",
-                      height: "auto",
-                    }}
-                    src="/logos/d-mark.svg"
-                    alt="D Logomark"
-                  ></img>
-                </div>
-
-                <div
-                  className="image-block"
-                  style={{
-                    display: "flex",
-                    width: "calc((100% / 2) - 1rem)",
-                    marginBottom: "2rem",
-                  }}
-                >
-                  <img
-                    style={{
-                      alignSelf: "center",
-                      width: "100%",
-                      height: "auto",
-                    }}
-                    src="/logos/variant.svg"
-                    alt="Variant Logotype V1"
-                  ></img>
-                </div>
-
-                <div
-                  className="image-block"
-                  style={{
-                    display: "flex",
-                    width: "calc((100% / 2) - 1rem)",
-                    marginBottom: "2rem",
-                  }}
-                >
-                  <img
-                    style={{
-                      alignSelf: "center",
-                      width: "100%",
-                      height: "auto",
-                    }}
-                    src="/logos/variant-v2.svg"
-                    alt="Variant Logotype V2"
-                  ></img>
-                </div>
-
-                <div
-                  className="image-block"
-                  style={{
-                    display: "flex",
-                    width: "calc((100% / 2) - 1rem)",
-                    marginBottom: "2rem",
-                  }}
-                >
-                  <img
-                    style={{
-                      alignSelf: "center",
-                      width: "100%",
-                      height: "auto",
-                    }}
-                    src="/logos/yield-serif.svg"
-                    alt="Yield Serif Logotype"
-                  ></img>
-                </div>
-
-                <div
-                  className="image-block"
-                  style={{
-                    display: "flex",
-                    width: "calc((100% / 2) - 1rem)",
-                    marginBottom: "2rem",
-                  }}
-                >
-                  <img
-                    style={{
-                      alignSelf: "center",
-                      width: "100%",
-                      height: "auto",
-                    }}
-                    src="/logos/yield-script.svg"
-                    alt="Yield Script Logotype"
-                  ></img>
-                </div>
-
-                <div
-                  className="image-block"
-                  style={{
-                    display: "flex",
-                    width: "calc((100% / 2) - 1rem)",
-                    marginBottom: "2rem",
-                  }}
-                >
-                  <img
-                    style={{
-                      alignSelf: "center",
-                      width: "100%",
-                      height: "auto",
-                    }}
-                    src="/logos/plant-mark.svg"
-                    alt="Plant Logomark"
-                  ></img>
-                </div>
-
-                <div
-                  className="image-block"
-                  style={{
-                    display: "flex",
-                    width: "calc((100% / 2) - 1rem)",
-                    marginBottom: "2rem",
-                  }}
-                >
-                  <img
-                    style={{
-                      alignSelf: "center",
-                      width: "100%",
-                      height: "auto",
-                    }}
-                    src="/logos/m-mark.svg"
-                    alt="M Logomark"
-                  ></img>
-                </div>
-
-                <div
-                  className="image-block"
-                  style={{
-                    display: "flex",
-                    width: "calc((100% / 2) - 1rem)",
-                  }}
-                >
-                  <img
-                    style={{
-                      alignSelf: "center",
-                      width: "100%",
-                      height: "auto",
-                    }}
-                    src="/logos/ktype-script.svg"
-                    alt="KTYPE Logotype"
-                  ></img>
-                </div>
-
-                <div
-                  className="image-block"
-                  style={{
-                    display: "flex",
-                    width: "calc((100% / 2) - 1rem)",
-                  }}
-                >
-                  <img
-                    style={{
-                      alignSelf: "center",
-                      width: "100%",
-                      height: "auto",
-                    }}
-                    src="/logos/pen-gods.png"
-                    alt="Griffin Badge"
+                    src="/fonts/test-words.jpg"
+                    alt="Test Words"
                   ></img>
                 </div>
               </div>

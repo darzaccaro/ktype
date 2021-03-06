@@ -12,7 +12,7 @@ export default {
     sans: "'Roboto Condensed', sans-serif",
   },
   sizes: {
-    contentWidth: 1400,
+    contentWidth: 1200,
   },
   breakpoints: {
     mobile: 800,

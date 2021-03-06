@@ -15,64 +15,66 @@ export default function Success() {
         width: "100%",
       }}
     >
-      {/* Let's work together - START */}
-      <div
-        className="background-color"
-        style={{ backgroundColor: theme.colors.dark }}
-      >
-        <div className="centering">
-          <div
-            className="project-flex"
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              justifyContent: "center",
-              alignItems: "center",
-              position: "relative",
-            }}
-          >
+      <div className="content">
+        {/* Let's work together - START */}
+        <div
+          className="background-color"
+          style={{ backgroundColor: theme.colors.dark }}
+        >
+          <div className="centering">
             <div
-              className="project-flex-item"
+              className="project-flex"
               style={{
-                margin: "0 auto",
-                width: "80%",
-                paddingBottom: 25,
+                display: "flex",
+                flexWrap: "wrap",
+                justifyContent: "center",
+                alignItems: "center",
+                position: "relative",
               }}
             >
-              <h1
+              <div
+                className="project-flex-item"
                 style={{
-                  color: theme.colors.white,
+                  margin: "0 auto",
+                  width: "80%",
+                  paddingBottom: 25,
                 }}
               >
-                Thank you for your submission!
-              </h1>
-              <p
-                style={{
-                  textAlign: "center",
-                  fontSize: "23px",
-                  lineHeight: "38px",
-                }}
-              >
-                We'll be in touch as soon as possible. I do my best to respond
-                within 24 hours.
-              </p>
-            </div>
+                <h1
+                  style={{
+                    color: theme.colors.white,
+                  }}
+                >
+                  Thank you for your submission!
+                </h1>
+                <p
+                  style={{
+                    textAlign: "center",
+                    fontSize: "23px",
+                    lineHeight: "38px",
+                  }}
+                >
+                  We'll be in touch as soon as possible. I do my best to respond
+                  within 24 hours.
+                </p>
+              </div>
 
-            <div
-              className="project-flex-item"
-              style={{
-                width: "50%",
-                textAlign: "center",
-              }}
-            >
-              <Link to="/work" onClick={() => window.scrollTo(0, 0)}>
-                <button className="lets-start-button">BACK TO WORK</button>
-              </Link>
+              <div
+                className="project-flex-item"
+                style={{
+                  width: "50%",
+                  textAlign: "center",
+                }}
+              >
+                <Link to="/work" onClick={() => window.scrollTo(0, 0)}>
+                  <button className="lets-start-button">BACK TO WORK</button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
+        {/* Let's work together - END */}
       </div>
-      {/* Let's work together - END */}
     </div>
   );
 }

@@ -64,7 +64,7 @@ function Header({ location }) {
               position: "fixed",
               display: "block",
               padding: "10px 25px",
-              zIndex: 2,
+              zIndex: 3,
             }}
           >
             <div className="mobile-nav-logo-small">
@@ -274,7 +274,6 @@ function Header({ location }) {
                   display: "block",
                   maxWidth: "28vh",
                   width: "90%",
-
                   /*
             width: 315,
             */

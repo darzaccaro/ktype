@@ -9,10 +9,11 @@ import Logos from "./pages/logos";
 import Lettering from "./pages/lettering";
 import DailyRenders from "./pages/dailyRenders";
 import LetterLove from "./pages/letterLove";
+import GrandPlace from "./pages/grandPlace";
 import Contact from "./pages/contact";
 import Work from "./pages/work";
 import Success from "./pages/success";
-import Details from "./pages/details";
+
 
 // Import Google Tag Manager
 import TagManager from "react-gtm-module";
@@ -39,9 +40,9 @@ function App() {
       <Route path="/lettering" component={Lettering} />
       <Route path="/daily-renders" component={DailyRenders} />
       <Route path="/letter-love" component={LetterLove} />
+      <Route path="/grand-place" component={GrandPlace} />
       <Route path="/contact" component={Contact} />
       <Route path="/success" component={Success} />
-      <Route path="/details" component={Details} />
 
       <Footer />
     </div>
