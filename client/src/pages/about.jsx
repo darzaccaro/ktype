@@ -81,17 +81,21 @@ export default function About() {
               <h2>Services I Focus on</h2>
 
               <ul className="services-stack">
-                <li>+ Brand Strategy</li>
+                <li>+ Visual Strategy</li>
                 <hr className="spacer-line"></hr>
-                <li>+ Identity Design</li>
-                <hr className="spacer-line"></hr>
-                <li>+ 3D Typography</li>
+                <li>+ Logo Design</li>
                 <hr className="spacer-line"></hr>
                 <li>+ Custom Lettering</li>
+                <hr className="spacer-line"></hr>
+                <li>+ 3D Typography</li>
                 <hr className="spacer-line"></hr>
                 <li>+ Illustration</li>
                 <hr className="spacer-line"></hr>
                 <li>+ Web Design</li>
+                <hr className="spacer-line"></hr>
+                <li>+ Brand Guidelines</li>
+                <hr className="spacer-line"></hr>
+                <li>+ Printed Material</li>
                 <hr className="spacer-line"></hr>
               </ul>
             </div>

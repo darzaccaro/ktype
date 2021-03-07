@@ -120,8 +120,8 @@ export default function Logos() {
                       width: "100%",
                       height: "auto",
                     }}
-                    src="/logos/quiver.svg"
-                    alt="Quiver Logotype"
+                    src="/logos/our-musings.svg"
+                    alt="Our Musings Logotype"
                   ></img>
                 </div>
 

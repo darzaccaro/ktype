@@ -77,13 +77,14 @@ export default function Work() {
               width: "calc(50% - 1rem)",
               height: "auto",
               position: "relative",
+              paddingBottom: "2rem",
             }}
           >
             <Link className="card-link" to="/grand-place">
               <img
                 src="/work/GrandPlace_Avatar_Logomark_Color.jpg"
                 className="thumbnail"
-                alt="Grand Place Project Cover Image"
+                alt="Grand Place Project Cover"
               />
 
               <div className="info-container">
@@ -103,17 +104,18 @@ export default function Work() {
               width: "calc(50% - 1rem)",
               height: "auto",
               position: "relative",
+              paddingBottom: "2rem",
             }}
           >
             <Link className="card-link" to="/logos">
               <img
                 src="/work/work-logos-black.gif"
                 className="thumbnail"
-                alt="Logos Cover Image"
+                alt="Logos Cover"
               />
               <div className="info-container">
                 <div className="project-info">
-                  <h2 className="card-title">Logotypes &amp; Trademarks</h2>
+                  <h2 className="card-title">Logos &amp; Marks</h2>
                   <p className="card-details">
                     Strategy, Identity Design, Lettering
                   </p>
@@ -127,15 +129,15 @@ export default function Work() {
             style={{
               width: "calc(50% - 1rem)",
               height: "auto",
-              paddingTop: "2rem",
               position: "relative",
+              paddingBottom: "2rem",
             }}
           >
             <Link className="card-link" to="/lettering">
               <img
                 src="/work/work-b.jpg"
                 className="thumbnail"
-                alt="Lettering Project Cover Image"
+                alt="Lettering Project Cover"
               />
               <div className="info-container">
                 <div className="project-info">
@@ -150,16 +152,16 @@ export default function Work() {
             className="work-flex-item"
             style={{
               width: "calc(50% - 1rem)",
-              paddingTop: "2rem",
               height: "auto",
               position: "relative",
+              paddingBottom: "2rem",
             }}
           >
             <Link className="card-link" to="/daily-renders">
               <img
                 src="/work/work-w-postwork.png"
                 className="thumbnail"
-                alt="Daily Renders Project Cover Image"
+                alt="Daily Renders Project Cover"
               />
               <div className="info-container">
                 <div className="project-info">
@@ -176,7 +178,6 @@ export default function Work() {
             className="work-flex-item"
             style={{
               width: "calc(50% - 1rem)",
-              paddingTop: "2rem",
               height: "auto",
               position: "relative",
             }}
@@ -185,7 +186,7 @@ export default function Work() {
               <img
                 src="/work/work-letterlove.png"
                 className="thumbnail"
-                alt="Letter Love Project Cover Image"
+                alt="Letter Love Project Cover"
               />
               <div className="info-container">
                 <div className="project-info">

@@ -139,8 +139,8 @@ export default function GrandPlace() {
                 </p>
                 <p style={{ color: theme.colors.black, marginBottom: 0 }}>
                   <span style={{ fontWeight: 700 }}>Services Provided:</span>{" "}
-                  Strategy, Naming, Identity Design, Brand Guidelines, Signage,
-                  Printed Material
+                  Strategy, Naming, Identity Design, Typography &amp; Color,
+                  Brand Guidelines, Signage, Printed Material
                 </p>
               </div>
             </div>
@@ -712,6 +712,7 @@ export default function GrandPlace() {
                   style={{
                     color: theme.colors.black,
                     fontSize: 31,
+                    lineHeight: "50px",
                     marginBottom: 32,
                   }}
                 >
