@@ -221,7 +221,7 @@ export default function LetterLove() {
               width: "100%",
             }}
           >
-            <Link to="/logos" onClick={() => window.scrollTo(0, 0)}>
+            <Link to="/grand-place" onClick={() => window.scrollTo(0, 0)}>
               <button
                 className="project-navigation"
                 style={{

@@ -685,6 +685,25 @@ export default function GrandPlace() {
                     alt="Unchosen key logo concept"
                   ></img>
                 </div>
+
+                <div
+                  className="image-block"
+                  style={{
+                    display: "flex",
+                    width: "100%",
+                    paddingTop: "1rem",
+                  }}
+                >
+                  <img
+                    style={{
+                      alignSelf: "center",
+                      width: "100%",
+                      height: "auto",
+                    }}
+                    src="/grand_place/logoprocess.jpg"
+                    alt="Logo process review"
+                  ></img>
+                </div>
               </div>
             </div>
           </div>
@@ -915,7 +934,7 @@ export default function GrandPlace() {
                 width: "100%",
               }}
             >
-              <Link to="/logos" onClick={() => window.scrollTo(0, 0)}>
+              <Link to="/thanks" onClick={() => window.scrollTo(0, 0)}>
                 <button
                   className="project-navigation"
                   style={{

@@ -107,6 +107,33 @@ export default function Work() {
               paddingBottom: "2rem",
             }}
           >
+            <Link className="card-link" to="/thanks">
+              <img
+                src="/work/thankscard-thumbnail.jpg"
+                className="thumbnail"
+                alt="Thanks Greeting Card Project Cover"
+              />
+
+              <div className="info-container">
+                <div className="project-info">
+                  <h2 className="card-title">Thanks Card</h2>
+                  <p className="card-details">
+                    Custom Lettering, Greeting Card Design
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </article>
+
+          <article
+            className="work-flex-item"
+            style={{
+              width: "calc(50% - 1rem)",
+              height: "auto",
+              position: "relative",
+              paddingBottom: "2rem",
+            }}
+          >
             <Link className="card-link" to="/logos">
               <img
                 src="/work/work-logos-black.gif"

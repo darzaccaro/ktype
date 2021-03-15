@@ -10,6 +10,7 @@ import Lettering from "./pages/lettering";
 import DailyRenders from "./pages/dailyRenders";
 import LetterLove from "./pages/letterLove";
 import GrandPlace from "./pages/grandPlace";
+import Thanks from "./pages/thanks";
 import Contact from "./pages/contact";
 import Work from "./pages/work";
 import Success from "./pages/success";
@@ -41,6 +42,7 @@ function App() {
       <Route path="/daily-renders" component={DailyRenders} />
       <Route path="/letter-love" component={LetterLove} />
       <Route path="/grand-place" component={GrandPlace} />
+      <Route path="/thanks" component={Thanks} />
       <Route path="/contact" component={Contact} />
       <Route path="/success" component={Success} />
 
