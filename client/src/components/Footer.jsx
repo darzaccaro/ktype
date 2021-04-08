@@ -41,7 +41,7 @@ export default function Footer() {
                     color: theme.colors.white,
                   }}
                 >
-                  &copy; 2021 Kade Tyler. All rights reserved.
+                  &copy; 2021 KTYPE, LLC. All rights reserved.
                 </h4>
               </div>
 
